@@ -1,0 +1,76 @@
+{
+    "CRYPTO SHOWDOWN": "CRYPTO SHOWDOWN",
+    "Home": "Home",
+    "How To Play": "How To Play",
+    "WhitePaper": "WhitePaper",
+    "Gems": "Gems",
+    "RU": "EN",
+    "Presale": "Presale",
+    "The first RPG gacha game on the blockchain":"The first RPG gacha game on the blockchain",
+    "Characters": "Characters",
+    "How To Earn": "How To Earn",
+    "Contact": "Contact",
+    "About Us": "About Us",
+    "PLAY": "PLAY",
+    "PLAY SOON": "PLAY SOON",
+    "First rpg Gacha game on blockchain.":"First rpg Gacha game on blockchain.",
+    "GET STARTED": "GET STARTED",
+    "HOW TO": "HOW TO",
+    "FIGHT": "FIGHT",
+    "When fighting, your characters become stronger, the higher your characters level , the more building improvements are available to you.":"When fighting, your characters become stronger, the higher your characters level , the more building improvements are available to you.",
+    "BUILD":"BUILD",
+    "Upgrade buildings on your land to get resources and income. Wells give water to restore energy to the characters, buildings give resources and income, the wall protects your land.":"Upgrade buildings on your land to get resources and income. Wells give water to restore energy to the characters, buildings give resources and income, the wall protects your land.",
+    "EARN":"EARN",
+    "The higher your characters level, the better buildings are developed, the more you earn. Your income depends only on your achievements in the game.":"The higher your characters level, the better buildings are developed, the more you earn. Your income depends only on your achievements in the game.",
+    "GEM": "GEM",
+    "DESCRIPTION": "DESCRIPTION",
+    "CRITICAL": "CRITICAL",
+    "HP": "HP",
+    "ATTACK": "ATTACK",
+    "CHEST": "CHEST",
+    "THIS GEM INCREASES CHANCE OF CRITICAL ATTACK IF EQUIPPED ON A CHARACTER.":"THIS GEM INCREASES CHANCE OF CRITICAL ATTACK IF EQUIPPED ON A CHARACTER.",
+    "1 LVL GEM GIVE +5%":"1 LVL GEM GIVE +5%",
+    "2 LVL GEM GIVE +10%":"2 LVL GEM GIVE +10%",
+    "3 LVL GEM GIVE +15%":"3 LVL GEM GIVE +15%",
+    "INITIAL CRIT CHANCE 10%":"INITIAL CRIT CHANCE 10%",
+    "THIS GEM INCREASES HP IF EQUIPPED ON A CHARACTER.":"THIS GEM INCREASES HP IF EQUIPPED ON A CHARACTER.",
+    "1 LVL GEM GIVE +50 HP":"1 LVL GEM GIVE +50 HP",
+    "2 LVL GEM GIVE +100 HP":"2 LVL GEM GIVE +100 HP",
+    "3 LVL GEM GIVE +150 HP":"3 LVL GEM GIVE +150 HP",
+    "THIS GEM INCREASES ATTACK DAMAGE IF EQUIPPED ON A CHARACTER.":"THIS GEM INCREASES ATTACK DAMAGE IF EQUIPPED ON A CHARACTER.",
+    "1 LVL GEM GIVE +10 DAMAGE":"1 LVL GEM GIVE +10 DAMAGE",
+    "2 LVL GEM GIVE +20 DAMAGE":"2 LVL GEM GIVE +20 DAMAGE",
+    "3 LVL GEM GIVE +30 DAMAGE":"3 LVL GEM GIVE +30 DAMAGE",
+    "CRYSTALS CAN ONLY BE OBTAINED FROM CHESTS.":"CRYSTALS CAN ONLY BE OBTAINED FROM CHESTS.",
+    "CRYSTALS DROP FROM CHESTS RANDOMLY AND HAVE 3 TYPES FO RARITY.":"CRYSTALS DROP FROM CHESTS RANDOMLY AND HAVE 3 TYPES FO RARITY.",
+    "TEST":"TEST",
+    "FIGHT IN BATTLES FOR INCREASE YOUR CHARACTERS LEVEL. THE HIGHER LEVEL YOUR CHARACTERS HAVE, THE BETTER YOU CAN IMPROVE YOUR LAND.":"FIGHT IN BATTLES FOR INCREASE YOUR CHARACTERS LEVEL. THE HIGHER LEVEL YOUR CHARACTERS HAVE, THE BETTER YOU CAN IMPROVE YOUR LAND.",
+    "IMPROVE YOUR LAND THIS OPENS UP ALL THE WAYS FOR YOU TO PROGRESS IN THE GAME, THE BETTER YOUR LAND IS IMPROVED, THE MORE YOU EARN.":"IMPROVE YOUR LAND THIS OPENS UP ALL THE WAYS FOR YOU TO PROGRESS IN THE GAME, THE BETTER YOUR LAND IS IMPROVED, THE MORE YOU EARN.",
+    "MAIN":"MAIN",
+    "TEAM":"TEAM",
+    "CharacterList": [
+        {
+            "Name": "Sakura",
+            "Appearance": "Sakura is a fire element character.",
+            "Personality": "She comes from the distant lands of Aden, being a bounty hunter she is interested in the precious artifacts found in these lands. Sakura has high critical damage as well as instant damage abilities. Her weakness is fighting against water elemental creatures, especially if they have instant damage."
+        },
+        {
+            "Name": "Rena",
+            "Appearance": "Rena is a water element character. ",
+            "Personality": "She's been on these battlefields for what seems like an eternity, but we don't know exactly how long she's been here. Rena is an ancient water element creature with periodic damage and a high crit chance, but she is weak against opponents with the lightning element, especially if that creature has periodic damage."
+        },
+        {
+            "Name": "Motoko",
+            "Appearance": "Motoko is a lightning element character.",
+            "Personality": "A wanderer who seems to have been everywhere, or nowhere? Has anyone seen him? Rumor has it that all creatures who have ever seen him were defeated by him in an instant. But what we do know is that this character can take a lot of instant damage and deal a lot of crushing damage. He doesn't have a lot of critical damage, but every attack he makes can be his enemy's last. His weakness is fighting against creatures with the wood element, especially if that creature has intermittent damage."
+        },
+        {
+            "Name": "Hayate",
+            "Appearance": "Hayate is a wood element character.",
+            "Personality": "The huge castle of Altdream, more like a city, was once home to thousands of people. One day, one of the guards discovered the ability to control wooden objects and then the earth. One day, while practicing with the elements, not far from the castle, the knight sent the entire castle underground, destroying everyone in it. He became maddened by his own power and now constantly seeks out creatures to destroy. His strength is periodic damage. His weakness is fighting creatures with the element of fire, especially if those creatures deal instant damage."
+        }
+    ]
+    
+
+
+}
