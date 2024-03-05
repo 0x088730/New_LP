@@ -30,7 +30,7 @@ export default function Home() {
   return (
     <div>
       <I18nextProvider i18n={i18next}>
-        <div className="w-full overflow-x-hidden overflow-y-auto Home">
+        <div className="w-full overflow-hidden Home">
           <div className="absolute w-full h-24 z-10 flex justify-center items-center">
             <Suspense fallback={<div></div>}>
               <Header currentMenu={currentMenu} setCurrentMenu={setCurrentMenu} />

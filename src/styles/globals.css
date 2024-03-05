@@ -142,6 +142,11 @@ body {
   background-size: 100% 100%;
 }
 
+.center-bg-blur {
+  background-image: url("../../public/assets/images/center-bg-blur.png") !important;
+  background-size: 100% 100%;
+}
+
 .usdt-btn {
   background-image: url("../../public/assets/images/usdt-btn.png") !important;
   background-size: 100% 100%;

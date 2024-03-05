@@ -82,8 +82,9 @@ export default function MainPresale({
     }
     return (
         <>
-            <div className="center-bg w-[1020px] h-[540px] me-[13px] flex flex-col items-center mt-8 sm:mt-0">
-                <div className="w-[750px] lg:w-[900px] mt-4 text-white font-skranji">
+            <div className="center-bg-blur w-[1010px] h-[540px] me-[13px] flex flex-col justify-center items-center mt-8 sm:mt-0">
+                <div className="font-oi text-[2rem] text-center text-gradient-shadow-stroke" style={{ WebkitTextFillColor: "white" }}>Public Sale<br/> Start Soon</div>
+                {/* <div className="w-[750px] lg:w-[900px] mt-4 text-white font-skranji">
                     <div className="flex flex-col md:flex-row justify-between items-center">
                         <div className="flex justify-evenly flex-col w-[350px] lg:w-[420px]">
                             <div className="text-1xl font-bold flex justify-between">
@@ -120,7 +121,7 @@ export default function MainPresale({
                 {!buyStatus ?
                     !pendingStatus ?
                         <>
-                            <LabelButton title={"YOU PAY"} class="mt-8" buyStatus={buyStatus} color="text-green-500" img="assets/images/usdt.png" onChange={(e) => onAmountClick(e)} />
+                            <LabelButton title={"YOU PAY"} class="mt-8" buyStatus={buyStatus} color="text-green-500" img="assets/images/usdt.png" />
                         </>
                         :
                         <div className="w-[32rem] h-[8rem] border-[3px] border-[#222222] bg-[#ffffff] rounded-3xl flex justify-center items-center text-[1rem] font-bold tracking-[-1.2px] relative">
@@ -142,12 +143,12 @@ export default function MainPresale({
                     </div>
                 }
                 <LabelButton title={"YOU RECEIVE"} buyStatus={buyStatus} color="text-yellow-500" img="assets/images/cryptoIcon.png" receiveAmount={receiveAmount} />
-                <LabelButton title={"ENTER CODE"} buyStatus={buyStatus} onChange={(e) => getEnterCode(e)} />
-                <ClickButton title="BUY" className="w-60 h-12 text-white" onClick={() => onBtnClick("Buy")} />
+                <LabelButton title={"ENTER CODE"} buyStatus={buyStatus} />
+                <ClickButton title="BUY" className="w-60 h-12 text-white" />
                 <div className="font-bold text-white">
                     <span className="text-[#ff0000] text-2xl">{t("! ")}</span>
                     <span className="text-[#dcc90a] text-1xl">{t("UNLOCK 15% ON TOKEN RELEASE AND EVERY 14 DAYS +21.25%")}</span>
-                </div>
+                </div> */}
             </div>
         </>
     )
