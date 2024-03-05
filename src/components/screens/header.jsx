@@ -54,7 +54,7 @@ export default function Header({ currentMenu, setCurrentMenu }) {
 
   return (
     <div className="w-[80%] fixed h-24 z-10 flex items-center justify-center font-skranji text-white">
-      <div className="flex items-center justify-between h-full w-[30%]">
+      <div className="hidden xl:flex items-center justify-between h-full w-[30%]">
         <div className="justify-between hidden h-full w-full lg:text-lg px-30 xl:flex">
           {menuList.map((menu) => {
             return (
@@ -75,7 +75,7 @@ export default function Header({ currentMenu, setCurrentMenu }) {
           })}
         </div>
       </div>
-      <img src="assets/images/logo.png" alt="" className="cursor-pointer w-[350px] mx-32" onClick={() => handleMenuClick("Home")} />
+      <img src="assets/images/logo.png" alt="" className="cursor-pointer w-[250px] sm:w-[350px] mx-8 lg:mx-32" onClick={() => handleMenuClick("Home")} />
 
       <div className="items-center hidden h-full space-x-5 xl:flex xl:justify-between w-[30%]">
         <div className="flex gap-x-4">

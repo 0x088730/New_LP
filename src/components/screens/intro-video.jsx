@@ -43,8 +43,8 @@ export default function IntroVideo() {
       </div>
       <div className="relative flex flex-col items-center justify-start w-full h-[1519px] mt-[-18rem] sm:mt-[-15rem]">
         <img src="assets/images/backgrounds/howPlay.png" className="background-position-center-absolute translate-x-[6%] sm:translate-x-0 w-[1920px] h-[1519px] 2xl:w-full 2xl:h-full" />
-        <div className="font-oi translate-y-[25rem] text-[#FF9B00] text-[24px] sm:text-[60px] text-gradient-shadow-stroke"><span style={{ WebkitTextFillColor: "white" }}>How to</span> play</div>
-        <div className="translate-y-[30rem] flex flex-col md:flex-row gap-y-12 md:gap-x-12">
+        <div className="font-oi translate-y-[25rem] text-[#FF9B00] text-[24px] sm:text-[30px] md:text-[40px] lg:text-[50px] xl:text-[60px] text-gradient-shadow-stroke"><span style={{ WebkitTextFillColor: "white" }}>How to</span> play</div>
+        <div className="translate-y-[30rem] flex flex-col lg:flex-row gap-y-12 md:gap-x-12">
           <div className="relative w-[350px] sm:w-[300px] h-[200px] sm:h-[250px] p-8 flex flex-col justify-end items-center border-4 border-[#ffffff]/[0.5] rounded-xl backdrop-blur-md">
             <img src="assets/images/playImg1.png" alt="" className="absolute -top-16 sm:-top-20 w-[55%] sm:w-[75%]" />
             <div className="text-[22px]">FIGHT</div>
@@ -61,13 +61,13 @@ export default function IntroVideo() {
             <div className="text-center text-[15px]">When fighting, your characters become stronger, the higher your characters level , the more building improvements are available to you.</div>
           </div>
         </div>
-        <img src="assets/images/characters/character-5.png" alt="" className="absolute left-16 sm:-left-64 bottom-0 sm:-bottom-24 w-full sm:w-[60%]" />
-        <img src="assets/images/rock3.png" alt="" className="absolute right-0 -bottom-16 sm:-bottom-40 w-[90%] sm:w-1/2" />
+        <img src="assets/images/characters/character-5.png" alt="" className="absolute left-16 sm:left-[-9rem] xl:-left-64 bottom-0 sm:bottom-0 xl:-bottom-24 w-full sm:w-[60%]" />
+        <img src="assets/images/rock3.png" alt="" className="absolute right-0 -bottom-24 sm:-bottom-20 xl:-bottom-40 w-[90%] sm:w-1/2" />
       </div>
-      <div className="relative waterpaper bg-[#8d70ff] md:w-full xl:h-[1202px] flex justify-center overflow-visible mt-[22rem] sm:mt-0">
+      <div className="relative md:w-full xl:h-[1202px] flex justify-center overflow-visible mt-[22rem] sm:mt-[18rem] lg:mt-[18rem] xl:mt-0">
         <img src="assets/images/backgrounds/whitepaper.jpg" className="background-position-center-absolute w-[1920px] h-[1200px] 2xl:w-full 2xl:h-full" />
-        <img src="assets/images/tree1.png" alt="" className="absolute left-0 top-[-23rem] sm:-top-8 w-1/2" />
-        <img src="assets/images/tree2.png" alt="" className="absolute right-0 top-[-23.7rem] sm:-top-20 w-[50.4%]" />
+        <img src="assets/images/tree1.png" alt="" className="absolute left-0 top-[-22.5rem] sm:top-[-20rem] xl:-top-8 w-1/2" />
+        <img src="assets/images/tree2.png" alt="" className="absolute right-0 top-[-23rem] sm:top-[-21.5rem] xl:-top-20 w-[50.4%]" />
         <div className="flex flex-col justify-start items-center translate-y-[-15rem] sm:translate-y-0">
           <img src="assets/images/white-book.png" alt="" className="my-32 z-10" />
           <ClickButton title="WHITEPAPER" className="w-[18rem] h-20" />
@@ -76,10 +76,10 @@ export default function IntroVideo() {
       <div className="relative sm:hidden md:w-full xl:h-[1428px] flex flex-col justify-center items-center mt-[47rem] sm:mt-[-22rem]">
         <img src="assets/images/backgrounds/gemdescription.png" className="background-position-center-absolute w-[1920px] h-[1428px] 2xl:w-full 2xl:h-full" />
       </div>
-      <div className="relative md:w-full xl:h-[1428px] flex flex-col justify-center items-center mt-0 sm:mt-[-22rem]">
+      <div className="relative md:w-full xl:h-[1428px] flex flex-col justify-center items-center mt-0 sm:mt-[25rem] xl:mt-[-22rem]">
         <img src="assets/images/backgrounds/gemdescription.png" className="background-position-center-absolute w-[1920px] h-[1428px] 2xl:w-full 2xl:h-full" />
-        <img src="assets/images/characters/character-4.png" alt="" className="absolute -right-8 top-[-50rem] sm:top-[-19rem] w-[85%] sm:w-[40%]" />
-        <img src="assets/images/rock6.png" alt="" className="absolute right-0 sm:-right-40 top-[-31rem] sm:top-80 w-[90%] sm:w-[48%]" />
+        <img src="assets/images/characters/character-4.png" alt="" className="absolute -right-8 top-[-50rem] sm:top-[-30rem] md:top-[-34rem] lg:top-[-40rem] xl:top-[-19rem] w-[85%] sm:w-[40%]" />
+        <img src="assets/images/rock6.png" alt="" className="absolute right-0 sm:-right-40 top-[-31rem] sm:top-[-13rem] xl:top-80 w-[90%] sm:w-[48%]" />
         <img src="assets/images/rock7.png" alt="" className="absolute -right-40 top-[-6rem] w-[33%] -z-10" />
         <div className="w-[1300px] flex flex-col justify-start items-center translate-y-[-27rem] sm:translate-y-[-20rem]">
           <div className="font-oi text-[#FF9B00] text-[30px] sm:text-[60px] text-center sm:text-left text-gradient-shadow-stroke w-full">Gem<br /><span style={{ WebkitTextFillColor: "white" }}>description</span></div>

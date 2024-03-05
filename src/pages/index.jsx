@@ -14,76 +14,22 @@ const HowToEarn = React.lazy(() => import('~/components/screens/how-to-earn'));
 const HowToPlay = React.lazy(() => import('~/components/screens/how-to-play'));
 const IntroVideo = React.lazy(() => import('~/components/screens/intro-video'));
 
-
 export default function Home() {
   const [currentMenu, setCurrentMenu] = useState("Home");
-  var counter = 50
-  const { t, i18n } = useTranslation()
-  const menuList = [
-    t('Home'),
-    t("How To Play"),
-    t("WhitePaper"),
-    t("Gems"),
-    t("Characters"),
-    t("How To Earn"),
-    t("Contact"),
-    t("About Us"),
-  ];
-  const handleSectionIntersection = (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting)
-        if (menuList.includes(entry.target.id)) {
-          if (entry.target.id === t("How To Play")) {
-            setHtpAnimation(true);
-          } else {
-            // setHtpAnimation(false);
-          }
-          if (entry.target.id === t("How To Earn")) {
-            setHteAnimation(true);
-          } else {
-            setHteAnimation(false);
-          }
-          if (entry.target.id === t("Gems") || entry.target.id === t("WhitePaper")) {
-            setGemAnimation(true);
-            setHtpAnimation(false);
-          } else {
-            setGemAnimation(false);
-          }
-          setCurrentMenu(entry.target.id);
-        }
-    });
-  };
-  const [htpAnimation, setHtpAnimation] = useState(false);
-  const [hteAnimation, setHteAnimation] = useState(false);
-  const [gemAnimation, setGemAnimation] = useState(false);
-  useEffect(() => {
-    const observer = new IntersectionObserver(handleSectionIntersection, {
-      root: null, // Use the viewport as the root
-      rootMargin: "0px",
-      threshold: 0.5, // Trigger the callback when at least 50% of the section is visible
-    });
+  const { t, i18n } = useTranslation();
 
-    // Observe each section with an id
-    const sections = document.querySelectorAll("div[id]");
-    sections.forEach((section) => observer.observe(section));
-
-    // Clean up the observer when the component unmounts
-    return () => observer.disconnect();
-  }, []);
   useEffect(() => {
-    i18n.changeLanguage('en')
-    const image = new Image();
+    i18n.changeLanguage('en');
     counterUser().then(res => {
       if (res.count === false) {
         alert(res.message);
       }
     });
-  }, [])
+  }, []);
 
   return (
     <div>
       <I18nextProvider i18n={i18next}>
-
         <div className="w-full overflow-x-hidden overflow-y-auto Home">
           <div className="absolute w-full h-24 z-10 flex justify-center items-center">
             <Suspense fallback={<div></div>}>
@@ -95,7 +41,8 @@ export default function Home() {
               <IntroVideo />
             </Suspense>
           </div>
-          {/* <div id={t("How To Play")} className="w-full">
+          {/* Commented out sections causing the error
+          <div id={t("How To Play")} className="w-full">
             <Suspense fallback={<div></div>}>
               <HowToPlay animation={htpAnimation} />
             </Suspense>
@@ -137,7 +84,6 @@ export default function Home() {
               <Contact />
             </Suspense>
           </div> */}
-
         </div>
       </I18nextProvider>
     </div>
