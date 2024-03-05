@@ -1,14 +1,14 @@
 import { useEffect, useRef, useState } from "react"
 
 
-export default function Claim({setShowClaimWindowFlag}) {
+export default function Claim({ setShowClaimWindowFlag }) {
     const [boxOpenState, setBoxOpenState] = useState(false)
     const [itemArray, setItemArray] = useState([])
     const itemBarRef = useRef()
-    const [gifState,setGifState] = useState(true)
+    const [gifState, setGifState] = useState(true)
     const [selectedItemFlag, setSelectedItemFlag] = useState(false)
     const [text, setText] = useState("")
-    const [starState,setStarState] = useState(false)
+    const [starState, setStarState] = useState(false)
     useEffect(() => {
         const randomArray = [];
         for (let i = 0; i < 50; i++) {
@@ -56,11 +56,10 @@ export default function Claim({setShowClaimWindowFlag}) {
         }, 1500)
     }
     return (
-        <div className="relative w-full h-screen"
-        >
+        <div className="absolute z-30 w-full h-screen background-position-center-absolute">
             <div className="flex items-center justify-center w-full h-screen ">
-                <img src={`assets/images/gem_bg.${gifState?'gif':'jpg'}`} alt="abs" className="absolute object-cover w-full h-full "/>
-            
+                <img src={`assets/images/gem_bg.${gifState ? 'gif' : 'jpg'}`} alt="abs" className="absolute object-cover w-full h-full " />
+
                 <div id="claim-box" className="absolute w-1/4 h-fit ">
                     <img src={`assets/images/item/${boxOpenState === true ? "box-open.png" : "box-closed.png"}`} alt="abs" className=" animation animate-bounce-twice" />
                 </div>
@@ -76,18 +75,18 @@ export default function Claim({setShowClaimWindowFlag}) {
                             <p className="absolute z-30 text-xs md:text-2xl text-white ">Okay</p>
                             <img src="assets/images/big-button.png" className="relative top-0" ></img>
                         </div>
-                        
+
                     </div>
                 }
 
                 <div className="flex -translate-x-[200%] duration-[4000ms]" ref={itemBarRef}>
-                    {!selectedItemFlag && 
+                    {!selectedItemFlag &&
                         itemArray.map((item, no) =>
                             <img key={no} src={`assets/images/item/item-${item.type}-${item.level}.png`} className="w-[4%] px-0.5"></img>
                         )
                     }
                 </div>
-                {starState&&<div className="absolute z-20 w-full h-full">
+                {starState && <div className="absolute z-20 w-full h-full">
                     <img src="assets/images/star.png" alt="" className="mx-auto h-full object-cover" />
                 </div>}
             </div>

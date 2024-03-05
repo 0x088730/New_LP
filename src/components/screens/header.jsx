@@ -53,7 +53,7 @@ export default function Header({ currentMenu, setCurrentMenu }) {
   }
 
   return (
-    <div className="w-[80%] fixed h-24 z-10 flex items-center justify-center font-skranji text-white">
+    <div className="w-[80%] absolute h-24 z-10 flex items-center justify-center font-skranji text-white">
       <div className="hidden xl:flex items-center justify-between h-full w-[30%]">
         <div className="justify-between hidden h-full w-full lg:text-lg px-30 xl:flex">
           {menuList.map((menu) => {
@@ -65,8 +65,8 @@ export default function Header({ currentMenu, setCurrentMenu }) {
                 smooth={true}
                 offset={-70}
                 duration={500}
-                className={`px-4 hover:bg-[#3d208e] hover:text-orange-300 text-lg duration-700 h-full flex items-center cursor-pointer 
-                             hover:scale-105 border-0 border-b-4 border-transparent hover:border-orange-300 text-white`}
+                className={`px-4 hover:text-orange-300 text-lg duration-700 h-full flex items-center cursor-pointer 
+                             hover:scale-125 border-0 border-b-4 border-transparent text-white`}
                 onClick={() => handleMenuClick(menu)}
               >
                 {menu}
@@ -83,7 +83,7 @@ export default function Header({ currentMenu, setCurrentMenu }) {
             <img
               src="assets/images/tg.png"
               alt=""
-              className="object-cover w-full cursor-pointer"
+              className="object-cover w-full cursor-pointer hover:scale-125 duration-700"
               onClick={goTelegram}
             />
           </div>
@@ -91,7 +91,7 @@ export default function Header({ currentMenu, setCurrentMenu }) {
             <img
               src="assets/images/tw.png"
               alt=""
-              className="object-cover w-full cursor-pointer"
+              className="object-cover w-full cursor-pointer hover:scale-125 duration-700"
               onClick={goTwitter}
             />
           </div>
@@ -99,7 +99,7 @@ export default function Header({ currentMenu, setCurrentMenu }) {
             <img
               src="assets/images/discord.png"
               alt=""
-              className="object-cover w-full cursor-pointer"
+              className="object-cover w-full cursor-pointer hover:scale-125 duration-700"
               onClick={goDiscord}
             />
           </div>
