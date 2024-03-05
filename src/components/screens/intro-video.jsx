@@ -36,7 +36,7 @@ export default function IntroVideo() {
         <div className="flex flex-col items-center w-80 translate-y-40">
           <div className="font-oi text-[#FF9B00] text-[40px] sm:text-[60px] md:text-[70px] lg:text-[80px] xl:text-[90px] 2xl:text-[100px] text-gradient-shadow-stroke text-center">Play Soon</div>
           <div className="text-center px-16 my-8">The first RPG gacha game on the blockchain</div>
-          <ClickButton title={"GET START"} className="w-60 sm:w-52 lg:w-60 h-20" onClick={() => goPlay("'https://play.cryptoshowdown.io/'")} />
+          <ClickButton title={"GET START"} className="w-60 sm:w-52 lg:w-60 h-20" onClick={() => goPlay("https://play.cryptoshowdown.io/")} />
         </div>
         <img src="assets/images/characters/character-1.png" alt="" className="absolute left-0 bottom-[50px] w-1/2 sm:w-[40%]" />
         <img src="assets/images/characters/character-2.png" alt="" className="absolute right-0 bottom-[50px] w-1/2 sm:w-[40%]" />
@@ -154,7 +154,7 @@ export default function IntroVideo() {
             ))}
           </div>
         </div>
-        <div className="flex flex-col justify-start items-center translate-y-[-40%] sm:translate-y-0 -mt-20 sm:mt-[22rem]">
+        <div className="flex flex-col justify-start items-center translate-y-[-43%] sm:translate-y-0 -mt-20 sm:mt-[22rem]">
           <div className="font-oi text-[#FF9B00] text-[20px] sm:text-[60px] text-gradient-shadow-stroke"><span style={{ WebkitTextFillColor: "white" }}>How to</span> earn</div>
           <div className="flex flex-col md:flex-row my-16 gap-y-16 sm:gap-y-12 md:gap-x-12">
             <div className="relative w-[350px] sm:w-[500px] h-[160px] sm:h-[200px] p-4 flex flex-col justify-end items-center border-4 border-[#ffffff]/[0.5] rounded-xl backdrop-blur-md">
@@ -172,9 +172,9 @@ export default function IntroVideo() {
       </div>
       <div className="relative md:w-full xl:h-[1223px] flex flex-col justify-start items-center -mt-12 sm:mt-[-48rem]">
         <img src="assets/images/backgrounds/contact.png" className="background-position-center-absolute w-[1920px] h-[750px] 2xl:w-full 2xl:h-full" />
-        <div className="flex flex-col justify-center items-center mt-0 sm:mt-[20rem] translate-y-[-23%] sm:translate-y-0">
+        <div className="flex flex-col justify-center items-center mt-0 sm:mt-[20rem] translate-y-[-31%] sm:translate-y-0">
           <div className="font-oi text-[#FF9B00] text-[20px] sm:text-[60px] text-gradient-shadow-stroke"><span style={{ WebkitTextFillColor: "white" }}>Main</span> team</div>
-          <div className="flex flex-col md:flex-row items-center gap-y-6 my-12 md:gap-x-6 z-10">
+          <div className="flex flex-col md:flex-row items-center gap-y-6 my-6 md:gap-x-6 z-10">
             <div className="relative w-[300px] sm:w-[420px] h-[170px] sm:h-[225px] flex flex-col justify-center items-center">
               <img src="assets/images/member/member1.png" alt="" className="absolute w-full h-full -z-10" />
               <div className="text-[22px] mt-20 sm:mt-24">ILYA GUZNENKOV</div>
@@ -191,12 +191,12 @@ export default function IntroVideo() {
               <div className="text-[18px]">ADMINISTRATOR</div>
             </div>
           </div>
+          <ClickButton title="PLAY" className="w-52 h-16 z-10" onClick={() => goPlay("https://play.cryptoshowdown.io/")} />
         </div>
-        <ClickButton title="PLAY" className="w-52 h-16" />
         <img src="assets/images/rock8.png" alt="" className="absolute left-0 bottom-0 w-[40%]" />
         <img src="assets/images/rock9.png" alt="" className="absolute right-0 bottom-0 w-1/2" />
         <img src="assets/images/characters/character-6.png" alt="" className="absolute -right-12 sm:-right-20 bottom-0 w-[62%] sm:w-[600px] h-[64%] sm:h-[1000px] z-20" />
-        <div className="absolute left-12 sm:left-0 bottom-0 sm:bottom-20 flex flex-col sm:flex-row justify-around w-full mb-12 z-30">
+        <div className="absolute left-12 sm:left-0 bottom-0 sm:bottom-20 flex flex-col sm:flex-row justify-around w-full mb-2 z-30">
           <div>©SOURCECODE<br />ALL RIGHTS RESERVERD</div>
           <div className="flex items-center my-8 sm:my-0"><img src="assets/images/SMS.png" alt="" className="me-2" />ADM@SOURCE-CODE.WORK</div>
           <div className="flex gap-x-4 items-center">
