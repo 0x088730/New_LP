@@ -69,7 +69,7 @@ export default function IntroVideo() {
         <img src="assets/images/backgrounds/whitepaper.jpg" className="background-position-center-absolute w-[1920px] h-[1200px] 2xl:w-full 2xl:h-full" />
         <img src="assets/images/tree1.png" alt="" className="absolute left-0 top-[-22.5rem] sm:top-[-20.5rem] md:top-[-20rem] xl:-top-8 w-1/2" />
         <img src="assets/images/tree2.png" alt="" className="absolute right-0 top-[-23rem] sm:top-[-21.5rem] xl:-top-20 w-[50.4%]" />
-        <div className="flex flex-col justify-start items-center translate-y-[-15rem] sm:translate-y-[-17rem] md:translate-y-0">
+        <div className="flex flex-col justify-start items-center translate-y-[-15rem] sm:translate-y-[-17rem] lg:translate-y-0">
           <img src="assets/images/white-book.png" alt="" className="my-32 z-10" />
           <ClickButton title="WHITEPAPER" className="w-[18rem] h-20" />
         </div>
@@ -77,66 +77,70 @@ export default function IntroVideo() {
       <div className="relative md:hidden md:w-full xl:h-[1428px] flex flex-col justify-center items-center mt-[47rem] sm:mt-[43rem] md:mt-[-22rem]">
         <img src="assets/images/backgrounds/gemdescription.png" className="background-position-center-absolute w-[1920px] h-[1428px] 2xl:w-full 2xl:h-full" />
       </div>
-      <div className="relative md:w-full xl:h-[1428px] flex flex-col justify-center items-center mt-0 sm:mt-4 md:mt-[25rem] xl:mt-[-22rem]">
+      <div className="relative md:w-full xl:h-[1428px] flex flex-col justify-center items-center mt-0 sm:mt-4 md:mt-[12rem] lg:mt-[25rem] xl:mt-[-22rem]">
         <img src="assets/images/backgrounds/gemdescription.png" className="background-position-center-absolute w-[1920px] h-[1428px] 2xl:w-full 2xl:h-full" />
         <img src="assets/images/characters/character-4.png" alt="" className="absolute -right-8 top-[-55rem] md:top-[-34rem] lg:top-[-40rem] xl:top-[-19rem] w-[85%] sm:w-[65%] md:w-[40%]" />
         <img src="assets/images/rock6.png" alt="" className="absolute right-0 sm:-right-40 top-[-31rem] md:top-[-13rem] xl:top-80 w-[90%] md:w-[48%]" />
         <img src="assets/images/rock7.png" alt="" className="absolute -right-40 top-[-6rem] w-[33%] -z-10" />
-        <div className="w-[1300px] flex flex-col justify-start items-center translate-y-[-27rem] sm:translate-y-[-20rem]">
+        <div className="w-[1300px] flex flex-col justify-start items-center translate-y-[-27rem] md:translate-y-[-5rem] lg:translate-y-[-20rem]">
           <div className="font-oi text-[#FF9B00] text-[30px] sm:text-[40px] md:text-[50px] lg:text-[55px] xl:text-[60px] text-center xl:text-left text-gradient-shadow-stroke w-full">Gem<br /><span style={{ WebkitTextFillColor: "white" }}>description</span></div>
-          <div className="flex flex-col md:flex-row mt-20 gap-y-20 md:gap-x-6">
-            <div className="relative w-[350px] md:w-[310px] h-[270px] md:h-[340px] p-5 pt-10 md:p-4 md:pt-16 flex flex-col justify-start items-center border-4 border-[#ffffff]/[0.5] rounded-xl backdrop-blur-md">
-              <img src="assets/images/item/item-infernal-3.png" alt="" className="absolute -top-16 md:-top-20 w-[25%] md:w-[30%]" />
-              <div className="text-[18px] md:text-[22px]">CRITICAL</div>
-              <div className="text-center text-[13px] md:text-[15px]">This gem increases chance of critical attack if equipped on a character.</div>
-              {count.map((number) => (
-                <div className="text-[15px] md:text-[18px] flex justify-between border-b-2 border-white my-2 w-full">
-                  <div>{number} LVL GEM GIVE</div>
-                  <div className="percent-text">+{5 * number}%</div>
+          <div className="flex flex-col lg:flex-row mt-20 gap-y-20 md:gap-x-6">
+            <div className="flex flex-col md:flex-row gap-x-6 gap-y-20">
+              <div className="relative w-[350px] md:w-[310px] h-[270px] md:h-[340px] p-5 pt-10 md:p-4 md:pt-16 flex flex-col justify-start items-center border-4 border-[#ffffff]/[0.5] rounded-xl backdrop-blur-md">
+                <img src="assets/images/item/item-infernal-3.png" alt="" className="absolute -top-16 md:-top-20 w-[25%] md:w-[30%]" />
+                <div className="text-[18px] md:text-[22px]">CRITICAL</div>
+                <div className="text-center text-[13px] md:text-[15px]">This gem increases chance of critical attack if equipped on a character.</div>
+                {count.map((number) => (
+                  <div className="text-[15px] md:text-[18px] flex justify-between border-b-2 border-white my-2 w-full">
+                    <div>{number} LVL GEM GIVE</div>
+                    <div className="percent-text">+{5 * number}%</div>
+                  </div>
+                ))}
+                <div className="text-[15px] md:text-[18px] flex justify-between my-2 w-full">
+                  <div>INITIAL CRIT CHANCE</div>
+                  <div className="percent-text">+10%</div>
                 </div>
-              ))}
-              <div className="text-[15px] md:text-[18px] flex justify-between my-2 w-full">
-                <div>INITIAL CRIT CHANCE</div>
-                <div className="percent-text">+10%</div>
+              </div>
+              <div className="relative w-[350px] md:w-[310px] h-[250px] md:h-[340px] p-5 pt-10 md:p-4 md:pt-16 flex flex-col justify-start items-center border-4 border-[#ffffff]/[0.5] rounded-xl backdrop-blur-md">
+                <img src="assets/images/item/item-chimera-3.png" alt="" className="absolute -top-16 md:-top-20 w-[25%] md:w-[30%]" />
+                <div className="text-[18px] md:text-[22px]">HP</div>
+                <div className="text-center text-[13px] md:text-[15px]">This gem increases hp if equipped on a character.</div>
+                {count.map((number) => (
+                  <div className={`text-[15px] md:text-[18px] flex justify-between ${number === 3 ? "" : "border-b-2"} border-white my-2 w-full`}>
+                    <div>{number} LVL GEM GIVE</div>
+                    <div className="percent-text">+{50 * number} HP</div>
+                  </div>
+                ))}
               </div>
             </div>
-            <div className="relative w-[350px] md:w-[310px] h-[250px] md:h-[340px] p-5 pt-10 md:p-4 md:pt-16 flex flex-col justify-start items-center border-4 border-[#ffffff]/[0.5] rounded-xl backdrop-blur-md">
-              <img src="assets/images/item/item-chimera-3.png" alt="" className="absolute -top-16 md:-top-20 w-[25%] md:w-[30%]" />
-              <div className="text-[18px] md:text-[22px]">HP</div>
-              <div className="text-center text-[13px] md:text-[15px]">This gem increases hp if equipped on a character.</div>
-              {count.map((number) => (
-                <div className={`text-[15px] md:text-[18px] flex justify-between ${number === 3 ? "" : "border-b-2"} border-white my-2 w-full`}>
-                  <div>{number} LVL GEM GIVE</div>
-                  <div className="percent-text">+{50 * number} HP</div>
-                </div>
-              ))}
-            </div>
-            <div className="relative w-[350px] md:w-[310px] h-[250px] md:h-[340px] p-5 pt-10 md:p-4 md:pt-16 flex flex-col justify-start items-center border-4 border-[#ffffff]/[0.5] rounded-xl backdrop-blur-md">
-              <img src="assets/images/item/item-gem-3.png" alt="" className="absolute -top-16 md:-top-20 w-[25%] md:w-[30%]" />
-              <div className="text-[18px] md:text-[22px]">ATTACK</div>
-              <div className="text-center text-[13px] md:text-[15px]">This gem increases attack damage if equipped on a character.</div>
-              {count.map((number) => (
-                <div className={`text-[15px] md:text-[18px] flex justify-between ${number === 3 ? "" : "border-b-2"} border-white my-2 w-full`}>
-                  <div>{number} LVL GEM GIVE</div>
-                  <div className="percent-text">+{10 * number} DMAGE</div>
-                </div>
-              ))}
-            </div>
-            <div className="relative w-[350px] md:w-[310px] h-[250px] md:h-[340px] p-5 pt-10 md:p-4 md:pt-16 flex flex-col justify-start items-center border-4 border-[#ffffff]/[0.5] rounded-xl backdrop-blur-md">
-              <img src="assets/images/item/box-closed.png" alt="" className="absolute -top-16 md:-top-20 w-[25%] md:w-[30%]" />
-              <div className="text-[18px] md:text-[22px]">CHEST</div>
-              <div className="text-center text-[13px] md:text-[15px]">Crystals can only be obtained from chests. Crystals drop from chests randomly and have 3 types of rarity</div>
-              <img src="assets/images/test-btn.png" alt="" className="cursor-pointer mt-6 w-[55%] md:w-[65%]" />
+            <div className="flex flex-col md:flex-row gap-x-6 gap-y-20">
+              <div className="relative w-[350px] md:w-[310px] h-[250px] md:h-[340px] p-5 pt-10 md:p-4 md:pt-16 flex flex-col justify-start items-center border-4 border-[#ffffff]/[0.5] rounded-xl backdrop-blur-md">
+                <img src="assets/images/item/item-gem-3.png" alt="" className="absolute -top-16 md:-top-20 w-[25%] md:w-[30%]" />
+                <div className="text-[18px] md:text-[22px]">ATTACK</div>
+                <div className="text-center text-[13px] md:text-[15px]">This gem increases attack damage if equipped on a character.</div>
+                {count.map((number) => (
+                  <div className={`text-[15px] md:text-[18px] flex justify-between ${number === 3 ? "" : "border-b-2"} border-white my-2 w-full`}>
+                    <div>{number} LVL GEM GIVE</div>
+                    <div className="percent-text">+{10 * number} DMAGE</div>
+                  </div>
+                ))}
+              </div>
+              <div className="relative w-[350px] md:w-[310px] h-[250px] md:h-[340px] p-5 pt-10 md:p-4 md:pt-16 flex flex-col justify-start items-center border-4 border-[#ffffff]/[0.5] rounded-xl backdrop-blur-md">
+                <img src="assets/images/item/box-closed.png" alt="" className="absolute -top-16 md:-top-20 w-[25%] md:w-[30%]" />
+                <div className="text-[18px] md:text-[22px]">CHEST</div>
+                <div className="text-center text-[13px] md:text-[15px]">Crystals can only be obtained from chests. Crystals drop from chests randomly and have 3 types of rarity</div>
+                <img src="assets/images/test-btn.png" alt="" className="cursor-pointer mt-6 w-[55%] md:w-[65%]" />
+              </div>
             </div>
           </div>
         </div>
       </div>
-      <div className="relative md:w-full xl:h-[1280px] flex justify-center mt-[76rem] sm:mt-[52em] md:mt-[43rem] xl:mt-0">
+      <div className="relative md:w-full xl:h-[1280px] flex justify-center mt-[76rem] sm:mt-[52em] md:mt-[61rem] lg:mt-[43rem] xl:mt-0">
         <img src="assets/images/backgrounds/howEarn.jpg" className="background-position-center-absolute w-[1920px] h-[1280px] 2xl:w-full 2xl:h-full" />
-        <img src="assets/images/characters/character-3.png" alt="" className="absolute left-0 top-[-99rem] sm:top-[-74rem] md:top-[-42rem] w-[73%] sm:w-[45%] md:w-[27%]" />
+        <img src="assets/images/characters/character-3.png" alt="" className="absolute left-0 top-[-99rem] sm:top-[-74rem] md:top-[-67rem] lg:top-[-42rem] w-[73%] sm:w-[45%] md:w-[35%] lg:w-[27%]" />
         <img src="assets/images/rock4.png" alt="" className="absolute left-0 top-[-25rem] w-[30%] hidden sm:block" />
         <img src="assets/images/rock5.png" alt="" className="absolute right-0 top-[-22rem] w-[30%] hidden sm:block" />
-        <div className="main-bg absolute w-[1200px] h-[1000px] sm:h-[800px] top-[-81rem] sm:top-[-57rem] md:top-[-32rem] flex flex-col-reverse sm:flex-row justify-center items-center">
+        <div className="main-bg absolute w-[1200px] h-[1000px] sm:h-[800px] top-[-81rem] sm:top-[-57rem] md:top-[-52rem] lg:top-[-33rem] flex flex-col-reverse sm:flex-row justify-center items-center">
           <img src="assets/images/earn-center.png" alt="" className="absolute w-[75%] h-[70%] sm:h-[65%] me-6" />
           <img src={`assets/images/characters/idle/${currentCharacter}.gif`} alt="GIF Image" className={`object-cover ${currentCharacter === 2 ? "w-44 sm:w-56" : "w-56 sm:w-64"} me-0 sm:me-16 z-10`} />
           <div className={`relative text-bg ${currentCharacter === 3 || currentCharacter === 4 ? "w-[365px] sm:w-[380px] h-[370px] sm:h-[370px]" : ""} w-[280px] sm:w-[300px] h-[320px] sm:h-[350px] ml-0 sm:ml-16 z-10 p-4 sm:p-6 flex justify-center items-center`}>
@@ -155,15 +159,15 @@ export default function IntroVideo() {
             ))}
           </div>
         </div>
-        <div className="flex flex-col justify-start items-center translate-y-[-43%] sm:translate-y-[-70%] md:translate-y-0 -mt-20 sm:mt-[20rem] md:mt-[22rem]">
+        <div className="flex flex-col justify-start items-center translate-y-[-43%] sm:translate-y-[-70%] md:translate-y-[-22rem] lg:translate-y-0 -mt-20 sm:mt-[20rem] md:mt-[22rem]">
           <div className="font-oi text-[#FF9B00] text-[30px] sm:text-[40px] md:text-[50px] lg:text-[55px] xl:text-[60px] text-gradient-shadow-stroke"><span style={{ WebkitTextFillColor: "white" }}>How to</span> earn</div>
-          <div className="flex flex-col md:flex-row my-16 gap-y-16 sm:gap-y-12 md:gap-x-12">
-            <div className="relative w-[350px] sm:w-[500px] h-[160px] sm:h-[180px] md:h-[200px] p-4 flex flex-col justify-end items-center border-4 border-[#ffffff]/[0.5] rounded-xl backdrop-blur-md">
+          <div className="flex flex-col md:flex-row my-16 gap-y-16 sm:gap-y-12 md:gap-x-4 lg:gap-x-12">
+            <div className="relative w-[350px] sm:w-[350px] lg:w-[500px] h-[160px] sm:h-[180px] md:h-[170px] lg:h-[200px] p-4 flex flex-col justify-end items-center border-4 border-[#ffffff]/[0.5] rounded-xl backdrop-blur-md">
               <img src="assets/images/helmit.png" alt="" className="absolute -top-16 sm:-top-20 w-[45%] md:w-[50%]" />
               <div className="text-[22px]">CHARACTERS</div>
               <div className="text-center text-[15px]">Fight in battles for increase your characters level. The higher level your characters have, the better you can improve your land.</div>
             </div>
-            <div className="relative w-[350px] sm:w-[500px] h-[160px] sm:h-[180px] md:h-[200px] p-4 flex flex-col justify-end items-center border-4 border-[#ffffff]/[0.5] rounded-xl backdrop-blur-md">
+            <div className="relative w-[350px] sm:w-[350px] lg:w-[500px] h-[160px] sm:h-[180px] md:h-[170px] lg:h-[200px] p-4 flex flex-col justify-end items-center border-4 border-[#ffffff]/[0.5] rounded-xl backdrop-blur-md">
               <img src="assets/images/playImg2.png" alt="" className="absolute -top-16 sm:-top-20 w-[45%] md:w-[50%]" />
               <div className="text-[22px]">LAND</div>
               <div className="text-center text-[15px]">Improve your land this opens up all the ways for you to progress in the game, the better your land is inproved, the more you earn.</div>
@@ -171,24 +175,24 @@ export default function IntroVideo() {
           </div>
         </div>
       </div>
-      <div className="relative md:w-full xl:h-[1223px] flex flex-col justify-start items-center -mt-12 sm:mt-[-17rem] md:mt-[-12rem] xl:mt-[-48rem]">
-        <img src="assets/images/backgrounds/contact.png" className="background-position-center-absolute w-[1920px] h-[750px] 2xl:w-full 2xl:h-full" />
-        <div className="flex flex-col justify-center items-center mt-0 md:mt-[24rem] lg:mt-[20rem] translate-y-[-31%] sm:translate-y-[-25%] md:translate-y-0">
+      <div className="relative md:w-full xl:h-[1223px] flex flex-col justify-start items-center -mt-12 sm:mt-[-17rem] md:mt-[-22rem] lg:mt-[-12rem] xl:mt-[-48rem]">
+        <img src="assets/images/backgrounds/contact.png" className="background-position-center-absolute w-[1920px] h-[750px] md:h-[1132px] lg:h-[750px] 2xl:w-full 2xl:h-full" />
+        <div className="flex flex-col justify-center items-center mt-0 md:mt-[24rem] lg:mt-[20rem] translate-y-[-31%] sm:translate-y-[-25%] md:translate-y-[-24rem] lg:translate-y-[-19rem] xl:translate-y-0">
           <div className="font-oi text-[#FF9B00] text-[30px] sm:text-[40px] md:text-[50px] lg:text-[55px] xl:text-[60px] text-gradient-shadow-stroke"><span style={{ WebkitTextFillColor: "white" }}>Main</span> team</div>
-          <div className="flex flex-col md:flex-row items-center gap-y-6 my-6 md:gap-x-6 z-10">
-            <div className="relative w-[300px] md:w-[420px] h-[170px] md:h-[225px] flex flex-col justify-center items-center">
+          <div className="flex flex-col lg:flex-row items-center gap-y-6 my-6 md:gap-x-6 z-10">
+            <div className="relative w-[300px] lg:w-[420px] h-[170px] lg:h-[225px] flex flex-col justify-center items-center">
               <img src="assets/images/member/member1.png" alt="" className="absolute w-full h-full -z-10" />
-              <div className="text-[22px] mt-20 md:mt-24">ILYA GUZNENKOV</div>
+              <div className="text-[22px] mt-20 lg:mt-24">ILYA GUZNENKOV</div>
               <div className="text-[18px]">FOUNDER</div>
             </div>
-            <div className="relative w-[300px] md:w-[420px] h-[170px] md:h-[225px] flex flex-col justify-center items-center">
+            <div className="relative w-[300px] lg:w-[420px] h-[170px] lg:h-[225px] flex flex-col justify-center items-center">
               <img src="assets/images/member/member2.png" alt="" className="absolute w-full h-full -z-10" />
-              <div className="text-[22px] mt-20 md:mt-24">NIKOKAY POPOV</div>
+              <div className="text-[22px] mt-20 lg:mt-24">NIKOKAY POPOV</div>
               <div className="text-[18px]">CO-FOUNDER</div>
             </div>
-            <div className="relative w-[300px] md:w-[420px] h-[170px] md:h-[225px] flex flex-col justify-center items-center">
+            <div className="relative w-[300px] lg:w-[420px] h-[170px] lg:h-[225px] flex flex-col justify-center items-center">
               <img src="assets/images/member/member3.png" alt="" className="absolute w-full h-full -z-10" />
-              <div className="text-[22px] mt-20 md:mt-24">ANNA RERICH</div>
+              <div className="text-[22px] mt-20 lg:mt-24">ANNA RERICH</div>
               <div className="text-[18px]">ADMINISTRATOR</div>
             </div>
           </div>
@@ -196,7 +200,7 @@ export default function IntroVideo() {
         </div>
         <img src="assets/images/rock8.png" alt="" className="absolute left-0 -bottom-4 w-[40%]" />
         <img src="assets/images/rock9.png" alt="" className="absolute right-0 -bottom-4 w-1/2" />
-        <img src="assets/images/characters/character-6.png" alt="" className="absolute -right-12 md:-right-20 bottom-0 w-[62%] md:w-[600px] h-[64%] sm:h-[70%] md:h-[1000px] z-20" />
+        <img src="assets/images/characters/character-6.png" alt="" className="absolute -right-12 lg:-right-20 bottom-0 w-[62%] lg:w-[600px] h-[64%] sm:h-[70%] lg:h-[1000px] z-20" />
         <div className="absolute left-12 sm:left-0 bottom-0 sm:bottom-8 md:bottom-20 flex flex-col sm:flex-row justify-around w-full mb-2 z-30">
           <div>©SOURCECODE<br />ALL RIGHTS RESERVERD</div>
           <div className="flex items-center my-8 sm:my-0"><img src="assets/images/SMS.png" alt="" className="me-2" />ADM@SOURCE-CODE.WORK</div>
