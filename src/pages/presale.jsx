@@ -156,18 +156,18 @@ export default function Presale() {
   }
 
   return (
-    <div className="relative md:w-full h-screen min-w-[1024px] presale-bg">
+    <div className="relative flex justify-center font-skranji">
       <Header currentMenu="Presale Admin" />
-      <div className="relative flex-col h-full space-y-2 flex lg:items-center justify-center">
-        <div className="absolute top-0 translate-y-28 flex justify-between items-end w-10/12 lg:w-10/12 xl:w-9/12 2xl:w-7/12 min-w-[1024px]">
-          <div className="pt-2 text-4xl text-left text-white xl:text-4xl 2xl:text-4xl font-animeace">
-            {t("CSC TOKEN PRESALE")}
-          </div>
+      <div className="fixed overflow-y-auto overflow-x-hidden flex-col h-full w-full space-y-2 flex items-center justify-center">
+        <img src="assets/images/backgrounds/presale-bg.jpg" className="background-position-center w-[1920px] h-full 2xl:w-full 2xl:h-full" />
+        <div className="absolute top-0 w-[300px] sm:w-[500px] lg:w-[1000px] xl:w-[1200px] translate-y-28 flex flex-col lg:flex-row justify-center md:justify-between items-center">
+          <div className="font-oi text-[#FF9B00] text-[2rem] text-center text-gradient-shadow-stroke">csc <span style={{ WebkitTextFillColor: "white" }}>token presale</span></div>
           <div
-            className="wallet-connect text-md text-left text-white font-animeace cursor-pointer w-[450px] h-[54px] flex items-center justify-end"
+            className="wallet-connect text-md text-left text-white cursor-pointer w-[450px] h-16 flex items-end justify-end"
             onClick={() => onBtnClick("Connect")}
           >
-            <span className="w-[300px] text-center font-[900]" style={{ textShadow: "rgb(34, 29, 61, 0.8) 0px 3px 3px" }}>
+            <span className="mb-[0.8rem]">Your wallet:</span>
+            <span className="ref-btn w-[280px] h-[2.7rem] mb-[4px] font-[900] flex justify-center items-center" style={{ textShadow: "rgb(34, 29, 61, 0.8) 0px 3px 3px" }}>
               {btnType === "Connect" ?
                 <>
                   <img src="assets/images/metamask.png" alt="" className="w-6 inline me-1" />{t("CONNECT METAMASK")}
@@ -180,50 +180,45 @@ export default function Presale() {
             </span>
           </div>
         </div>
-        <div className="absolute top-0 translate-y-40 flex w-10/12 lg:w-10/12 xl:w-9/12 2xl:w-7/12 min-w-[1024px] ml-3 z-[1]">
-          <div
-            className={`text-white text-1xl font-animeace w-[9rem] h-[3.5rem] cursor-pointer relative ${page === "main" ? "green-btn" : "inactive-btn"}`}
-            onClick={() => {
-              global.pageStatus = "main";
-              setPage("main")
-            }}
-          >
-            <span
-              className="absolute right-[1.1rem] top-[8px] text-[18px] text-[#FFBF80] font-lightest"
-              style={{ WebkitTextStroke: "0.8px rgb(73, 25, 25, 0.8)", textShadow: "rgb(34, 29, 61, 0.8) 0px 3px 3px" }}
+        <div className="main-bg w-[1200px] h-[750px] absolute top-0 translate-y-72 sm:translate-y-52 lg:translate-y-40 flex flex-col items-center z-[1]">
+          <div className="w-full flex justify-center items-end h-[150px] p-5 -mt-24 sm:mt-0">
+            <div
+              className={`text-white text-1xl w-28 h-8 sm:w-36 sm:h-10 cursor-pointer relative ${page === "main" ? "green-btn" : "inactive-btn"}`}
+              onClick={() => {
+                global.pageStatus = "main";
+                setPage("main")
+              }}
             >
-              {t("PRESALE")}
-            </span>
-          </div>
-          <div className={`text-white text-1xl font-animeace w-[9rem] h-[3.5rem] cursor-pointer relative ${page === "chart" ? "green-btn" : "inactive-btn"}`}>
-            <span
-              className="absolute right-[1.9rem] top-[8px] text-[18px] text-[#FFBF80] font-lightest"
-              style={{ WebkitTextStroke: "0.8px rgb(73, 25, 25, 0.8)", textShadow: "rgb(34, 29, 61, 0.8) 0px 3px 3px" }}
+              <span
+                className="flex justify-center items-center text-[18px] text-[#ffffff] font-lightest w-full h-full"
+                style={{ WebkitTextStroke: "0.8px rgb(73, 25, 25, 0.8)", textShadow: "rgb(34, 29, 61, 0.8) 0px 3px 3px" }}
+              >
+                {t("PRESALE")}
+              </span>
+            </div>
+            <div
+              className={`text-white text-1xl w-28 h-8 sm:w-36 sm:h-10 mx-6 sm:mx-12 cursor-pointer relative ${page === "chart" ? "green-btn" : "inactive-btn"}`}
               onClick={() => setPage("chart")}
             >
-              {t("CHART")}
-            </span>
-          </div>
-          <div
-            className={`text-white text-1xl font-animeace w-[9rem] h-[3.5rem] cursor-pointer relative ${page === "account" ? "green-btn" : "inactive-btn"}`}
-            onClick={() => setPage("account")}
-          >
-            <span
-              className="absolute right-[1rem] top-[8px] text-[18px] text-[#FFBF80] font-lightest"
-              style={{ WebkitTextStroke: "0.8px rgb(73, 25, 25, 0.8)", textShadow: "rgb(34, 29, 61, 0.8) 0px 3px 3px" }}
+              <span
+                className="flex justify-center items-center text-[18px] text-[#ffffff] font-lightest w-full h-full"
+                style={{ WebkitTextStroke: "0.8px rgb(73, 25, 25, 0.8)", textShadow: "rgb(34, 29, 61, 0.8) 0px 3px 3px" }}
+              >
+                {t("CHART")}
+              </span>
+            </div>
+            <div
+              className={`text-white text-1xl w-28 h-8 sm:w-36 sm:h-10 cursor-pointer relative ${page === "account" ? "green-btn" : "inactive-btn"}`}
+              onClick={() => setPage("account")}
             >
-              {t("ACCOUNT")}
-            </span>
+              <span
+                className="flex justify-center items-center text-[18px] text-[#ffffff] font-lightest w-full h-full"
+                style={{ WebkitTextStroke: "0.8px rgb(73, 25, 25, 0.8)", textShadow: "rgb(34, 29, 61, 0.8) 0px 3px 3px" }}
+              >
+                {t("ACCOUNT")}
+              </span>
+            </div>
           </div>
-        </div>
-        <div className="w-10/12 lg:w-10/12 xl:w-9/12 2xl:w-7/12 min-w-[1024px] z-0">
-          <video
-            src="assets/videos/intro.mp4"
-            className="absolute top-1 translate-y-52 object-cover object-center rounded-3xl shadow-1xl shadow-[3px_3px_20px_7px_#FC44E9] contrast-125 brightness-50 w-10/12 lg:w-10/12 xl:w-9/12 2xl:w-7/12 min-w-[1024px] h-[60%] min-h-[576px]"
-            autoPlay
-            loop
-            muted
-          />
           {page === "main" ?
             <MainPresale
               usdtamount={usdtamount}
@@ -251,6 +246,15 @@ export default function Presale() {
                 setBonusRate={setBonusRate}
               />
           }
+        </div>
+        <div className="absolute left-12 pb-12 translate-y-[45rem] sm:hidden flex flex-col sm:flex-row justify-around w-full mb-12 z-30 text-white">
+          <div>©SOURCECODE<br />ALL RIGHTS RESERVERD</div>
+          <div className="flex items-center my-8 sm:my-0"><img src="assets/images/SMS.png" alt="" className="me-2" />ADM@SOURCE-CODE.WORK</div>
+          <div className="flex gap-x-4 items-center">
+            <img src="assets/images/tw.png" alt="" className="cursor-pointer" onClick={() => goPlay("https://twitter.com/Crypto_Showdown")} />
+            <img src="assets/images/tg.png" alt="" className="cursor-pointer" onClick={() => goPlay("https://t.me/cryptoshowdown")} />
+            <img src="assets/images/discord.png" alt="" className="cursor-pointer" onClick={() => goPlay("https://discord.gg/9FRAyNg9Qh")} />
+          </div>
         </div>
       </div>
     </div>

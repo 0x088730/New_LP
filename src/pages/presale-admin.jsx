@@ -263,35 +263,6 @@ export default function PresaleAdmin() {
           </div>
         </div>
       </div>
-      {/* <div className="flex justify-center items-center z-0">
-          {page === "main" ?
-            <MainPresaleAdmin
-              usdtamount={usdtamount}
-              setusdtamount={setusdtamount}
-              receiveAmount={receiveAmount}
-              setReceiveAmount={setReceiveAmount}
-              onBtnClick={onBtnClick}
-              buyStatus={buyStatus}
-              setBuyStatus={setBuyStatus}
-              code={code}
-              setCode={setCode}
-              pendingStatus={pendingStatus}
-              globalValue={globalValue}
-              setGlobalValue={setGlobalValue}
-            />
-            :
-            page === "chart" ?
-              <Chart />
-              :
-              <Account
-                tokenAmount={tokenAmount}
-                setTokenAmount={setTokenAmount}
-                btnType={btnType}
-                bonusRate={bonusRate}
-                setBonusRate={setBonusRate}
-              />
-          }
-        </div> */}
     </div>
   );
 }
