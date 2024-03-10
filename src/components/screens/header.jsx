@@ -3,6 +3,8 @@ import { Link } from "react-scroll";
 import { useTranslation } from "react-i18next";
 import { useRouter } from "next/router";
 import { global } from "~/common/global";
+import { goUrl } from "../utils";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 export default function Header({ currentMenu, setCurrentMenu }) {
   const [showFlag, setShowFlag] = useState({ menu: false });
 
@@ -35,22 +37,6 @@ export default function Header({ currentMenu, setCurrentMenu }) {
     }
     i18n.changeLanguage(lang);
   }
-  const goPlay = () => {
-    const newPageURL = 'https://play.cryptoshowdown.io/';
-    window.open(newPageURL, '_blank');
-  }
-  const goTelegram = () => {
-    const newPageURL = 'https://t.me/cryptoshowdown';
-    window.open(newPageURL, '_blank');
-  }
-  const goDiscord = () => {
-    const newPageURL = 'https://discord.gg/9FRAyNg9Qh ';
-    window.open(newPageURL, '_blank');
-  }
-  const goTwitter = () => {
-    const newPageURL = 'https://twitter.com/Crypto_Showdown';
-    window.open(newPageURL, '_blank');
-  }
 
   return (
     <div className="w-[80%] absolute h-24 z-10 flex items-center justify-center font-skranji text-white">
@@ -69,47 +55,45 @@ export default function Header({ currentMenu, setCurrentMenu }) {
                              hover:scale-125 border-0 border-b-4 border-transparent text-white`}
                 onClick={() => handleMenuClick(menu)}
               >
-                {menu}
+                {t(menu)}
               </Link>
             );
           })}
         </div>
       </div>
-      <img src="assets/images/logo.png" alt="" className="cursor-pointer w-[250px] sm:w-[350px] mx-8 lg:mx-32" onClick={() => handleMenuClick("Home")} />
+      <LazyLoadImage effect="black-and-white" draggable="false" src="assets/images/logo.png" alt="" className="cursor-pointer w-[250px] sm:w-[350px] mx-8 lg:mx-32" onClick={() => handleMenuClick("Home")} />
 
       <div className="items-center hidden h-full space-x-5 xl:flex xl:justify-between w-[30%]">
         <div className="flex gap-x-4">
           <div className="h-1/3">
-            <img
+            <LazyLoadImage effect="black-and-white" draggable="false"
               src="assets/images/tg.png"
               alt=""
               className="object-cover w-full cursor-pointer hover:scale-125 duration-700"
-              onClick={goTelegram}
+              onClick={() => goUrl('https://t.me/cryptoshowdown')}
             />
           </div>
           <div className="h-1/3">
-            <img
+            <LazyLoadImage effect="black-and-white" draggable="false"
               src="assets/images/tw.png"
               alt=""
               className="object-cover w-full cursor-pointer hover:scale-125 duration-700"
-              onClick={goTwitter}
+              onClick={() => goUrl('https://twitter.com/Crypto_Showdown')}
             />
           </div>
           <div className="h-1/3">
-            <img
+            <LazyLoadImage effect="black-and-white" draggable="false"
               src="assets/images/discord.png"
               alt=""
               className="object-cover w-full cursor-pointer hover:scale-125 duration-700"
-              onClick={goDiscord}
+              onClick={() => goUrl('https://discord.gg/9FRAyNg9Qh ')}
             />
           </div>
         </div>
         <div className="flex space-x-2 text-white cursor-pointer " onClick={handleLangClick}>
 
-          <img alt='' className="lang-image" src={`assets/images/la_${i18n.language === 'en' ? 'en' : 'ru'}.png`} />
-          <div>
-            {t('En')}
-          </div>
+          <LazyLoadImage effect="black-and-white" draggable="false" alt='' className="lang-image mx-2" src={`assets/images/la_${i18n.language === 'en' ? 'en' : 'ru'}.png`} />
+          {i18n.language === 'en' ? t('En') : t('En')}
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -128,8 +112,8 @@ export default function Header({ currentMenu, setCurrentMenu }) {
         <div
           className="flex items-center justify-center w-32 h-12 rounded-full text-2xl text-white duration-500 cursor-pointer"
           style={{ backgroundImage: "linear-gradient(180deg, #F3DF7D, #FF9B00)" }}
-          onClick={goPlay}>
-          Play
+          onClick={() => goUrl('https://play.cryptoshowdown.io/')}>
+          {t("Play")}
         </div>
       </div>
       <div className="w-1/2 h-full text-right xl:hidden">
@@ -153,7 +137,7 @@ export default function Header({ currentMenu, setCurrentMenu }) {
           </svg>
         </button>
         <div
-          className={`absolute right-0 w-64 text-center xl:hidden bg-[#8d70ff] text-3xl transition-transform duration-500 transform ${showFlag.menu ? "translate-x-0" : "translate-x-full"}`}
+          className={`fixed right-0 w-64 text-center xl:hidden bg-[#8d70ff] text-3xl transition-transform duration-500 transform ${showFlag.menu ? "translate-x-0" : "translate-x-full"}`}
         >
           {showFlag.menu === true &&
             menuList.map((menu) => {

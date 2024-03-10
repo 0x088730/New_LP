@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react"
+import { LazyLoadImage } from "react-lazy-load-image-component"
 
 
 export default function Claim({ setShowClaimWindowFlag }) {
@@ -58,36 +59,32 @@ export default function Claim({ setShowClaimWindowFlag }) {
     return (
         <div className="absolute z-30 w-full h-screen background-position-center-absolute">
             <div className="flex items-center justify-center w-full h-screen ">
-                <img src={`assets/images/gem_bg.${gifState ? 'gif' : 'jpg'}`} alt="abs" className="absolute object-cover w-full h-full " />
+                <img effect="black-and-white" draggable="false" src={`assets/images/gem_bg.${gifState ? 'gif' : 'jpg'}`} alt="abs" className="absolute object-cover w-full h-full " />
 
                 <div id="claim-box" className="absolute w-1/4 h-fit ">
-                    <img src={`assets/images/item/${boxOpenState === true ? "box-open.png" : "box-closed.png"}`} alt="abs" className=" animation animate-bounce-twice" />
+                    <img effect="black-and-white" draggable="false" src={`assets/images/item/${boxOpenState === true ? "box-open.png" : "box-closed.png"}`} alt="abs" className=" animation animate-bounce-twice" />
                 </div>
 
             </div>
             <div className="absolute top-0 flex items-center w-full h-screen overflow-hidden ">
-                {
-
-                    selectedItemFlag && <div className="w-1/6 mx-auto">
-                        <p className="absolute -translate-y-[200%] text:2xl md:text-5xl text-white font-animeace">{text}</p>
-                        <img src={`assets/images/item/item-${itemArray[12].type}-${itemArray[12].level}.png`} className="w-full px-0.5" onClick={onClickItem}></img>
-                        <div className="relative flex items-center justify-center w-full duration-500 translate-y-20 cursor-pointer hover:brightness-125" onClick={onClickItem}>
-                            <p className="absolute z-30 text-xs md:text-2xl text-white ">Okay</p>
-                            <img src="assets/images/big-button.png" className="relative top-0" ></img>
-                        </div>
-
+                {selectedItemFlag && <div className="w-1/6 mx-auto">
+                    <p className="absolute -translate-y-[200%] text:2xl md:text-5xl text-white font-animeace">{text}</p>
+                    <img effect="black-and-white" draggable="false" src={`assets/images/item/item-${itemArray[12].type}-${itemArray[12].level}.png`} className="w-full px-0.5" onClick={onClickItem} />
+                    <div className="relative flex items-center justify-center w-full duration-500 translate-y-20 cursor-pointer hover:brightness-125" onClick={onClickItem}>
+                        <p className="absolute z-30 text-xs md:text-2xl text-white ">Okay</p>
+                        <img effect="black-and-white" draggable="false" src="assets/images/big-button.png" className="relative top-0" />
                     </div>
-                }
+                </div>}
 
                 <div className="flex -translate-x-[200%] duration-[4000ms]" ref={itemBarRef}>
                     {!selectedItemFlag &&
                         itemArray.map((item, no) =>
-                            <img key={no} src={`assets/images/item/item-${item.type}-${item.level}.png`} className="w-[4%] px-0.5"></img>
+                            <img effect="black-and-white" draggable="false" key={no} src={`assets/images/item/item-${item.type}-${item.level}.png`} className="w-[4%] px-0.5" />
                         )
                     }
                 </div>
                 {starState && <div className="absolute z-20 w-full h-full">
-                    <img src="assets/images/star.png" alt="" className="mx-auto h-full object-cover" />
+                    <img effect="black-and-white" draggable="false" src="assets/images/star.png" alt="" className="mx-auto h-full object-cover" />
                 </div>}
             </div>
         </div>

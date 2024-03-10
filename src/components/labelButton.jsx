@@ -1,4 +1,5 @@
 import { useTranslation } from "react-i18next";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 export default function LabelButton(props) {
     const { t, i18n } = useTranslation();
@@ -7,7 +8,7 @@ export default function LabelButton(props) {
         <label className="text-md font-bold text-white text-left">{t(props.title)}</label>
         <div className="relative mt-1 rounded-full shadow-sm border-4 border-[#ffffff]/[0.2]">
             <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3 z-10">
-                <img src={props.img} alt="" className="w-6 inline me-1" />
+                <LazyLoadImage effect="black-and-white" draggable="false" src={props.img} alt="" className="w-6 inline me-1" />
             </div>
             <input
                 type="text"

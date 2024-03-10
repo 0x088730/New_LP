@@ -2,36 +2,82 @@ import React, { Suspense, useEffect, useState } from "react";
 import { I18nextProvider, useTranslation } from "react-i18next";
 import { counterUser } from "~/common/api";
 import i18next from "~/global/i18n";
+import Image from 'next/image';
 
 const Header = React.lazy(() => import('~/components/screens/header'));
-const IntroVideo = React.lazy(() => import('~/components/screens/intro-video'));
+const MainPage = React.lazy(() => import('~/components/screens/mainPage'));
+const HowPlay = React.lazy(() => import('~/components/screens/howPlay'));
+const WhitePaper = React.lazy(() => import('~/components/screens/whitePaper'));
+const GemDescription = React.lazy(() => import('~/components/screens/gemDescription'));
+const HowEarn = React.lazy(() => import('~/components/screens/howEarn'));
+const ContactUs = React.lazy(() => import('~/components/screens/contactUs'));
 
 export default function Home() {
   const [currentMenu, setCurrentMenu] = useState("Home");
   const { t, i18n } = useTranslation();
+  const [loading, setLoading] = useState(false);
+  const [loadedImages, setLoadedImages] = useState(0);
 
   useEffect(() => {
+    if (loadedImages === 27) {
+      setLoading(false)
+    }
+  }, [loadedImages]);
+  const handleImageLoad = () => {
+    setLoadedImages(prevCount => prevCount + 1);
+  };
+  console.log(loadedImages, loading)
+
+  useEffect(() => {
+    setLoading(true);
     i18n.changeLanguage('en');
     counterUser().then(res => {
       if (res.count === false) {
-        alert(res.message);
+        // alert(res.message);
       }
     });
   }, []);
 
   return (
     <div>
+      <Image
+        effect="black-and-white"
+        draggable="false"
+        alt=''
+        src="assets/images/backgrounds/loading.jpg"
+        width={500}
+        height={500}
+        loading="lazy"
+        className={`w-full h-full fixed ${loading === true ? "block" : "hidden"}`}
+      />
       <I18nextProvider i18n={i18next}>
-        <div className="w-full overflow-hidden Home">
+        <div className={`w-full overflow-hidden Home ${loading === true ? "hidden" : "block"}`}>
           <div className="absolute w-full h-24 z-10 flex justify-center items-center">
             <Suspense fallback={<div></div>}>
               <Header currentMenu={currentMenu} setCurrentMenu={setCurrentMenu} />
             </Suspense>
           </div>
-          <div id={t("Home")} className="w-full">
-            <Suspense fallback={<div></div>}>
-              <IntroVideo />
-            </Suspense>
+          <div id="Home" className="w-full">
+            <div className="relative font-skranji text-white">
+              <Suspense fallback={<div></div>}>
+                <MainPage handleImageLoad={handleImageLoad} />
+              </Suspense>
+              <Suspense fallback={<div></div>}>
+                <HowPlay handleImageLoad={handleImageLoad} />
+              </Suspense>
+              <Suspense fallback={<div></div>}>
+                <WhitePaper handleImageLoad={handleImageLoad} />
+              </Suspense>
+              <Suspense fallback={<div></div>}>
+                <GemDescription handleImageLoad={handleImageLoad} />
+              </Suspense>
+              <Suspense fallback={<div></div>}>
+                <HowEarn handleImageLoad={handleImageLoad} />
+              </Suspense>
+              <Suspense fallback={<div></div>}>
+                <ContactUs handleImageLoad={handleImageLoad} />
+              </Suspense>
+            </div>
           </div>
         </div>
       </I18nextProvider>

@@ -168,16 +168,6 @@ body {
   background-size: 100% 100%;
 }
 
-.usdt-btn {
-  background-image: url("../../public/assets/images/usdt-btn.png") !important;
-  background-size: 100% 100%;
-}
-
-.network-btn {
-  background-image: url("../../public/assets/images/network-btn.png") !important;
-  background-size: 100% 100%;
-}
-
 .ref-btn {
   background-image: url("../../public/assets/images/referral-btn.png") !important;
   background-size: 100% 100%;
@@ -193,18 +183,8 @@ body {
   background-size: 100% 100%;
 }
 
-.blue-btn {
-  background-image: url("../../public/assets/images/blue-btn.png") !important;
-  background-size: 100% 100%;
-}
-
 .cryptoIcon {
   background-image: url("../../public/assets/images/cryptoIcon.png") !important;
-  background-size: 100% 100%;
-}
-
-.account-bg {
-  background-image: url("../../public/assets/images/account_bg.png") !important;
   background-size: 100% 100%;
 }
 
@@ -349,15 +329,30 @@ body {
 }
 
 .text-gradient-shadow-stroke {
-  background: -webkit-linear-gradient(left, rgb(243, 196, 50), rgb(255, 155, 0));
+  background: -webkit-linear-gradient(left, rgb(255 218 102), rgb(255, 155, 0));
   background-clip: text;
   -webkit-text-fill-color: transparent;
   filter: drop-shadow(0 10px black);
   -webkit-text-stroke: 3px black;
 }
 
+@media screen and (max-width: 1024px) {
+  .text-gradient-shadow-stroke {
+    filter: drop-shadow(0 5px black);
+    -webkit-text-stroke: 0.3px black;
+  }
+}
+
+.text-gradient-shadow-stroke-middle {
+  background: -webkit-linear-gradient(left, rgb(255 218 102), rgb(255 170 38));
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 5px black);
+  -webkit-text-stroke: 0.3px black;
+}
+
 .percent-text {
-  background: -webkit-linear-gradient(left, rgb(243, 196, 50), rgb(255, 155, 0));
+  background: -webkit-linear-gradient(left, rgb(255 218 102), rgb(255, 155, 0));
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
