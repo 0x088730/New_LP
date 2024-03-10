@@ -75,19 +75,19 @@ const ContactUs = (props) => {
                     <LazyImage
                         src="assets/images/tw.png"
                         onLoad={props.handleImageLoad}
-                        className="cursor-pointer"
+                        className="cursor-pointer w-10"
                         onClick={() => goUrl("https://twitter.com/Crypto_Showdown")}
                     />
                     <LazyImage
                         src="assets/images/tg.png"
                         onLoad={props.handleImageLoad}
-                        className="cursor-pointer"
+                        className="cursor-pointer w-10"
                         onClick={() => goUrl("https://t.me/cryptoshowdown")}
                     />
                     <LazyImage
                         src="assets/images/discord.png"
                         onLoad={props.handleImageLoad}
-                        className="cursor-pointer"
+                        className="cursor-pointer w-10"
                         onClick={() => goUrl("https://discord.gg/9FRAyNg9Qh")}
                     />
                 </div>

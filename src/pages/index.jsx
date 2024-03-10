@@ -19,7 +19,7 @@ export default function Home() {
   const [loadedImages, setLoadedImages] = useState(0);
 
   useEffect(() => {
-    if (loadedImages === 27) {
+    if (loadedImages >= 10) {
       setLoading(false)
     }
   }, [loadedImages]);

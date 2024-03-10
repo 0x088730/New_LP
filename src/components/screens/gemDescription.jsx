@@ -122,7 +122,10 @@ const GemDescription = (props) => {
                                             src="assets/images/test-btn.png"
                                             onLoad={props.handleImageLoad}
                                             className="w-full h-full"
-                                            onClick={() => setShowClaimWindowFlag(true)}
+                                            onClick={() => {
+                                                setShowClaimWindowFlag(true);
+                                                document.body.style.overflowY = "hidden";
+                                            }}
                                         />
                                     </div>
                                 </div>
