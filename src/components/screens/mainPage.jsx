@@ -10,7 +10,7 @@ const MainPage = (props) => {
         <div className="relative overflow-hidden h-[750px] md:w-full xl:h-screen flex justify-center">
             <LazyImage
                 src="assets/images/backgrounds/home.jpg"
-                onLoad={() => props.handleImageLoad("assets/images/backgrounds/home.jpg")}
+                onLoad={() => props.handleImageLoad("main")}
                 className="background-position-center-absolute w-[1300px] h-[935px] sm:w-[1920px] sm:h-[1270px] 2xl:w-full 2xl:h-full"
             />
             <div className="flex flex-col items-center w-[22rem] sm:w-[24rem] md:w-[26rem] lg:w-[26rem] xl:w-[30rem] translate-y-40">
@@ -20,12 +20,12 @@ const MainPage = (props) => {
             </div>
             <LazyImage
                 src="assets/images/characters/character-1.gif"
-                onLoad={() => props.handleImageLoad("assets/images/characters/character-1.gif")}
+                onLoad={() => props.handleImageLoad("main")}
                 className="absolute left-0 bottom-[50px] w-[55%] sm:w-[40%]"
             />
             <LazyImage
                 src="assets/images/characters/character-2.gif"
-                onLoad={() => props.handleImageLoad("assets/images/characters/character-2.gif")}
+                onLoad={() => props.handleImageLoad("main")}
                 className="absolute -right-4 bottom-[50px] w-[45%] sm:w-[33%]"
             />
         </div>

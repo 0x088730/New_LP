@@ -16,39 +16,62 @@ export default function Home() {
   const [currentMenu, setCurrentMenu] = useState("Home");
   const { t, i18n } = useTranslation();
   const [loading, setLoading] = useState(false);
-  const [loadedImages1, setLoadedImages1] = useState(0);
-  const [loadedImages2, setLoadedImages2] = useState(0);
-  const [loadedImages3, setLoadedImages3] = useState(0);
-  const [loadedImages4, setLoadedImages4] = useState(0);
-  const [loadedImages5, setLoadedImages5] = useState(0);
-  const [loadedImages6, setLoadedImages6] = useState(0);
-  const [totalImages, setTotalImages] = useState(0);
+  const [loadedImages1, setLoadedImages1] = useState({ count: 0, loaded: false });
+  const [loadedImages2, setLoadedImages2] = useState({ count: 0, loaded: false });
+  const [loadedImages3, setLoadedImages3] = useState({ count: 0, loaded: false });
+  const [loadedImages4, setLoadedImages4] = useState({ count: 0, loaded: false });
+  const [loadedImages5, setLoadedImages5] = useState({ count: 0, loaded: false });
+  const [loadedImages6, setLoadedImages6] = useState({ count: 0, loaded: false });
 
-  const handleImageLoad1 = (src) => {
-    setLoadedImages1(prevCount => prevCount + 1);
-    console.log("1", loadedImages1, loading, src)
+  useEffect(() => {
+    if (loadedImages1.count >= 3) {
+      setLoadedImages1(prevState => ({ ...prevState, loaded: true }));
+    }
+  }, [loadedImages1])
+  useEffect(() => {
+    if (loadedImages2.count >= 6 && loadedImages1.loaded === true) {
+      setLoadedImages2(prevState => ({ ...prevState, loaded: true }));
+    }
+  }, [loadedImages2, loadedImages1])
+  useEffect(() => {
+    if (loadedImages3.count >= 5 && loadedImages2.loaded === true) {
+      setLoadedImages3(prevState => ({ ...prevState, loaded: true }));
+    }
+  }, [loadedImages3, loadedImages2])
+  useEffect(() => {
+    if (loadedImages4.count >= 10 && loadedImages3.loaded === true) {
+      setLoadedImages4(prevState => ({ ...prevState, loaded: true }));
+    }
+  }, [loadedImages4, loadedImages3])
+  useEffect(() => {
+    if (loadedImages5.count >= 12 && loadedImages4.loaded === true) {
+      setLoadedImages5(prevState => ({ ...prevState, loaded: true }));
+    }
+  }, [loadedImages5, loadedImages4])
+  useEffect(() => {
+    if (loadedImages6.count >= 11 && loadedImages5.loaded === true) {
+      setLoadedImages6(prevState => ({ ...prevState, loaded: true }));
+    }
+  }, [loadedImages6, loadedImages5])
+
+  const handleImageLoad1 = () => {
+    setLoadedImages1(prevState => ({ ...prevState, count: prevState.count + 1 }));
   };
-  const handleImageLoad2 = (src) => {
-    setLoadedImages2(prevCount => prevCount + 1);
-    console.log("2", loadedImages2, loading, src)
+  const handleImageLoad2 = () => {
+    setLoadedImages2(prevState => ({ ...prevState, count: prevState.count + 1 }));
   };
-  const handleImageLoad3 = (src) => {
-    setLoadedImages3(prevCount => prevCount + 1);
-    console.log("3", loadedImages3, loading, src)
+  const handleImageLoad3 = () => {
+    setLoadedImages3(prevState => ({ ...prevState, count: prevState.count + 1 }));
   };
-  const handleImageLoad4 = (src) => {
-    setLoadedImages4(prevCount => prevCount + 1);
-    console.log("4", loadedImages4, loading, src)
+  const handleImageLoad4 = () => {
+    setLoadedImages4(prevState => ({ ...prevState, count: prevState.count + 1 }));
   };
-  const handleImageLoad5 = (src) => {
-    setLoadedImages5(prevCount => prevCount + 1);
-    console.log("5", loadedImages5, loading, src)
+  const handleImageLoad5 = () => {
+    setLoadedImages5(prevState => ({ ...prevState, count: prevState.count + 1 }));
   };
-  const handleImageLoad6 = (src) => {
-    setLoadedImages6(prevCount => prevCount + 1);
-    console.log("6", loadedImages6, loading, src)
+  const handleImageLoad6 = () => {
+    setLoadedImages6(prevState => ({ ...prevState, count: prevState.count + 1 }));
   };
-  console.log(loadedImages1, loadedImages2, loadedImages3, loadedImages4, loadedImages5, loadedImages6)
 
   useEffect(() => {
     setLoading(true);
@@ -72,22 +95,22 @@ export default function Home() {
           <div id="Home" className="w-full">
             <div className="relative font-skranji text-white">
               <Suspense fallback={<div></div>}>
-                {loadedImages1 >= 3 ? <MainPage handleImageLoad={handleImageLoad1} /> : <div className="h-0"><MainPage handleImageLoad={handleImageLoad1} /></div>}
+                <MainPage handleImageLoad={handleImageLoad1} />
               </Suspense>
               <Suspense fallback={<div></div>}>
-                {loadedImages2 >= 6 ? <HowPlay handleImageLoad={handleImageLoad2} /> : <div className="h-0"><HowPlay handleImageLoad={handleImageLoad2} /></div>}
+                <HowPlay handleImageLoad={handleImageLoad2} loadedImages={loadedImages2} />
               </Suspense>
               <Suspense fallback={<div></div>}>
-                {loadedImages3 >= 5 ? <WhitePaper handleImageLoad={handleImageLoad3} /> : <div className="h-0"><WhitePaper handleImageLoad={handleImageLoad3} /></div>}
+                <WhitePaper handleImageLoad={handleImageLoad3} loadedImages={loadedImages3} />
               </Suspense>
               <Suspense fallback={<div></div>}>
-                {loadedImages4 >= 10 ? <GemDescription handleImageLoad={handleImageLoad4} /> : <div className="h-0"><GemDescription handleImageLoad={handleImageLoad4} /></div>}
+                <GemDescription handleImageLoad={handleImageLoad4} loadedImages={loadedImages4} />
               </Suspense>
               <Suspense fallback={<div></div>}>
-                {loadedImages5 >= 12 ? <HowEarn handleImageLoad={handleImageLoad5} /> : <div className="h-0"><HowEarn handleImageLoad={handleImageLoad5} /></div>}
+                <HowEarn handleImageLoad={handleImageLoad5} loadedImages={loadedImages5} />
               </Suspense>
               <Suspense fallback={<div></div>}>
-                {loadedImages6 >= 11 ? <ContactUs handleImageLoad={handleImageLoad6} /> : <div className="h-0"><ContactUs handleImageLoad={handleImageLoad6} /></div>}
+                <ContactUs handleImageLoad={handleImageLoad6} loadedImages={loadedImages6} />
               </Suspense>
             </div>
           </div>
