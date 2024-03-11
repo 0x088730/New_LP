@@ -62,7 +62,7 @@ export default function Home() {
 
   useEffect(() => {
     setPercent(Math.floor((loadedImages1.count + loadedImages2.count + loadedImages3.count + loadedImages4.count + loadedImages5.count + loadedImages6.count) * 100 / 47))
-  }, [])
+  }, [loadedImages1.count, loadedImages2.count, loadedImages3.count, loadedImages4.count, loadedImages5.count, loadedImages6.count])
 
   const handleImageLoad1 = () => {
     setLoadedImages1(prevState => ({ ...prevState, count: prevState.count + 1 }));
