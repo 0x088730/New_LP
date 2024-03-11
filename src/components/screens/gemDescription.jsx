@@ -14,29 +14,29 @@ const GemDescription = (props) => {
             <div className="relative md:hidden md:w-full xl:h-[1428px] flex flex-col justify-center items-center mt-[47rem] sm:mt-[43rem] md:mt-[-22rem]">
                 <LazyImage
                     src="assets/images/backgrounds/gemdescription.png"
-                    onLoad={props.handleImageLoad}
+                    onLoad={() => props.handleImageLoad("assets/images/backgrounds/gemdescription.png")}
                     className="background-position-center-absolute w-[1920px] h-[1428px] 2xl:w-full 2xl:h-full"
                 />
             </div>
             <div className="relative md:w-full xl:h-[1428px] flex flex-col justify-center items-center mt-0 sm:mt-4 md:mt-[12rem] lg:mt-[10rem] xl:mt-[-22rem]">
                 <LazyImage
                     src="assets/images/backgrounds/gemdescription.png"
-                    onLoad={props.handleImageLoad}
+                    onLoad={() => props.handleImageLoad("assets/images/backgrounds/gemdescription.png")}
                     className="background-position-center-absolute w-[1920px] h-[1428px] 2xl:w-full 2xl:h-full"
                 />
                 <LazyImage
                     src="assets/images/characters/character-4.png"
-                    onLoad={props.handleImageLoad}
+                    onLoad={() => props.handleImageLoad("assets/images/characters/character-4.png")}
                     className="absolute -right-8 top-[-55rem] md:top-[-32rem] lg:top-[-35rem] xl:top-[-19rem] w-[85%] sm:w-[65%] md:w-[55%] lg:w-[500px] xl:w-[600px]"
                 />
                 <LazyImage
                     src="assets/images/rock6.png"
-                    onLoad={props.handleImageLoad}
+                    onLoad={() => props.handleImageLoad("assets/images/rock6.png")}
                     className="absolute right-0 sm:-right-40 top-[-31rem] md:top-[-9rem] lg:top-[-9rem] xl:top-60 w-[90%] md:w-[73%] lg:w-[60%]"
                 />
                 <LazyImage
                     src="assets/images/rock7.png"
-                    onLoad={props.handleImageLoad}
+                    onLoad={() => props.handleImageLoad("assets/images/rock7.png")}
                     className="absolute -right-40 top-[-6rem] w-[33%] -z-10"
                 />
                 <div className="w-[1300px] flex flex-col justify-start items-center translate-y-[-27rem] md:translate-y-[-5rem] xl:translate-y-[-20rem]">
@@ -47,7 +47,7 @@ const GemDescription = (props) => {
                                 <div className="absolute -top-10 md:-top-12 w-[19%] md:w-[30%]">
                                     <LazyImage
                                         src="assets/images/gem-1.png"
-                                        onLoad={props.handleImageLoad}
+                                        onLoad={() => props.handleImageLoad("assets/images/gem-1.png")}
                                         className="w-full h-full"
                                     />
                                 </div>
@@ -70,7 +70,7 @@ const GemDescription = (props) => {
                                 <div className="absolute -top-10 md:-top-12 w-[19%] md:w-[30%]">
                                     <LazyImage
                                         src="assets/images/gem-2.png"
-                                        onLoad={props.handleImageLoad}
+                                        onLoad={() => props.handleImageLoad("assets/images/gem-2.png")}
                                         className="w-full h-full"
                                     />
                                 </div>
@@ -91,7 +91,7 @@ const GemDescription = (props) => {
                                 <div className="absolute -top-10 md:-top-12 w-[19%] md:w-[30%]">
                                     <LazyImage
                                         src="assets/images/gem-3.png"
-                                        onLoad={props.handleImageLoad}
+                                        onLoad={() => props.handleImageLoad("assets/images/gem-3.png")}
                                         className="w-full h-full"
                                     />
                                 </div>
@@ -110,7 +110,7 @@ const GemDescription = (props) => {
                                 <div className="absolute -top-16 md:-top-12 w-[25%] md:w-[30%]">
                                     <LazyImage
                                         src="assets/images/gem-4.png"
-                                        onLoad={props.handleImageLoad}
+                                        onLoad={() => props.handleImageLoad("assets/images/gem-4.png")}
                                         className="w-full h-full"
                                     />
                                 </div>
@@ -120,7 +120,7 @@ const GemDescription = (props) => {
                                     <div className="cursor-pointer mt-6 md:mt-[3.5rem] w-[55%] md:w-[65%]">
                                         <LazyImage
                                             src="assets/images/test-btn.png"
-                                            onLoad={props.handleImageLoad}
+                                            onLoad={() => props.handleImageLoad("assets/images/test-btn.png")}
                                             className="w-full h-full"
                                             onClick={() => {
                                                 setShowClaimWindowFlag(true);

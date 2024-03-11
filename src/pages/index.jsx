@@ -17,16 +17,37 @@ export default function Home() {
   const { t, i18n } = useTranslation();
   const [loading, setLoading] = useState(false);
   const [loadedImages, setLoadedImages] = useState(0);
+  const [totalImages, setTotalImages] = useState(0);
 
   useEffect(() => {
     if (loadedImages >= 10) {
       setLoading(false)
     }
   }, [loadedImages]);
-  const handleImageLoad = () => {
+  const handleImageLoad1 = (src) => {
     setLoadedImages(prevCount => prevCount + 1);
+    console.log(loadedImages, loading, src)
   };
-  console.log(loadedImages, loading)
+  const handleImageLoad2 = (src) => {
+    setLoadedImages(prevCount => prevCount + 1);
+    console.log(loadedImages, loading, src)
+  };
+  const handleImageLoad3 = (src) => {
+    setLoadedImages(prevCount => prevCount + 1);
+    console.log(loadedImages, loading, src)
+  };
+  const handleImageLoad4 = (src) => {
+    setLoadedImages(prevCount => prevCount + 1);
+    console.log(loadedImages, loading, src)
+  };
+  const handleImageLoad5 = (src) => {
+    setLoadedImages(prevCount => prevCount + 1);
+    console.log(loadedImages, loading, src)
+  };
+  const handleImageLoad6 = (src) => {
+    setLoadedImages(prevCount => prevCount + 1);
+    console.log(loadedImages, loading, src)
+  };
 
   useEffect(() => {
     setLoading(true);
@@ -53,29 +74,29 @@ export default function Home() {
       <I18nextProvider i18n={i18next}>
         <div className={`w-full overflow-hidden Home ${loading === true ? "hidden" : "block"}`}>
           <div className="absolute w-full h-24 z-10 flex justify-center items-center">
-            <Suspense fallback={<div></div>}>
+            <Suspense fallback={<div>...</div>}>
               <Header currentMenu={currentMenu} setCurrentMenu={setCurrentMenu} />
             </Suspense>
           </div>
           <div id="Home" className="w-full">
             <div className="relative font-skranji text-white">
               <Suspense fallback={<div></div>}>
-                <MainPage handleImageLoad={handleImageLoad} />
+                <MainPage handleImageLoad={handleImageLoad1} />
               </Suspense>
               <Suspense fallback={<div></div>}>
-                <HowPlay handleImageLoad={handleImageLoad} />
+                <HowPlay handleImageLoad={handleImageLoad2} />
               </Suspense>
               <Suspense fallback={<div></div>}>
-                <WhitePaper handleImageLoad={handleImageLoad} />
+                <WhitePaper handleImageLoad={handleImageLoad3} />
               </Suspense>
               <Suspense fallback={<div></div>}>
-                <GemDescription handleImageLoad={handleImageLoad} />
+                <GemDescription handleImageLoad={handleImageLoad4} />
               </Suspense>
               <Suspense fallback={<div></div>}>
-                <HowEarn handleImageLoad={handleImageLoad} />
+                <HowEarn handleImageLoad={handleImageLoad5} />
               </Suspense>
               <Suspense fallback={<div></div>}>
-                <ContactUs handleImageLoad={handleImageLoad} />
+                <ContactUs handleImageLoad={handleImageLoad6} />
               </Suspense>
             </div>
           </div>
