@@ -72,22 +72,22 @@ export default function Home() {
           <div id="Home" className="w-full">
             <div className="relative font-skranji text-white">
               <Suspense fallback={<div></div>}>
-                <MainPage handleImageLoad={handleImageLoad1} />
+                {loadedImages1 >= 3 ? <MainPage handleImageLoad={handleImageLoad1} /> : <div className="h-0"><MainPage handleImageLoad={handleImageLoad1} /></div>}
               </Suspense>
               <Suspense fallback={<div></div>}>
-                {loadedImages1 >= 3 ? <HowPlay handleImageLoad={handleImageLoad2} /> : <></>}
+                {loadedImages2 >= 6 ? <HowPlay handleImageLoad={handleImageLoad2} /> : <div className="h-0"><HowPlay handleImageLoad={handleImageLoad2} /></div>}
               </Suspense>
               <Suspense fallback={<div></div>}>
-                {loadedImages2 >= 6 ? <WhitePaper handleImageLoad={handleImageLoad3} /> : <></>}
+                {loadedImages3 >= 5 ? <WhitePaper handleImageLoad={handleImageLoad3} /> : <div className="h-0"><WhitePaper handleImageLoad={handleImageLoad3} /></div>}
               </Suspense>
               <Suspense fallback={<div></div>}>
-                {loadedImages3 >= 5 ? <GemDescription handleImageLoad={handleImageLoad4} /> : <></>}
+                {loadedImages4 >= 10 ? <GemDescription handleImageLoad={handleImageLoad4} /> : <div className="h-0"><GemDescription handleImageLoad={handleImageLoad4} /></div>}
               </Suspense>
               <Suspense fallback={<div></div>}>
-                {loadedImages4 >= 10 ? <HowEarn handleImageLoad={handleImageLoad5} /> : <></>}
+                {loadedImages5 >= 12 ? <HowEarn handleImageLoad={handleImageLoad5} /> : <div className="h-0"><HowEarn handleImageLoad={handleImageLoad5} /></div>}
               </Suspense>
               <Suspense fallback={<div></div>}>
-                {loadedImages5 >= 12 ? <ContactUs handleImageLoad={handleImageLoad6} /> : <></>}
+                {loadedImages6 >= 11 ? <ContactUs handleImageLoad={handleImageLoad6} /> : <div className="h-0"><ContactUs handleImageLoad={handleImageLoad6} /></div>}
               </Suspense>
             </div>
           </div>
