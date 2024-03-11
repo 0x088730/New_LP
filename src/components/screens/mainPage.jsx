@@ -11,7 +11,7 @@ const MainPage = (props) => {
             <LazyImage
                 src="assets/images/backgrounds/home.jpg"
                 onLoad={() => props.handleImageLoad("main")}
-                className="background-position-center-absolute w-[1300px] h-[935px] sm:w-[1920px] sm:h-[1270px] 2xl:w-full 2xl:h-full"
+                className={`background-position-center-absolute w-[1300px] sm:w-[1920px] 2xl:w-full ${props.loadedImages.loaded === true ? "h-[935px] sm:h-[1270px] 2xl:h-full" : "h-0"}`}
             />
             <div className="flex flex-col items-center w-[22rem] sm:w-[24rem] md:w-[26rem] lg:w-[26rem] xl:w-[30rem] translate-y-40">
                 <div className="font-oi text-[#FF9B00] text-[40px] sm:text-[50px] md:text-[60px] lg:text-[70px] xl:text-[80px] 2xl:text-[90px] text-gradient-shadow-stroke text-center">{t("Play Soon")}</div>
