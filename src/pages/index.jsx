@@ -24,11 +24,6 @@ export default function Home() {
   const [loadedImages6, setLoadedImages6] = useState(0);
   const [totalImages, setTotalImages] = useState(0);
 
-  // useEffect(() => {
-  //   if (loadedImages >= 10) {
-  //     // setLoading(false)
-  //   }
-  // }, [loadedImages]);
   const handleImageLoad1 = (src) => {
     setLoadedImages1(prevCount => prevCount + 1);
     console.log("1", loadedImages1, loading, src)
@@ -67,16 +62,6 @@ export default function Home() {
 
   return (
     <div>
-      {/* <Image
-        effect="black-and-white"
-        draggable="false"
-        alt=''
-        src="assets/images/backgrounds/loading.jpg"
-        width={500}
-        height={500}
-        loading="lazy"
-        className={`w-full h-full fixed ${loading === true ? "block" : "hidden"}`}
-      /> */}
       <I18nextProvider i18n={i18next}>
         <div className={`w-full overflow-hidden Home`}>
           <div className="absolute w-full h-24 z-10 flex justify-center items-center">
@@ -90,19 +75,19 @@ export default function Home() {
                 <MainPage handleImageLoad={handleImageLoad1} />
               </Suspense>
               <Suspense fallback={<div></div>}>
-                <HowPlay handleImageLoad={handleImageLoad2} />
+                {loadedImages1 >= 3 ? <HowPlay handleImageLoad={handleImageLoad2} /> : <></>}
               </Suspense>
               <Suspense fallback={<div></div>}>
-                <WhitePaper handleImageLoad={handleImageLoad3} />
+                {loadedImages2 >= 6 ? <WhitePaper handleImageLoad={handleImageLoad3} /> : <></>}
               </Suspense>
               <Suspense fallback={<div></div>}>
-                <GemDescription handleImageLoad={handleImageLoad4} />
+                {loadedImages3 >= 5 ? <GemDescription handleImageLoad={handleImageLoad4} /> : <></>}
               </Suspense>
               <Suspense fallback={<div></div>}>
-                <HowEarn handleImageLoad={handleImageLoad5} />
+                {loadedImages4 >= 10 ? <HowEarn handleImageLoad={handleImageLoad5} /> : <></>}
               </Suspense>
               <Suspense fallback={<div></div>}>
-                <ContactUs handleImageLoad={handleImageLoad6} />
+                {loadedImages5 >= 12 ? <ContactUs handleImageLoad={handleImageLoad6} /> : <></>}
               </Suspense>
             </div>
           </div>

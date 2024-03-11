@@ -1,6 +1,7 @@
 import { useTranslation } from "react-i18next";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import LazyImage from "../lazyImage";
+import { useEffect } from "react";
 
 const HowPlay = (props) => {
     const { t, i18n } = useTranslation();
@@ -8,8 +9,8 @@ const HowPlay = (props) => {
     return (
         <div className="relative flex flex-col items-center justify-start w-full h-[1519px] mt-[-18rem] sm:mt-[-15rem]">
             <LazyImage
-                src="assets/images/backgrounds/howPlay.svg"
-                onLoad={() => props.handleImageLoad("assets/images/backgrounds/howPlay.svg")}
+                src="assets/images/backgrounds/howPlay.png"
+                onLoad={() => props.handleImageLoad("assets/images/backgrounds/howPlay.png")}
                 className="background-position-center-absolute translate-x-[6%] sm:translate-x-0 w-[1920px] h-[1519px] 2xl:w-full 2xl:h-full"
             />
             <div className="font-oi translate-y-[25rem] text-[#FF9B00] text-[24px] sm:text-[30px] md:text-[40px] lg:text-[50px] xl:text-[60px] text-gradient-shadow-stroke"><span style={{ WebkitTextFillColor: "white" }}>{t("How to")}</span>{t(" play")}</div>
@@ -17,8 +18,8 @@ const HowPlay = (props) => {
                 <div className="relative w-[350px] sm:w-[330px] xl:w-[420px] h-[200px] sm:h-[230px] xl:h-[300px] flex flex-col justify-start items-center border-4 border-[#ffffff]/[0.2] rounded-xl backdrop-blur-md">
                     <div className="absolute top-[-3.5rem] sm:top-[-3.5rem] xl:top-[-5rem] w-[55%] sm:w-[66%] flex-center">
                         <LazyImage
-                            src="assets/images/playImg1.svg"
-                            onLoad={() => props.handleImageLoad("assets/images/playImg1.svg")}
+                            src="assets/images/playImg1.png"
+                            onLoad={() => props.handleImageLoad("assets/images/playImg1.png")}
                             className="w-full h-full"
                         />
                     </div>
@@ -30,8 +31,8 @@ const HowPlay = (props) => {
                 <div className="relative w-[350px] sm:w-[330px] xl:w-[420px] h-[200px] sm:h-[230px] xl:h-[300px] flex flex-col justify-start items-center border-4 border-[#ffffff]/[0.2] rounded-xl backdrop-blur-md">
                     <div className="absolute top-[-3.5rem] sm:top-[-3.5rem] xl:top-[-5rem] w-[55%] sm:w-[66%] flex-center">
                         <LazyImage
-                            src="assets/images/playImg2.svg"
-                            onLoad={() => props.handleImageLoad("assets/images/playImg2.svg")}
+                            src="assets/images/playImg2.png"
+                            onLoad={() => props.handleImageLoad("assets/images/playImg2.png")}
                             className="w-full h-full"
                         />
                     </div>
@@ -43,8 +44,8 @@ const HowPlay = (props) => {
                 <div className="relative w-[350px] sm:w-[330px] xl:w-[420px] h-[200px] sm:h-[230px] xl:h-[300px] flex flex-col justify-start items-center border-4 border-[#ffffff]/[0.2] rounded-xl backdrop-blur-md">
                     <div className="absolute top-[-3.5rem] sm:top-[-3.5rem] xl:top-[-5rem] w-[55%] sm:w-[66%] flex-center">
                         <LazyImage
-                            src="assets/images/playImg3.svg"
-                            onLoad={() => props.handleImageLoad("assets/images/playImg3.svg")}
+                            src="assets/images/playImg3.png"
+                            onLoad={() => props.handleImageLoad("assets/images/playImg3.png")}
                             className="w-full h-full"
                         />
                     </div>
@@ -55,13 +56,13 @@ const HowPlay = (props) => {
                 </div>
             </div>
             <LazyImage
-                src="assets/images/characters/character-5.svg"
-                onLoad={() => props.handleImageLoad("assets/images/characters/character-5.svg")}
+                src="assets/images/characters/character-5.png"
+                onLoad={() => props.handleImageLoad("assets/images/characters/character-5.png")}
                 className="absolute left-16 sm:-left-16 md:left-[-9rem] xl:-left-64 -bottom-8 sm:bottom-0 xl:-bottom-24 w-full sm:w-[60%]"
             />
             <LazyImage
-                src="assets/images/rock3.svg"
-                onLoad={() => props.handleImageLoad("assets/images/rock3.svg")}
+                src="assets/images/rock3.png"
+                onLoad={() => props.handleImageLoad("assets/images/rock3.png")}
                 className="absolute right-0 -bottom-24 sm:-bottom-20 xl:-bottom-40 w-[90%] sm:w-1/2"
             />
         </div>
