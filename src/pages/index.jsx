@@ -16,38 +16,44 @@ export default function Home() {
   const [currentMenu, setCurrentMenu] = useState("Home");
   const { t, i18n } = useTranslation();
   const [loading, setLoading] = useState(false);
-  const [loadedImages, setLoadedImages] = useState(0);
+  const [loadedImages1, setLoadedImages1] = useState(0);
+  const [loadedImages2, setLoadedImages2] = useState(0);
+  const [loadedImages3, setLoadedImages3] = useState(0);
+  const [loadedImages4, setLoadedImages4] = useState(0);
+  const [loadedImages5, setLoadedImages5] = useState(0);
+  const [loadedImages6, setLoadedImages6] = useState(0);
   const [totalImages, setTotalImages] = useState(0);
 
-  useEffect(() => {
-    if (loadedImages >= 10) {
-      setLoading(false)
-    }
-  }, [loadedImages]);
+  // useEffect(() => {
+  //   if (loadedImages >= 10) {
+  //     // setLoading(false)
+  //   }
+  // }, [loadedImages]);
   const handleImageLoad1 = (src) => {
-    setLoadedImages(prevCount => prevCount + 1);
-    console.log(loadedImages, loading, src)
+    setLoadedImages1(prevCount => prevCount + 1);
+    console.log("1", loadedImages1, loading, src)
   };
   const handleImageLoad2 = (src) => {
-    setLoadedImages(prevCount => prevCount + 1);
-    console.log(loadedImages, loading, src)
+    setLoadedImages2(prevCount => prevCount + 1);
+    console.log("2", loadedImages2, loading, src)
   };
   const handleImageLoad3 = (src) => {
-    setLoadedImages(prevCount => prevCount + 1);
-    console.log(loadedImages, loading, src)
+    setLoadedImages3(prevCount => prevCount + 1);
+    console.log("3", loadedImages3, loading, src)
   };
   const handleImageLoad4 = (src) => {
-    setLoadedImages(prevCount => prevCount + 1);
-    console.log(loadedImages, loading, src)
+    setLoadedImages4(prevCount => prevCount + 1);
+    console.log("4", loadedImages4, loading, src)
   };
   const handleImageLoad5 = (src) => {
-    setLoadedImages(prevCount => prevCount + 1);
-    console.log(loadedImages, loading, src)
+    setLoadedImages5(prevCount => prevCount + 1);
+    console.log("5", loadedImages5, loading, src)
   };
   const handleImageLoad6 = (src) => {
-    setLoadedImages(prevCount => prevCount + 1);
-    console.log(loadedImages, loading, src)
+    setLoadedImages6(prevCount => prevCount + 1);
+    console.log("6", loadedImages6, loading, src)
   };
+  console.log(loadedImages1, loadedImages2, loadedImages3, loadedImages4, loadedImages5, loadedImages6)
 
   useEffect(() => {
     setLoading(true);
@@ -61,7 +67,7 @@ export default function Home() {
 
   return (
     <div>
-      <Image
+      {/* <Image
         effect="black-and-white"
         draggable="false"
         alt=''
@@ -70,9 +76,9 @@ export default function Home() {
         height={500}
         loading="lazy"
         className={`w-full h-full fixed ${loading === true ? "block" : "hidden"}`}
-      />
+      /> */}
       <I18nextProvider i18n={i18next}>
-        <div className={`w-full overflow-hidden Home ${loading === true ? "hidden" : "block"}`}>
+        <div className={`w-full overflow-hidden Home`}>
           <div className="absolute w-full h-24 z-10 flex justify-center items-center">
             <Suspense fallback={<div>...</div>}>
               <Header currentMenu={currentMenu} setCurrentMenu={setCurrentMenu} />
