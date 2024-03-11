@@ -22,6 +22,7 @@ export default function Home() {
   const [loadedImages4, setLoadedImages4] = useState({ count: 0, loaded: false });
   const [loadedImages5, setLoadedImages5] = useState({ count: 0, loaded: false });
   const [loadedImages6, setLoadedImages6] = useState({ count: 0, loaded: false });
+  const [percent, setPercent] = useState(0);
 
   useEffect(() => {
     if (loadedImages1.count >= 3 && !loadedImages1.loaded) {
@@ -59,6 +60,10 @@ export default function Home() {
     }
   }, [loadedImages6.count, loadedImages6.loaded, loadedImages5.loaded]);
 
+  useEffect(() => {
+    setPercent(Math.floor((loadedImages1.count + loadedImages2.count + loadedImages3.count + loadedImages4.count + loadedImages5.count + loadedImages6.count) * 100 / 47))
+  }, [])
+
   const handleImageLoad1 = () => {
     setLoadedImages1(prevState => ({ ...prevState, count: prevState.count + 1 }));
   };
@@ -93,9 +98,10 @@ export default function Home() {
         <div className={`w-full overflow-hidden Home`}>
           <LazyImage
             src="assets/images/backgrounds/loading.jpg"
-            className={`background-position-center ${loadedImages1.loaded === false ? "h-full" : "h-0"} w-full z-10`}
+            className={`background-position-center ${loadedImages1.loaded === false ? "h-full" : "h-0"} w-full z-20`}
           />
-          <div className="absolute w-full h-24 z-10 flex justify-center items-center">
+          <div className="z-30 absolute">{percent}</div>
+          <div className={`absolute w-full ${loadedImages1.loaded === true ? "h-24" : "h-0"} z-10 flex justify-center items-center`}>
             <Suspense fallback={<div>...</div>}>
               <Header currentMenu={currentMenu} setCurrentMenu={setCurrentMenu} />
             </Suspense>
