@@ -18,6 +18,6 @@ const nextConfig = {
 const isProd = process.env.NODE_ENV === 'production'
 
 module.exports = {
-  nextConfig,
+  ...nextConfig,
   assetPrefix: isProd ? 'https://cdn.mydomain.com' : undefined,
 }
