@@ -27,7 +27,7 @@ const HowEarn = (props) => {
     };
 
     return (
-        <div className={`relative md:w-full ${props.loaded === true ? "xl:h-[1710px]" : "h-0"} flex justify-center mt-[64rem] sm:mt-[38rem] md:mt-[47rem] lg:mt-28 xl:mt-[-27rem]`}>
+        <div className={`relative md:w-full ${props.loaded === true ? "xl:h-[1710px] mt-[64rem] sm:mt-[38rem] md:mt-[47rem] lg:mt-28 xl:mt-[-27rem]" : "h-0 mt-0"} flex justify-center`}>
             <LazyImage
                 src="assets/images/backgrounds/howEarn.png"
                 onLoad={handleImageLoad}

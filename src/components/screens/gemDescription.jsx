@@ -22,15 +22,15 @@ const GemDescription = (props) => {
     };
 
     return (
-        <div className={`${props.loaded === true ? "" : "h-0"}`}>
-            <div className="relative md:hidden md:w-full xl:h-[1428px] flex flex-col justify-center items-center mt-[47rem] sm:mt-[43rem] md:mt-[-22rem]">
+        <>
+            <div className={`relative md:hidden md:w-full ${props.loaded === true ? "xl:h-[1428px] mt-[47rem] sm:mt-[43rem] md:mt-[-22rem]" : "h-0 mt-0"} flex flex-col justify-center items-center`}>
                 <LazyImage
                     src="assets/images/backgrounds/gemdescription.png"
                     onLoad={handleImageLoad}
                     className="background-position-center-absolute w-[1920px] h-[1428px] 2xl:w-full 2xl:h-full"
                 />
             </div>
-            <div className="relative md:w-full xl:h-[1428px] flex flex-col justify-center items-center mt-0 sm:mt-4 md:mt-[12rem] lg:mt-[10rem] xl:mt-[-22rem]">
+            <div className={`relative md:w-full ${props.loaded === true ? "xl:h-[1428px] mt-0 sm:mt-4 md:mt-[12rem] lg:mt-[10rem] xl:mt-[-22rem]" : "h-0 mt-0"} flex flex-col justify-center items-center`}>
                 <LazyImage
                     src="assets/images/backgrounds/gemdescription.png"
                     onLoad={handleImageLoad}
@@ -137,7 +137,7 @@ const GemDescription = (props) => {
                 </div>
                 {showClaimWindowFlag && <Claim setShowClaimWindowFlag={setShowClaimWindowFlag} />}
             </div>
-        </div>
+        </>
     );
 }
 

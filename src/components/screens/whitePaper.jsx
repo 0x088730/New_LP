@@ -21,7 +21,7 @@ const WhitePaper = (props) => {
     };
 
     return (
-        <div id={t("WhitePaper")} className={`relative md:w-full ${props.loaded === true ? "xl:h-[1202px]" : "h-0"} flex justify-center overflow-visible mt-[22rem] sm:mt-[17rem] md:mt-[16rem] lg:mt-[16rem] xl:mt-0`}>
+        <div id={t("WhitePaper")} className={`relative md:w-full ${props.loaded === true ? "xl:h-[1202px] mt-[22rem] sm:mt-[17rem] md:mt-[16rem] lg:mt-[16rem] xl:mt-0" : "h-0 mt-0"} flex justify-center overflow-visible`}>
             <LazyImage
                 src="assets/images/backgrounds/whitepaper.jpg"
                 onLoad={handleImageLoad}
