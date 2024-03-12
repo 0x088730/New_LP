@@ -1,4 +1,6 @@
 import { Html, Head, Main, NextScript } from 'next/document'
+import 'tailwindcss/tailwind.css';
+import "~/styles/global.css"
 
 export default function Document() {
   return (
