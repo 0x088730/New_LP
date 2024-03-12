@@ -38,8 +38,11 @@ export default function Home() {
   }, [loaded1, loaded2, loaded3, loaded4, loaded5, loaded6]);
 
   useEffect(() => {
-    setPercent(Math.floor(loadedImages1 * 100 / 3));
-  }, [loadedImages1]);
+    setPercent(Math.floor(
+      (loadedImages1 + loadedImages2 + loadedImages3 + loadedImages4 + loadedImages5 + loadedImages6)
+      * 100 / 35
+    ));
+  }, [loadedImages1, loadedImages2, loadedImages3, loadedImages4, loadedImages5, loadedImages6]);
 
   useEffect(() => {
     document.body.style.overflowY = "hidden"
