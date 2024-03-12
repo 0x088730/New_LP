@@ -4,6 +4,7 @@ import { counterUser } from "~/common/api";
 import i18next from "~/global/i18n";
 import Image from 'next/image';
 import LazyImage from "~/components/lazyImage";
+import 'tailwindcss/tailwind.css';
 
 const Header = React.lazy(() => import('~/components/screens/header'));
 const MainPage = React.lazy(() => import('~/components/screens/mainPage'));

@@ -8,6 +8,7 @@ import { goUrl } from "~/components/utils";
 import i18next from "~/global/i18n";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import LazyImage from "~/components/lazyImage";
+import 'tailwindcss/tailwind.css';
 
 export default function ReferralInfo() {
   const router = useRouter()
