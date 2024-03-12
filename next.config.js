@@ -15,9 +15,4 @@ const nextConfig = {
   }
 }
 
-const isProd = process.env.NODE_ENV === 'production'
-
-module.exports = {
-  ...nextConfig,
-  assetPrefix: isProd ? 'https://cdn.new-lp-nu.vercel.app' : "",
-}
+module.exports = nextConfig

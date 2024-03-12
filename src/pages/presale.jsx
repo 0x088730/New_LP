@@ -13,7 +13,6 @@ import { goUrl } from "~/components/utils";
 import i18next from "~/global/i18n";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import LazyImage from "~/components/lazyImage";
-import 'tailwindcss/tailwind.css';
 
 export default function PresaleAdmin() {
   const { t, i18n } = useTranslation();
@@ -167,7 +166,7 @@ export default function PresaleAdmin() {
   }, [])
 
   useEffect(() => {
-    if (loadedImages >= 3) {
+    if (loadedImages >= 7) {
       const timeout = setTimeout(() => {
         setLoading(false);
       }, 1000);
@@ -184,11 +183,11 @@ export default function PresaleAdmin() {
       <div className="relative flex justify-center font-skranji">
         <div className={`${loading === false ? "h-0 z-0" : "h-full z-30"} w-full flex justify-center`}>
           <LazyImage
-            src="/assets/images/backgrounds/loading.jpg"
+            src="assets/images/backgrounds/loading.jpg"
             className={`background-position-center w-full min-w-[1600px] h-full`}
           />
           <LazyImage
-            src="/assets/images/spinner.svg"
+            src="assets/images/spinner.svg"
             className="fixed bottom-16 w-40"
           />
           <div className="fixed bottom-[6.5rem] font-skranji text-white text-[3rem] font-bold">{Math.floor(loadedImages >= 7 ? 100 : loadedImages * 100 / 7)}%</div>
@@ -196,7 +195,7 @@ export default function PresaleAdmin() {
         <Header currentMenu="Presale Admin" />
         <div className={`fixed overflow-y-auto overflow-x-hidden flex-col ${loading === true ? "h-0" : "h-full"} w-full space-y-2 flex items-center justify-center`}>
           <LazyImage
-            src="/assets/images/backgrounds/presale-bg.jpg"
+            src="assets/images/backgrounds/presale-bg.jpg"
             onLoad={handleImageLoad}
             className="background-position-center w-[1920px] h-full 2xl:w-full 2xl:h-full"
           />
@@ -211,7 +210,7 @@ export default function PresaleAdmin() {
                 {btnType === "Connect" ?
                   <>
                     <LazyImage
-                      src="/assets/images/metamask.png"
+                      src="assets/images/metamask.png"
                       onLoad={handleImageLoad}
                       className="w-6 inline me-1"
                     />{t("CONNECT METAMASK")}
@@ -219,7 +218,7 @@ export default function PresaleAdmin() {
                   :
                   <>
                     <LazyImage
-                      src="/assets/images/metamask.png"
+                      src="assets/images/metamask.png"
                       onLoad={handleImageLoad}
                       className="w-6 inline me-1"
                     />{address}
@@ -302,25 +301,25 @@ export default function PresaleAdmin() {
               <div>{t("©SOURCECODE")}<br />{t("ALL RIGHTS RESERVERD")}</div>
               <div className="flex items-center my-8 sm:my-0">
                 <LazyImage
-                  src="/assets/images/sms.png"
+                  src="assets/images/sms.png"
                   onLoad={handleImageLoad}
                   className="me-2 w-6" />ADM@SOURCE-CODE.WORK
               </div>
               <div className="flex gap-x-4 items-center">
                 <LazyImage
-                  src="/assets/images/tw.png"
+                  src="assets/images/tw.png"
                   onLoad={handleImageLoad}
                   className="cursor-pointer w-10"
                   onClick={() => goUrl("https://twitter.com/Crypto_Showdown")}
                 />
                 <LazyImage
-                  src="/assets/images/tg.png"
+                  src="assets/images/tg.png"
                   onLoad={handleImageLoad}
                   className="cursor-pointer w-10"
                   onClick={() => goUrl("https://t.me/cryptoshowdown")}
                 />
                 <LazyImage
-                  src="/assets/images/discord.png"
+                  src="assets/images/discord.png"
                   onLoad={handleImageLoad}
                   className="cursor-pointer w-10"
                   onClick={() => goUrl("https://discord.gg/9FRAyNg9Qh")}

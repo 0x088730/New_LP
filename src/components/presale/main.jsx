@@ -104,7 +104,7 @@ export default function MainPresaleAdmin({
                                 <div className="font-bold">{t("TOTAL SOLD:")}</div>
                                 <div className="font-bold text-[#51ff3a] flex tracking-[2px]">
                                     <LazyImage
-                                        src="/assets/images/usdt.png"
+                                        src="assets/images/usdt.png"
                                         onLoad={handleImageLoad}
                                         className="w-6 h-6 me-4"
                                     />{FormatNumber(globalValue.totalAmount)}
@@ -115,7 +115,7 @@ export default function MainPresaleAdmin({
                             <div className="flex justify-between">
                                 <div className="w-40 h-10 flex items-center justify-start">
                                     <LazyImage
-                                        src="/assets/images/usdt.png"
+                                        src="assets/images/usdt.png"
                                         onLoad={handleImageLoad}
                                         className="w-6 me-2"
                                     />USDT

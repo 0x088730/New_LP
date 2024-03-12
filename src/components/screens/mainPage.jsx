@@ -23,7 +23,7 @@ const MainPage = (props) => {
     return (
         <div className={`relative overflow-hidden md:w-full ${props.loaded === true ? "h-[750px] xl:h-screen" : "h-0"} flex justify-center`}>
             <LazyImage
-                src="/assets/images/backgrounds/home.jpg"
+                src="assets/images/backgrounds/home.jpg"
                 onLoad={handleImageLoad}
                 className={`background-position-center-absolute w-[1300px] sm:w-[1920px] 2xl:w-full h-[935px] sm:h-[1270px] 2xl:h-full`}
             />
@@ -33,12 +33,12 @@ const MainPage = (props) => {
                 <ClickButton title={t("GET START")} className="w-60 sm:w-52 lg:w-[60%] h-20" onClick={() => goUrl("https://play.cryptoshowdown.io/")} />
             </div>
             <LazyImage
-                src="/assets/images/characters/character-1.gif"
+                src="assets/images/characters/character-1.gif"
                 onLoad={handleImageLoad}
                 className="absolute left-0 bottom-[50px] w-[55%] sm:w-[40%]"
             />
             <LazyImage
-                src="/assets/images/characters/character-2.gif"
+                src="assets/images/characters/character-2.gif"
                 onLoad={handleImageLoad}
                 className="absolute -right-4 bottom-[50px] w-[45%] sm:w-[33%]"
             />
