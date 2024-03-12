@@ -14,12 +14,12 @@ export default function Chart(props) {
                 </div>
                 <div className="flex flex-row-reverse sm:flex-row">
                     <LazyImage
-                        src={`assets/images/chart1.png`}
+                        src={`/assets/images/chart1.png`}
                         onLoad={() => props.handleImageLoad()}
                         className="hidden sm:block w-[35rem] md:w-[45rem] lg:w-[50rem]"
                     />
                     <LazyImage
-                        src={`assets/images/chart2.png`}
+                        src={`/assets/images/chart2.png`}
                         onLoad={() => props.handleImageLoad()}
                         className="block sm:hidden w-[20rem]"
                     />

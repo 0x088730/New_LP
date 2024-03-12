@@ -22,7 +22,7 @@ const ContactUs = (props) => {
     return (
         <div className={`relative md:w-full ${props.loaded === true ? "h-[1100px] sm:h-[1100px] md:h-[1300px] xl:h-[1300px]" : "h-0"} flex flex-col justify-start items-center mt-[-9rem] sm:mt-[-21rem] md:mt-[-28rem] lg:mt-[-32rem] xl:mt-[-50rem] 2xl:mt-[-48rem]`}>
             <LazyImage
-                src="assets/images/backgrounds/contact.png"
+                src="/assets/images/backgrounds/contact.png"
                 onLoad={(handleImageLoad)}
                 className="background-position-center-absolute w-[1920px] h-[1300px] md:h-[1300px] lg:h-[1300px] 2xl:w-full 2xl:h-full"
             />
@@ -32,7 +32,7 @@ const ContactUs = (props) => {
                     <div className="relative w-[300px] xl:w-[420px] h-[170px] xl:h-[225px] flex flex-col justify-center items-center">
                         <div className="absolute w-full h-full -z-10">
                             <LazyImage
-                                src="assets/images/member/member1.png"
+                                src="/assets/images/member/member1.png"
                                 onLoad={(handleImageLoad)}
                                 className="w-full h-full -z-10"
                             />
@@ -43,7 +43,7 @@ const ContactUs = (props) => {
                     <div className="relative w-[300px] xl:w-[420px] h-[170px] xl:h-[225px] flex flex-col justify-center items-center">
                         <div className="absolute w-full h-full -z-10">
                             <LazyImage
-                                src="assets/images/member/member2.png"
+                                src="/assets/images/member/member2.png"
                                 onLoad={(handleImageLoad)}
                                 className="w-full h-full -z-10"
                             />
@@ -54,7 +54,7 @@ const ContactUs = (props) => {
                     <div className="relative w-[300px] xl:w-[420px] h-[170px] xl:h-[225px] flex flex-col justify-center items-center">
                         <div className="absolute w-full h-full -z-10">
                             <LazyImage
-                                src="assets/images/member/member3.png"
+                                src="/assets/images/member/member3.png"
                                 onLoad={(handleImageLoad)}
                                 className="w-full h-full -z-10"
                             />
@@ -66,7 +66,7 @@ const ContactUs = (props) => {
                 <ClickButton title={t("PLAY")} className=" hidden xl:flex w-[16rem] md:w-[20rem] h-20 sm:h-24 md:h-24 md:text-[30px] lg:text-[35px] xl:text-[40px] z-10 translate-y-0 sm:translate-y-12 lg:translate-y-0 xl:translate-y-24" onClick={() => goUrl("https://play.cryptoshowdown.io/")} />
             </div>
             <LazyImage
-                src="assets/images/characters/character-6.png"
+                src="/assets/images/characters/character-6.png"
                 onLoad={handleImageLoad}
                 className="absolute -right-12 lg:-right-20 bottom-0 w-[62%] lg:w-[400px] 2xl:w-[600px] h-[64%] sm:h-[70%] lg:h-[660px] 2xl:h-[1000px] z-20"
             />
@@ -74,25 +74,25 @@ const ContactUs = (props) => {
                 <div>©SOURCECODE<br />ALL RIGHTS RESERVERD</div>
                 <div className="flex items-center my-8 sm:my-0">
                     <LazyImage
-                        src="assets/images/sms.png"
+                        src="/assets/images/sms.png"
                         onLoad={handleImageLoad}
                         className="me-2 w-6" />ADM@SOURCE-CODE.WORK
                 </div>
                 <div className="flex gap-x-4 items-center">
                     <LazyImage
-                        src="assets/images/tw.png"
+                        src="/assets/images/tw.png"
                         onLoad={handleImageLoad}
                         className="cursor-pointer w-10"
                         onClick={() => goUrl("https://twitter.com/Crypto_Showdown")}
                     />
                     <LazyImage
-                        src="assets/images/tg.png"
+                        src="/assets/images/tg.png"
                         onLoad={handleImageLoad}
                         className="cursor-pointer w-10"
                         onClick={() => goUrl("https://t.me/cryptoshowdown")}
                     />
                     <LazyImage
-                        src="assets/images/discord.png"
+                        src="/assets/images/discord.png"
                         onLoad={handleImageLoad}
                         className="cursor-pointer w-10"
                         onClick={() => goUrl("https://discord.gg/9FRAyNg9Qh")}

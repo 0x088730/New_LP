@@ -23,18 +23,18 @@ const WhitePaper = (props) => {
     return (
         <div id={t("WhitePaper")} className={`relative md:w-full ${props.loaded === true ? "xl:h-[1202px]" : "h-0"} flex justify-center overflow-visible mt-[22rem] sm:mt-[17rem] md:mt-[16rem] lg:mt-[16rem] xl:mt-0`}>
             <LazyImage
-                src="assets/images/backgrounds/whitepaper.jpg"
+                src="/assets/images/backgrounds/whitepaper.jpg"
                 onLoad={handleImageLoad}
                 className="background-position-center-absolute w-[1920px] h-[1200px] 2xl:w-full 2xl:h-full"
             />
             <LazyImage
-                src="assets/images/tree.png"
+                src="/assets/images/tree.png"
                 onLoad={handleImageLoad}
                 className="absolute left-0 top-[-29rem] sm:top-[-26rem] md:top-[-23rem] xl:-top-20 w-full h-full sm:h-[40rem] xl:h-[unset]"
             />
             <div className="relative w-[70rem] flex flex-col justify-start items-center translate-y-[-15rem] sm:translate-y-[-17rem] xl:translate-y-0">
                 <LazyImage
-                    src="assets/images/book-test.png"
+                    src="/assets/images/book-test.png"
                     onLoad={handleImageLoad}
                     className="z-10 translate-y-16 xl:translate-y-12 w-[61rem]"
                 />

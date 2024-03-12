@@ -125,7 +125,7 @@ export default function Account({ tokenAmount, setTokenAmount, btnType, bonusRat
                     <div className="w-[400px] sm:w-[500px] md:w-[600px] text-md mt-8">
                         <div className="text-[#FFFFFF] mx-4">{t("Your Current Referral Bonus")} - {bonusRate}%</div>
                         <LazyImage
-                            src={`assets/images/bonusRate_${bonusRate}.png`}
+                            src={`/assets/images/bonusRate_${bonusRate}.png`}
                             onLoad={handleImageLoad}
                             className="w-full"
                         />

@@ -42,11 +42,11 @@ export default function ReferralInfo() {
       <div className="flex justify-center">
         <div className={`${loading === false ? "h-0 z-0" : "h-full z-30"} w-full flex justify-center`}>
           <LazyImage
-            src="assets/images/backgrounds/loading.jpg"
+            src="/assets/images/backgrounds/loading.jpg"
             className={`background-position-center w-full min-w-[1600px] h-full`}
           />
           <LazyImage
-            src="assets/images/spinner.svg"
+            src="/assets/images/spinner.svg"
             className="absolute bottom-16 w-40"
           />
           <div className="absolute bottom-[6.5rem] font-skranji text-white text-[3rem] font-bold">{Math.floor(loadedImages * 100 / 8)}%</div>
@@ -54,7 +54,7 @@ export default function ReferralInfo() {
         <Header currentMenu="Referral Info" />
         <div className={`fixed overflow-y-auto overflow-x-hidden ${loading === true ? "h-0" : "h-full"} w-full flex justify-center items-center text-white font-skranji text-[16px]`}>
           <LazyImage
-            src="assets/images/htp_bg.jpg"
+            src="/assets/images/htp_bg.jpg"
             onLoad={handleImageLoad}
             className="background-position-center w-[1920px] h-[1200px] 2xl:w-full 2xl:h-full"
           />
@@ -65,7 +65,7 @@ export default function ReferralInfo() {
                 <div className="w-full md:w-[420px] h-[200px] md:h-[330px] lg:h-[300px] border-4 border-[#ffffff]/[0.5] rounded-xl backdrop-blur-md relative flex justify-center items-center">
                   <div className="absolute -top-[5.5rem] md:-top-[7.5rem] w-[300px] md:w-[383px]">
                     <LazyImage
-                      src="assets/images/infoImg1.png"
+                      src="/assets/images/infoImg1.png"
                       onLoad={handleImageLoad}
                       className="w-full h-full"
                     />
@@ -75,7 +75,7 @@ export default function ReferralInfo() {
                 <div className="mt-32 md:mt-0 px-8 w-full md:w-[860px] h-[490px] md:h-[330px] lg:h-[300px] border-4 border-[#ffffff]/[0.5] rounded-xl backdrop-blur-md relative flex justify-center items-center">
                   <div className="absolute -top-[7.5rem] md:right-12 w-[220px] sm:w-[250px]">
                     <LazyImage
-                      src="assets/images/infoImg2.png"
+                      src="/assets/images/infoImg2.png"
                       onLoad={handleImageLoad}
                       className="w-full h-full" />
                   </div>
@@ -99,7 +99,7 @@ export default function ReferralInfo() {
                   <div className="w-full h-full rounded-lg flex justify-center items-end sm:items-center p-3 sm:p-0" style={{ backgroundImage: "linear-gradient(45deg, #e49115 1%, transparent)" }}>
                     <div className="absolute sm:left-6 md:-left-6 lg:left-6 -top-16 sm:-top-5 w-[180px] sm:w-[91px] h-[150px] sm:h-[87px]">
                       <LazyImage
-                        src="assets/images/skewIcon.png"
+                        src="/assets/images/skewIcon.png"
                         onLoad={handleImageLoad}
                         className="w-full h-full"
                       />
@@ -120,25 +120,25 @@ export default function ReferralInfo() {
               <div>{t("©SOURCECODE")}<br />{t("ALL RIGHTS RESERVERD")}</div>
               <div className="flex items-center my-8 sm:my-0">
                 <LazyImage
-                  src="assets/images/sms.png"
+                  src="/assets/images/sms.png"
                   onLoad={handleImageLoad}
                   className="me-2 w-6" />ADM@SOURCE-CODE.WORK
               </div>
               <div className="flex gap-x-4 items-center">
                 <LazyImage
-                  src="assets/images/tw.png"
+                  src="/assets/images/tw.png"
                   onLoad={handleImageLoad}
                   className="cursor-pointer w-10"
                   onClick={() => goUrl("https://twitter.com/Crypto_Showdown")}
                 />
                 <LazyImage
-                  src="assets/images/tg.png"
+                  src="/assets/images/tg.png"
                   onLoad={handleImageLoad}
                   className="cursor-pointer w-10"
                   onClick={() => goUrl("https://t.me/cryptoshowdown")}
                 />
                 <LazyImage
-                  src="assets/images/discord.png"
+                  src="/assets/images/discord.png"
                   onLoad={handleImageLoad}
                   className="cursor-pointer w-10"
                   onClick={() => goUrl("https://discord.gg/9FRAyNg9Qh")}

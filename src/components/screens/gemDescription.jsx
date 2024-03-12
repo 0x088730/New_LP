@@ -25,19 +25,19 @@ const GemDescription = (props) => {
         <div className={`${props.loaded === true ? "" : "h-0"}`}>
             <div className="relative md:hidden md:w-full xl:h-[1428px] flex flex-col justify-center items-center mt-[47rem] sm:mt-[43rem] md:mt-[-22rem]">
                 <LazyImage
-                    src="assets/images/backgrounds/gemdescription.png"
+                    src="/assets/images/backgrounds/gemdescription.png"
                     onLoad={handleImageLoad}
                     className="background-position-center-absolute w-[1920px] h-[1428px] 2xl:w-full 2xl:h-full"
                 />
             </div>
             <div className="relative md:w-full xl:h-[1428px] flex flex-col justify-center items-center mt-0 sm:mt-4 md:mt-[12rem] lg:mt-[10rem] xl:mt-[-22rem]">
                 <LazyImage
-                    src="assets/images/backgrounds/gemdescription.png"
+                    src="/assets/images/backgrounds/gemdescription.png"
                     onLoad={handleImageLoad}
                     className="background-position-center-absolute w-[1920px] h-[1428px] 2xl:w-full 2xl:h-full"
                 />
                 <LazyImage
-                    src="assets/images/rock6.png"
+                    src="/assets/images/rock6.png"
                     onLoad={handleImageLoad}
                     className="absolute right-0 top-[-50rem] sm:top-[-60rem] md:top-[-30rem] lg:top-[-35rem] xl:top-[-22rem] 2xl:top-[-30rem] w-[90%] md:w-[55%] lg:w-[55%] 2xl:w-[60%]"
                 />
@@ -48,7 +48,7 @@ const GemDescription = (props) => {
                             <div className="relative w-[350px] md:w-[310px] h-[270px] md:h-[340px] flex flex-col justify-start items-center border-4 border-[#ffffff]/[0.2] rounded-xl backdrop-blur-md">
                                 <div className="absolute -top-10 md:-top-12 w-[19%] md:w-[30%]">
                                     <LazyImage
-                                        src="assets/images/gem-1.png"
+                                        src="/assets/images/gem-1.png"
                                         onLoad={handleImageLoad}
                                         className="w-full h-full"
                                     />
@@ -71,7 +71,7 @@ const GemDescription = (props) => {
                             <div className="relative w-[350px] md:w-[310px] h-[250px] md:h-[340px] flex flex-col justify-start items-center border-4 border-[#ffffff]/[0.2] rounded-xl backdrop-blur-md">
                                 <div className="absolute -top-10 md:-top-12 w-[19%] md:w-[30%]">
                                     <LazyImage
-                                        src="assets/images/gem-2.png"
+                                        src="/assets/images/gem-2.png"
                                         onLoad={handleImageLoad}
                                         className="w-full h-full"
                                     />
@@ -92,7 +92,7 @@ const GemDescription = (props) => {
                             <div className="relative w-[350px] md:w-[310px] h-[250px] md:h-[340px] flex flex-col justify-start items-center border-4 border-[#ffffff]/[0.2] rounded-xl backdrop-blur-md">
                                 <div className="absolute -top-10 md:-top-12 w-[19%] md:w-[30%]">
                                     <LazyImage
-                                        src="assets/images/gem-3.png"
+                                        src="/assets/images/gem-3.png"
                                         onLoad={handleImageLoad}
                                         className="w-full h-full"
                                     />
@@ -111,7 +111,7 @@ const GemDescription = (props) => {
                             <div className="relative w-[350px] md:w-[310px] h-[250px] md:h-[340px] flex flex-col justify-start items-center border-4 border-[#ffffff]/[0.2] rounded-xl backdrop-blur-md">
                                 <div className="absolute -top-16 md:-top-12 w-[25%] md:w-[30%]">
                                     <LazyImage
-                                        src="assets/images/gem-4.png"
+                                        src="/assets/images/gem-4.png"
                                         onLoad={handleImageLoad}
                                         className="w-full h-full"
                                     />
@@ -121,7 +121,7 @@ const GemDescription = (props) => {
                                     <div className="text-center text-[13px] md:text-[15px]">{t("Crystals can only be obtained from chests. Crystals drop from chests randomly and have 3 types of rarity")}</div>
                                     <div className="cursor-pointer mt-6 md:mt-[3.5rem] w-[55%] md:w-[65%]">
                                         <LazyImage
-                                            src="assets/images/test-btn.png"
+                                            src="/assets/images/test-btn.png"
                                             onLoad={handleImageLoad}
                                             className="w-full h-full"
                                             onClick={() => {
