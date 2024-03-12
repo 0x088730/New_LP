@@ -6,6 +6,7 @@ import { checkPresaleCoolDown } from "~/common/api";
 import { FormatNumber } from "~/global/common";
 import { ClaimButton, ClickButton } from "../clickButton";
 import { LazyLoadImage } from "react-lazy-load-image-component";
+import LazyImage from "../lazyImage";
 
 export default function MainPresaleAdmin({
     usdtamount,
@@ -20,6 +21,7 @@ export default function MainPresaleAdmin({
     pendingStatus,
     globalValue,
     setGlobalValue,
+    handleImageLoad,
 }) {
     const { t, i18n } = useTranslation();
     const [date, setDate] = useState({
@@ -101,14 +103,22 @@ export default function MainPresaleAdmin({
                             <div className="text-1xl flex justify-between">
                                 <div className="font-bold">{t("TOTAL SOLD:")}</div>
                                 <div className="font-bold text-[#51ff3a] flex tracking-[2px]">
-                                    <LazyLoadImage effect="black-and-white" draggable="false" src="assets/images/usdt.png" alt="" className="w-6 h-6 me-4" />{FormatNumber(globalValue.totalAmount)}
+                                    <LazyImage
+                                        src="assets/images/usdt.png"
+                                        onLoad={handleImageLoad}
+                                        className="w-6 h-6 me-4"
+                                    />{FormatNumber(globalValue.totalAmount)}
                                 </div>
                             </div>
                         </div>
                         <div className="flex justify-evenly flex-col w-[300px]">
                             <div className="flex justify-between">
                                 <div className="w-40 h-10 flex items-center justify-start">
-                                    <LazyLoadImage effect="black-and-white" draggable="false" src="assets/images/usdt.png" alt="" className="w-6 me-2" />USDT
+                                    <LazyImage
+                                        src="assets/images/usdt.png"
+                                        onLoad={handleImageLoad}
+                                        className="w-6 me-2"
+                                    />USDT
                                 </div>
                                 <div className="w-40 h-10 flex items-center justify-end">
                                     {t("NETWORK: ")}<span className="text-[#ffd616] ml-2">{t("BNB")}</span>

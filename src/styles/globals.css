@@ -387,3 +387,31 @@ body {
   translate: -50% -50%;
   max-width: none;
 }
+
+.background-position-center-test {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% 0;
+  max-width: none;
+}
+
+.home-bg-test {
+  background-image: url("../../public/assets/images/backgrounds/home.jpg") !important;
+  background-size: 100% 100%;
+}
+
+.gem-bg-test {
+  background-image: url("../../public/assets/images/backgrounds/gemdes.png") !important;
+  background-size: 100% 100%;
+}
+
+.earn-bg-test {
+  background-image: url("../../public/assets/images/backgrounds/earn.png") !important;
+  background-size: 100% 100%;
+}
+
+.main-bg-test {
+  background-image: url("../../public/assets/images/main-bg-test.png") !important;
+  background-size: 100% 100%;
+}
