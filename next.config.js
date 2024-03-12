@@ -14,5 +14,5 @@ const nextConfig = {
     unoptimized: true
   }
 }
-
-module.exports = nextConfig
+const isProd = process.env.NODE_ENV === 'production'
+module.exports = {...nextConfig, assetPrefix: isProd ? 'https://cdn.new-lp-theta.vercel.app' : "",}
