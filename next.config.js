@@ -19,5 +19,5 @@ const isProd = process.env.NODE_ENV === 'production'
 
 module.exports = {
   ...nextConfig,
-  assetPrefix: isProd ? 'https://cdn.cryptoshowdown.io' : "",
+  assetPrefix: isProd ? 'https://new-lp-nu.vercel.app' : "",
 }
