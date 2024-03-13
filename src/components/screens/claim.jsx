@@ -83,7 +83,7 @@ export default function Claim({ setShowClaimWindowFlag }) {
                     }
                 </div>
                 {starState && <div className="absolute z-20 w-full h-full">
-                    <img effect="black-and-white" draggable="false" src="assets/images/star.png" alt="" className="mx-auto h-full object-cover" />
+                    <img effect="black-and-white" draggable="false" src="https://1oc3hrz1dgaooenq.public.blob.vercel-storage.com/others/star-EaTQ7GLMsTMEMXlPj9Zjoo78uclY7b.png" alt="" className="mx-auto h-full object-cover" />
                 </div>}
             </div>
         </div>

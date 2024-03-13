@@ -61,13 +61,13 @@ export default function Header({ currentMenu, setCurrentMenu }) {
           })}
         </div>
       </div>
-      <LazyLoadImage effect="black-and-white" draggable="false" src="assets/images/logo.png" alt="" className="cursor-pointer w-[250px] sm:w-[350px] mx-8 lg:mx-32" onClick={() => handleMenuClick("Home")} />
+      <LazyLoadImage effect="black-and-white" draggable="false" src="https://1oc3hrz1dgaooenq.public.blob.vercel-storage.com/others/logo-CmOSU4sZckrxinDYHAlI2AXVyfFUaz.png" alt="" className="cursor-pointer w-[250px] sm:w-[350px] mx-8 lg:mx-32" onClick={() => handleMenuClick("Home")} />
 
       <div className="items-center hidden h-full space-x-5 xl:flex xl:justify-between w-[30%]">
         <div className="flex gap-x-4">
           <div className="h-1/3">
             <LazyLoadImage effect="black-and-white" draggable="false"
-              src="assets/images/tg.png"
+              src="https://1oc3hrz1dgaooenq.public.blob.vercel-storage.com/others/tg-7826BkbDTIHjIqbypPhborZ38rvT90.png"
               alt=""
               className="object-cover w-full cursor-pointer hover:scale-125 duration-700"
               onClick={() => goUrl('https://t.me/cryptoshowdown')}
@@ -75,7 +75,7 @@ export default function Header({ currentMenu, setCurrentMenu }) {
           </div>
           <div className="h-1/3">
             <LazyLoadImage effect="black-and-white" draggable="false"
-              src="assets/images/tw.png"
+              src="https://1oc3hrz1dgaooenq.public.blob.vercel-storage.com/others/tw-mqQsv2bjdytKljsS9ozhLRHgFM1tQB.png"
               alt=""
               className="object-cover w-full cursor-pointer hover:scale-125 duration-700"
               onClick={() => goUrl('https://twitter.com/Crypto_Showdown')}
@@ -83,7 +83,7 @@ export default function Header({ currentMenu, setCurrentMenu }) {
           </div>
           <div className="h-1/3">
             <LazyLoadImage effect="black-and-white" draggable="false"
-              src="assets/images/discord.png"
+              src="https://1oc3hrz1dgaooenq.public.blob.vercel-storage.com/others/discord-WVqr4Tnb05DTTWVIxEDCbHy5E7HLoT.png"
               alt=""
               className="object-cover w-full cursor-pointer hover:scale-125 duration-700"
               onClick={() => goUrl('https://discord.gg/9FRAyNg9Qh ')}

@@ -14,12 +14,12 @@ export default function Chart(props) {
                 </div>
                 <div className="flex flex-row-reverse sm:flex-row">
                     <LazyImage
-                        src={`assets/images/chart1.png`}
+                        src={`https://1oc3hrz1dgaooenq.public.blob.vercel-storage.com/others/chart1-5knb3gE9adPDfdSc7V48ugJmloEkTe.png`}
                         onLoad={() => props.handleImageLoad()}
                         className="hidden sm:block w-[35rem] md:w-[45rem] lg:w-[50rem]"
                     />
                     <LazyImage
-                        src={`assets/images/chart2.png`}
+                        src={`https://1oc3hrz1dgaooenq.public.blob.vercel-storage.com/others/chart2-JsFGhEu2jG0TuBhivQtSKCOIRwH0lT.png`}
                         onLoad={() => props.handleImageLoad()}
                         className="block sm:hidden w-[20rem]"
                     />

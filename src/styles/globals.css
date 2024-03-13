@@ -112,33 +112,8 @@ body {
   animation: bounce-twice 2s ease-in-out 2;
 }
 
-.home {
-  background-image: url("../../public/assets/images/backgrounds/home.jpg") !important;
-  background-size: 100% 100%;
-}
-
-.howPlay {
-  background-image: url("../../public/assets/images/backgrounds/howPlay.png") !important;
-  background-size: cover;
-}
-
 .waterpaper {
   background-image: url("../../public/assets/images/backgrounds/whitepaper.jpg") !important;
-  background-size: 100% 100%;
-}
-
-.gemdescription {
-  background-image: url("../../public/assets/images/backgrounds/gemdescription.png") !important;
-  background-size: 100% 100%;
-}
-
-.howEarn {
-  background-image: url("../../public/assets/images/backgrounds/howEarn.jpg") !important;
-  background-size: 100% 100%;
-}
-
-.contact {
-  background-image: url("../../public/assets/images/backgrounds/contact.png") !important;
   background-size: 100% 100%;
 }
 
@@ -358,12 +333,6 @@ body {
   -webkit-text-fill-color: transparent;
 }
 
-.info-bg {
-  background-image: url("../../public/assets/images/backgrounds/htp_bg.jpg") !important;
-  background-size: cover;
-  background-position: center;
-}
-
 .numPresent {
   background: linear-gradient(94.42deg, rgba(255, 255, 255, 0.1035) 1.32%, rgba(255, 255, 255, 0.09) 100.74%);
   background-blend-mode: soft-light, normal;
@@ -394,21 +363,6 @@ body {
   left: 50%;
   translate: -50% 0;
   max-width: none;
-}
-
-.home-bg-test {
-  background-image: url("../../public/assets/images/backgrounds/home.jpg") !important;
-  background-size: 100% 100%;
-}
-
-.gem-bg-test {
-  background-image: url("../../public/assets/images/backgrounds/gemdes.png") !important;
-  background-size: 100% 100%;
-}
-
-.earn-bg-test {
-  background-image: url("../../public/assets/images/backgrounds/earn.png") !important;
-  background-size: 100% 100%;
 }
 
 .main-bg-test {

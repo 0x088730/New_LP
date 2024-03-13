@@ -5,13 +5,20 @@ import i18next from "~/global/i18n";
 import Image from 'next/image';
 import LazyImage from "~/components/lazyImage";
 
-const Header = React.lazy(() => import('~/components/screens/header'));
-const MainPage = React.lazy(() => import('~/components/screens/mainPage'));
-const HowPlay = React.lazy(() => import('~/components/screens/howPlay'));
-const WhitePaper = React.lazy(() => import('~/components/screens/whitePaper'));
-const GemDescription = React.lazy(() => import('~/components/screens/gemDescription'));
-const HowEarn = React.lazy(() => import('~/components/screens/howEarn'));
-const ContactUs = React.lazy(() => import('~/components/screens/contactUs'));
+// const Header = React.lazy(() => import('~/components/screens/header'));
+// const MainPage = React.lazy(() => import('~/components/screens/mainPage'));
+// const HowPlay = React.lazy(() => import('~/components/screens/howPlay'));
+// const WhitePaper = React.lazy(() => import('~/components/screens/whitePaper'));
+// const GemDescription = React.lazy(() => import('~/components/screens/gemDescription'));
+// const HowEarn = React.lazy(() => import('~/components/screens/howEarn'));
+// const ContactUs = React.lazy(() => import('~/components/screens/contactUs'));
+import Header from "~/components/screens/header";
+import MainPage from "~/components/screens/mainPage";
+import HowPlay from "~/components/screens/howPlay";
+import WhitePaper from "~/components/screens/whitePaper";
+import GemDescription from "~/components/screens/gemDescription";
+import HowEarn from "~/components/screens/howEarn";
+import ContactUs from "~/components/screens/contactUs";
 
 export default function Home() {
   const [currentMenu, setCurrentMenu] = useState("Home");
@@ -45,14 +52,21 @@ export default function Home() {
   }, [loadedImages1, loadedImages2, loadedImages3, loadedImages4, loadedImages5, loadedImages6]);
 
   useEffect(() => {
-    document.body.style.overflowY = "hidden"
-    i18n.changeLanguage('en');
-    counterUser().then(res => {
-      if (res.count === false) {
-        // alert(res.message);
+    async function fetchData() {
+      try {
+        document.body.style.overflowY = "hidden";
+        i18n.changeLanguage('en');
+        const counterResponse = await counterUser();
+        if (counterResponse.count === false) {
+          // alert(counterResponse.message);
+        }
+      } catch (error) {
+        console.error("Error fetching data:", error);
       }
-    });
+    }
+    fetchData();
   }, []);
+
   useEffect(() => {
     if (percent >= 100)
       document.body.style.overflowY = "auto"
@@ -64,90 +78,56 @@ export default function Home() {
         <div className={`w-full overflow-hidden Home`}>
           <div className={`${percent >= 100 ? "h-0" : "h-full"} w-full z-30 flex justify-center`}>
             <LazyImage
-              src="assets/images/backgrounds/loading.jpg"
+              src="https://1oc3hrz1dgaooenq.public.blob.vercel-storage.com/loading-WGHzpbP6BMyWPUpYMIgZFdV43W9XoW.jpg"
               className={`background-position-center w-full min-w-[1600px] h-full`}
             />
             <LazyImage
-              src="assets/images/spinner.svg"
+              src="https://1oc3hrz1dgaooenq.public.blob.vercel-storage.com/others/spinner-KchMqW2myVLGxijjVL93hLIeJOCf68.svg"
               className="absolute bottom-16 w-40"
             />
             <div className="absolute bottom-[6.5rem] font-skranji text-white text-[3rem] font-bold">{percent > 100 ? 100 : percent}%</div>
           </div>
           <div className={`absolute w-full h-24 ${percent >= 100 ? "flex" : "hidden"} z-10 flex justify-center items-center`}>
-            <Suspense fallback={<div>...</div>}>
-              <Header currentMenu={currentMenu} setCurrentMenu={setCurrentMenu} />
-            </Suspense>
+            <Header currentMenu={currentMenu} setCurrentMenu={setCurrentMenu} />
           </div>
           <div id="Home" className={`w-full ${percent >= 100 ? "" : "h-0"}`}>
             <div className="relative font-skranji text-white z-0">
-              <Suspense fallback={<div></div>}>
-                <MainPage
-                  loadedImages={loadedImages1}
-                  setLoadedImages={setLoadedImages1}
-                  loaded={!loading}
-                  setLoaded={setLoaded1}
-                />
-              </Suspense>
-              <Suspense fallback={<div></div>}>
-                {
-                  loaded1 === true ?
-                    <HowPlay
-                      loadedImages={loadedImages2}
-                      setLoadedImages={setLoadedImages2}
-                      loaded={!loading}
-                      setLoaded={setLoaded2}
-                    />
-                    : null
-                }
-              </Suspense>
-              <Suspense fallback={<div></div>}>
-                {
-                  loaded2 === true ?
-                    <WhitePaper
-                      loadedImages={loadedImages3}
-                      setLoadedImages={setLoadedImages3}
-                      loaded={!loading}
-                      setLoaded={setLoaded3}
-                    />
-                    : null
-                }
-              </Suspense>
-              <Suspense fallback={<div></div>}>
-                {
-                  loaded3 === true ?
-                    <GemDescription
-                      loadedImages={loadedImages4}
-                      setLoadedImages={setLoadedImages4}
-                      loaded={!loading}
-                      setLoaded={setLoaded4}
-                    />
-                    : null
-                }
-              </Suspense>
-              <Suspense fallback={<div></div>}>
-                {
-                  loaded4 === true ?
-                    <HowEarn
-                      loadedImages={loadedImages5}
-                      setLoadedImages={setLoadedImages5}
-                      loaded={!loading}
-                      setLoaded={setLoaded5}
-                    />
-                    : null
-                }
-              </Suspense>
-              <Suspense fallback={<div></div>}>
-                {
-                  loaded5 === true ?
-                    <ContactUs
-                      loadedImages={loadedImages6}
-                      setLoadedImages={setLoadedImages6}
-                      loaded={!loading}
-                      setLoaded={setLoaded6}
-                    />
-                    : null
-                }
-              </Suspense>
+              <MainPage
+                loadedImages={loadedImages1}
+                setLoadedImages={setLoadedImages1}
+                loaded={!loading}
+                setLoaded={setLoaded1}
+              />
+              <HowPlay
+                loadedImages={loadedImages2}
+                setLoadedImages={setLoadedImages2}
+                loaded={!loading}
+                setLoaded={setLoaded2}
+              />
+              <WhitePaper
+                loadedImages={loadedImages3}
+                setLoadedImages={setLoadedImages3}
+                loaded={!loading}
+                setLoaded={setLoaded3}
+              />
+              <GemDescription
+                loadedImages={loadedImages4}
+                setLoadedImages={setLoadedImages4}
+                loaded={!loading}
+                setLoaded={setLoaded4}
+              />
+              <HowEarn
+                loadedImages={loadedImages5}
+                setLoadedImages={setLoadedImages5}
+                loaded={!loading}
+                setLoaded={setLoaded5}
+              />
+              <ContactUs
+                loadedImages={loadedImages6}
+                setLoadedImages={setLoadedImages6}
+                loaded={!loading}
+                setLoaded={setLoaded6}
+              />
             </div>
           </div>
         </div>
