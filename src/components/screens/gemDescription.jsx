@@ -23,22 +23,19 @@ const GemDescription = (props) => {
 
     return (
         <>
-            <div className={`relative md:hidden md:w-full ${props.loaded === true ? "xl:h-[1428px] mt-[47rem] sm:mt-[43rem] md:mt-[-22rem]" : "h-0 mt-0"} flex flex-col justify-center items-center`}>
+            <div className={`relative md:hidden md:w-full xl:h-[1428px] mt-[47rem] sm:mt-[43rem] md:mt-[-22rem] flex flex-col justify-center items-center`}>
                 <LazyImage
                     src="https://1oc3hrz1dgaooenq.public.blob.vercel-storage.com/gemdes-U1JlEkvxiaDwj98aBkGqjGYYLhSBKR.png"
-                    onLoad={handleImageLoad}
                     className="background-position-center-absolute w-[1920px] h-[1428px] 2xl:w-full 2xl:h-full"
                 />
             </div>
-            <div className={`relative md:w-full ${props.loaded === true ? "xl:h-[1428px] mt-0 sm:mt-4 md:mt-[12rem] lg:mt-[10rem] xl:mt-[-22rem]" : "h-0 mt-0"} flex flex-col justify-center items-center`}>
+            <div className={`relative md:w-full xl:h-[1428px] mt-0 sm:mt-4 md:mt-[12rem] lg:mt-[10rem] xl:mt-[-22rem] flex flex-col justify-center items-center`}>
                 <LazyImage
                     src="https://1oc3hrz1dgaooenq.public.blob.vercel-storage.com/gemdes-U1JlEkvxiaDwj98aBkGqjGYYLhSBKR.png"
-                    onLoad={handleImageLoad}
                     className="background-position-center-absolute w-[1920px] h-[1428px] 2xl:w-full 2xl:h-full"
                 />
                 <LazyImage
                     src="https://1oc3hrz1dgaooenq.public.blob.vercel-storage.com/others/rock6-Wn6QEXryZUWS5LdJep5ZEQWavakbGo.png"
-                    onLoad={handleImageLoad}
                     className="absolute right-0 top-[-50rem] sm:top-[-60rem] md:top-[-30rem] lg:top-[-35rem] xl:top-[-22rem] 2xl:top-[-30rem] w-[90%] md:w-[55%] lg:w-[55%] 2xl:w-[60%]"
                 />
                 <div className="w-[1300px] flex flex-col justify-start items-center translate-y-[-27rem] md:translate-y-[-5rem] xl:translate-y-[-20rem]">
@@ -49,7 +46,6 @@ const GemDescription = (props) => {
                                 <div className="absolute -top-10 md:-top-12 w-[19%] md:w-[30%]">
                                     <LazyImage
                                         src="https://1oc3hrz1dgaooenq.public.blob.vercel-storage.com/items/gem-1-TbKfNpUspL3ph137AhTKvn809MORrl.png"
-                                        onLoad={handleImageLoad}
                                         className="w-full h-full"
                                     />
                                 </div>
@@ -72,7 +68,6 @@ const GemDescription = (props) => {
                                 <div className="absolute -top-10 md:-top-12 w-[19%] md:w-[30%]">
                                     <LazyImage
                                         src="https://1oc3hrz1dgaooenq.public.blob.vercel-storage.com/items/gem-2-roHnt7lYXNGbPqtllvznjSzACRHKf4.png"
-                                        onLoad={handleImageLoad}
                                         className="w-full h-full"
                                     />
                                 </div>
@@ -93,7 +88,6 @@ const GemDescription = (props) => {
                                 <div className="absolute -top-10 md:-top-12 w-[19%] md:w-[30%]">
                                     <LazyImage
                                         src="https://1oc3hrz1dgaooenq.public.blob.vercel-storage.com/items/gem-3-wxMy5DtqUXBot8btNFRVQ6NHMncwa2.png"
-                                        onLoad={handleImageLoad}
                                         className="w-full h-full"
                                     />
                                 </div>
@@ -112,7 +106,6 @@ const GemDescription = (props) => {
                                 <div className="absolute -top-16 md:-top-12 w-[25%] md:w-[30%]">
                                     <LazyImage
                                         src="https://1oc3hrz1dgaooenq.public.blob.vercel-storage.com/items/gem-4-id8GbpoB9rrKbtejyI0uyTi8NP4A1K.png"
-                                        onLoad={handleImageLoad}
                                         className="w-full h-full"
                                     />
                                 </div>
@@ -122,7 +115,6 @@ const GemDescription = (props) => {
                                     <div className="cursor-pointer mt-6 md:mt-[3.5rem] w-[55%] md:w-[65%]">
                                         <LazyImage
                                             src="https://1oc3hrz1dgaooenq.public.blob.vercel-storage.com/others/test-btn-39WvlNb7V0axFyLPHtU8SDehQtYQZy.png"
-                                            onLoad={handleImageLoad}
                                             className="w-full h-full"
                                             onClick={() => {
                                                 setShowClaimWindowFlag(true);

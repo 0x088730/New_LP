@@ -76,58 +76,17 @@ export default function Home() {
     <div>
       <I18nextProvider i18n={i18next}>
         <div className={`w-full overflow-hidden Home`}>
-          <div className={`${percent >= 100 ? "h-0" : "h-full"} w-full z-30 flex justify-center`}>
-            <LazyImage
-              src="https://1oc3hrz1dgaooenq.public.blob.vercel-storage.com/loading-WGHzpbP6BMyWPUpYMIgZFdV43W9XoW.jpg"
-              className={`background-position-center w-full min-w-[1600px] min-h-[900px]: h-full`}
-            />
-            <LazyImage
-              src="https://1oc3hrz1dgaooenq.public.blob.vercel-storage.com/others/spinner-KchMqW2myVLGxijjVL93hLIeJOCf68.svg"
-              className="absolute bottom-16 w-40"
-            />
-            <div className="absolute bottom-[6.5rem] font-skranji text-white text-[3rem] font-bold">{percent > 100 ? 100 : percent}%</div>
-          </div>
-          <div className={`absolute w-full h-24 ${percent >= 100 ? "flex" : "hidden"} z-10 flex justify-center items-center`}>
+          <div className={`absolute w-full h-24 flex z-10 justify-center items-center`}>
             <Header currentMenu={currentMenu} setCurrentMenu={setCurrentMenu} />
           </div>
-          <div id="Home" className={`w-full ${percent >= 100 ? "" : "h-0"}`}>
+          <div id="Home" className={`w-full`}>
             <div className="relative font-skranji text-white z-0">
-              <MainPage
-                loadedImages={loadedImages1}
-                setLoadedImages={setLoadedImages1}
-                loaded={!loading}
-                setLoaded={setLoaded1}
-              />
-              <HowPlay
-                loadedImages={loadedImages2}
-                setLoadedImages={setLoadedImages2}
-                loaded={!loading}
-                setLoaded={setLoaded2}
-              />
-              <WhitePaper
-                loadedImages={loadedImages3}
-                setLoadedImages={setLoadedImages3}
-                loaded={!loading}
-                setLoaded={setLoaded3}
-              />
-              <GemDescription
-                loadedImages={loadedImages4}
-                setLoadedImages={setLoadedImages4}
-                loaded={!loading}
-                setLoaded={setLoaded4}
-              />
-              <HowEarn
-                loadedImages={loadedImages5}
-                setLoadedImages={setLoadedImages5}
-                loaded={!loading}
-                setLoaded={setLoaded5}
-              />
-              <ContactUs
-                loadedImages={loadedImages6}
-                setLoadedImages={setLoadedImages6}
-                loaded={!loading}
-                setLoaded={setLoaded6}
-              />
+              <MainPage/>
+              <HowPlay/>
+              <WhitePaper />
+              <GemDescription/>
+              <HowEarn />
+              <ContactUs />
             </div>
           </div>
         </div>

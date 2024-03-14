@@ -27,15 +27,13 @@ const HowEarn = (props) => {
     };
 
     return (
-        <div className={`relative md:w-full ${props.loaded === true ? "xl:h-[1710px] mt-[64rem] sm:mt-[38rem] md:mt-[47rem] lg:mt-28 xl:mt-[-27rem]" : "h-0 mt-0"} flex justify-center`}>
+        <div className={`relative md:w-full xl:h-[1710px] mt-[64rem] sm:mt-[38rem] md:mt-[47rem] lg:mt-28 xl:mt-[-27rem] flex justify-center`}>
             <LazyImage
                 src="https://1oc3hrz1dgaooenq.public.blob.vercel-storage.com/howEarn-sU6HwrUqVfGvh6rSUC7WUPjyxhgQOD.png"
-                onLoad={handleImageLoad}
                 className="background-position-center-absolute w-[1920px] h-[1710px] 2xl:w-full 2xl:h-full"
             />
             <LazyImage
                 src="https://1oc3hrz1dgaooenq.public.blob.vercel-storage.com/character/character3-slhlUUKxZ1yT3rVA72qm8Z2DbVaSxX.png"
-                onLoad={handleImageLoad}
                 className="absolute left-0 mt-40 sm:mt-0 top-[-99rem] sm:top-[-65rem] md:top-[-58rem] lg:top-[-22rem] xl:top-[-18rem] w-[66%] sm:w-[45%] md:w-[35%] lg:w-[33%] xl:w-[27%]"
             />
             <div className="main-bg-test absolute w-[1200px] h-[1000px] sm:h-[800px] top-[-70rem] sm:top-[-45rem] md:top-[-38rem] lg:top-[-6rem] xl:-top-16 flex flex-col-reverse sm:flex-row justify-center items-center">
@@ -66,7 +64,6 @@ const HowEarn = (props) => {
                         <div key={index}>
                             <LazyImage
                                 src={`assets/images/characters/avatar${item}.png`}
-                                onLoad={handleImageLoad}
                                 className={`${item !== currentCharacter ? "grayscale" : ""} object-cover w-24 sm:w-28 md:w-32 lg:w-36 xl:w-40 mx-2 sm:mx-4 md:mx-6 lg:mx-8 z-10 cursor-pointer`}
                                 onClick={() => setCurrentCharacter(item)}
                             />
@@ -81,7 +78,6 @@ const HowEarn = (props) => {
                         <div className="absolute -top-16 sm:-top-20 w-[45%] md:w-[50%]">
                             <LazyImage
                                 src="https://1oc3hrz1dgaooenq.public.blob.vercel-storage.com/others/helmit-FiEHuxH7xY6FA4NfY6P8ylBVXjNMkc.png"
-                                onLoad={handleImageLoad}
                                 className="w-full h-full"
                             />
                         </div>
@@ -94,7 +90,6 @@ const HowEarn = (props) => {
                         <div className="absolute -top-16 sm:-top-20 w-[45%] md:w-[50%]">
                             <LazyImage
                                 src="https://1oc3hrz1dgaooenq.public.blob.vercel-storage.com/others/playImg2-mLqyhAT8Ridvp3Uvl9Iw1srhm5ipHp.png"
-                                onLoad={handleImageLoad}
                                 className="w-full h-full"
                             />
                         </div>

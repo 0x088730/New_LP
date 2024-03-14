@@ -20,10 +20,9 @@ const ContactUs = (props) => {
     };
 
     return (
-        <div className={`relative md:w-full ${props.loaded === true ? "h-[1100px] sm:h-[1100px] md:h-[1300px] xl:h-[1300px] mt-[-9rem] sm:mt-[-21rem] md:mt-[-28rem] lg:mt-[-32rem] xl:mt-[-50rem] 2xl:mt-[-48rem]" : "h-0 mt-0"} flex flex-col justify-start items-center`}>
+        <div className={`relative md:w-full h-[1100px] sm:h-[1100px] md:h-[1300px] xl:h-[1300px] mt-[-9rem] sm:mt-[-21rem] md:mt-[-28rem] lg:mt-[-32rem] xl:mt-[-50rem] 2xl:mt-[-48rem] flex flex-col justify-start items-center`}>
             <LazyImage
                 src="https://1oc3hrz1dgaooenq.public.blob.vercel-storage.com/contact-cMWZ0LdqHEmrcDRJ4Kkk45YA7AviG4.png"
-                onLoad={(handleImageLoad)}
                 className="background-position-center-absolute w-[1920px] h-[1300px] md:h-[1300px] lg:h-[1300px] 2xl:w-full 2xl:h-full"
             />
             <div className="flex flex-col justify-center items-center mt-64 sm:mt-0 md:mt-[24rem] lg:mt-[20rem] xl:mt-[35rem] 2xl:mt-[20rem] translate-y-[-6rem] sm:translate-y-[8rem] md:translate-y-[-18rem] lg:translate-y-[13rem] xl:translate-y-[-14rem] 2xl:translate-y-0">
@@ -33,7 +32,6 @@ const ContactUs = (props) => {
                         <div className="absolute w-full h-full -z-10">
                             <LazyImage
                                 src="https://1oc3hrz1dgaooenq.public.blob.vercel-storage.com/members/member1-dYLWE6K9eMtducWs3em9nCuXOGg6lu.png"
-                                onLoad={(handleImageLoad)}
                                 className="w-full h-full -z-10"
                             />
                         </div>
@@ -44,7 +42,6 @@ const ContactUs = (props) => {
                         <div className="absolute w-full h-full -z-10">
                             <LazyImage
                                 src="https://1oc3hrz1dgaooenq.public.blob.vercel-storage.com/members/member2-lysYPnAbS1SNTUIu5RIUhjeF3YP09w.png"
-                                onLoad={(handleImageLoad)}
                                 className="w-full h-full -z-10"
                             />
                         </div>
@@ -55,7 +52,6 @@ const ContactUs = (props) => {
                         <div className="absolute w-full h-full -z-10">
                             <LazyImage
                                 src="https://1oc3hrz1dgaooenq.public.blob.vercel-storage.com/members/member3-jdFcGLaK3baBwQz7et78CkpbB8kHwE.png"
-                                onLoad={(handleImageLoad)}
                                 className="w-full h-full -z-10"
                             />
                         </div>
@@ -67,7 +63,6 @@ const ContactUs = (props) => {
             </div>
             <LazyImage
                 src="https://1oc3hrz1dgaooenq.public.blob.vercel-storage.com/character/character-6-vhcKMuJvSMcieOzhB1PtnjC5iAxEn5.png"
-                onLoad={handleImageLoad}
                 className="absolute -right-12 lg:-right-20 bottom-0 w-[62%] lg:w-[400px] 2xl:w-[600px] h-[64%] sm:h-[70%] lg:h-[660px] 2xl:h-[1000px] z-20"
             />
             <div className="absolute left-12 sm:left-0 bottom-20 flex flex-col sm:flex-row justify-around w-full mb-2 z-30">
@@ -75,25 +70,21 @@ const ContactUs = (props) => {
                 <div className="flex items-center my-8 sm:my-0">
                     <LazyImage
                         src="https://1oc3hrz1dgaooenq.public.blob.vercel-storage.com/others/sms-LJXM15DJNsH4YVQcKG4j9K7mHLa2na.png"
-                        onLoad={handleImageLoad}
                         className="me-2 w-6" />ADM@SOURCE-CODE.WORK
                 </div>
                 <div className="flex gap-x-4 items-center">
                     <LazyImage
                         src="https://1oc3hrz1dgaooenq.public.blob.vercel-storage.com/others/tw-mqQsv2bjdytKljsS9ozhLRHgFM1tQB.png"
-                        onLoad={handleImageLoad}
                         className="cursor-pointer w-10"
                         onClick={() => goUrl("https://twitter.com/Crypto_Showdown")}
                     />
                     <LazyImage
                         src="https://1oc3hrz1dgaooenq.public.blob.vercel-storage.com/others/tg-7826BkbDTIHjIqbypPhborZ38rvT90.png"
-                        onLoad={handleImageLoad}
                         className="cursor-pointer w-10"
                         onClick={() => goUrl("https://t.me/cryptoshowdown")}
                     />
                     <LazyImage
                         src="https://1oc3hrz1dgaooenq.public.blob.vercel-storage.com/others/discord-WVqr4Tnb05DTTWVIxEDCbHy5E7HLoT.png"
-                        onLoad={handleImageLoad}
                         className="cursor-pointer w-10"
                         onClick={() => goUrl("https://discord.gg/9FRAyNg9Qh")}
                     />
