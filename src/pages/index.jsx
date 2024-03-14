@@ -79,7 +79,7 @@ export default function Home() {
           <div className={`${percent >= 100 ? "h-0" : "h-full"} w-full z-30 flex justify-center`}>
             <LazyImage
               src="https://1oc3hrz1dgaooenq.public.blob.vercel-storage.com/loading-WGHzpbP6BMyWPUpYMIgZFdV43W9XoW.jpg"
-              className={`background-position-center w-full min-w-[1600px] h-full`}
+              className={`background-position-center w-full min-w-[1600px] min-h-[900px]: h-full`}
             />
             <LazyImage
               src="https://1oc3hrz1dgaooenq.public.blob.vercel-storage.com/others/spinner-KchMqW2myVLGxijjVL93hLIeJOCf68.svg"
