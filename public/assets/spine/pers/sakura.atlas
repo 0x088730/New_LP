@@ -1,0 +1,83 @@
+
+sakura.png
+size: 1024,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Веки Л
+  rotate: false
+  xy: 327, 879
+  size: 96, 61
+  orig: 113, 97
+  offset: 9, 21
+  index: -1
+Веки П
+  rotate: false
+  xy: 245, 887
+  size: 80, 53
+  orig: 98, 85
+  offset: 9, 17
+  index: -1
+Волосы
+  rotate: true
+  xy: 2, 2
+  size: 428, 721
+  orig: 993, 721
+  offset: 456, 0
+  index: -1
+Глаза  Л
+  rotate: false
+  xy: 195, 898
+  size: 48, 42
+  orig: 48, 42
+  offset: 0, 0
+  index: -1
+Глаза П
+  rotate: true
+  xy: 149, 899
+  size: 41, 44
+  orig: 41, 44
+  offset: 0, 0
+  index: -1
+Голова
+  rotate: true
+  xy: 2, 512
+  size: 365, 400
+  orig: 441, 410
+  offset: 76, 6
+  index: -1
+Ресницы Л
+  rotate: false
+  xy: 2, 907
+  size: 63, 33
+  orig: 68, 38
+  offset: 3, 3
+  index: -1
+Ресницы П
+  rotate: false
+  xy: 67, 901
+  size: 80, 39
+  orig: 85, 45
+  offset: 2, 3
+  index: -1
+Роговица
+  rotate: false
+  xy: 425, 863
+  size: 196, 77
+  orig: 196, 77
+  offset: 0, 0
+  index: -1
+Рука
+  rotate: true
+  xy: 623, 784
+  size: 156, 214
+  orig: 156, 218
+  offset: 0, 0
+  index: -1
+Тело
+  rotate: false
+  xy: 404, 432
+  size: 444, 350
+  orig: 986, 659
+  offset: 232, 0
+  index: -1

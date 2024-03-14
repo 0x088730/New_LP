@@ -2,8 +2,6 @@ import React, { Suspense, useEffect, useState } from "react";
 import { I18nextProvider, useTranslation } from "react-i18next";
 import { counterUser } from "~/common/api";
 import i18next from "~/global/i18n";
-import Image from 'next/image';
-import LazyImage from "~/components/lazyImage";
 
 // const Header = React.lazy(() => import('~/components/screens/header'));
 // const MainPage = React.lazy(() => import('~/components/screens/mainPage'));
@@ -23,111 +21,39 @@ import ContactUs from "~/components/screens/contactUs";
 export default function Home() {
   const [currentMenu, setCurrentMenu] = useState("Home");
   const { t, i18n } = useTranslation();
-  const [loadedImages1, setLoadedImages1] = useState(0);
-  const [loadedImages2, setLoadedImages2] = useState(0);
-  const [loadedImages3, setLoadedImages3] = useState(0);
-  const [loadedImages4, setLoadedImages4] = useState(0);
-  const [loadedImages5, setLoadedImages5] = useState(0);
-  const [loadedImages6, setLoadedImages6] = useState(0);
   const [loaded1, setLoaded1] = useState(false);
   const [loaded2, setLoaded2] = useState(false);
   const [loaded3, setLoaded3] = useState(false);
   const [loaded4, setLoaded4] = useState(false);
   const [loaded5, setLoaded5] = useState(false);
   const [loaded6, setLoaded6] = useState(false);
-  const [percent, setPercent] = useState(0);
-  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    if (loaded1 && loaded2 && loaded3 && loaded4 && loaded5 && loaded6) {
-      setLoading(false);
-    }
-  }, [loaded1, loaded2, loaded3, loaded4, loaded5, loaded6]);
-
-  useEffect(() => {
-    setPercent(Math.floor(
-      (loadedImages1 + loadedImages2 + loadedImages3 + loadedImages4 + loadedImages5 + loadedImages6)
-      * 100 / 35
-    ));
-  }, [loadedImages1, loadedImages2, loadedImages3, loadedImages4, loadedImages5, loadedImages6]);
-
-  useEffect(() => {
-    async function fetchData() {
-      try {
-        document.body.style.overflowY = "hidden";
-        i18n.changeLanguage('en');
-        const counterResponse = await counterUser();
-        if (counterResponse.count === false) {
-          // alert(counterResponse.message);
-        }
-      } catch (error) {
-        console.error("Error fetching data:", error);
-      }
-    }
-    fetchData();
+    i18n.changeLanguage('en');
+    counterUser().then(res => {
+      // alert(res.message);
+    });
   }, []);
-
-  useEffect(() => {
-    if (percent >= 100)
-      document.body.style.overflowY = "auto"
-  }, [percent]);
 
   return (
     <div>
       <I18nextProvider i18n={i18next}>
         <div className={`w-full overflow-hidden Home`}>
-          <div className={`${percent >= 100 ? "h-0" : "h-full"} w-full z-30 flex justify-center`}>
-            <LazyImage
-              src="https://1oc3hrz1dgaooenq.public.blob.vercel-storage.com/loading-WGHzpbP6BMyWPUpYMIgZFdV43W9XoW.jpg"
-              className={`background-position-center w-full min-w-[1600px] h-full`}
-            />
-            <LazyImage
-              src="https://1oc3hrz1dgaooenq.public.blob.vercel-storage.com/others/spinner-KchMqW2myVLGxijjVL93hLIeJOCf68.svg"
-              className="absolute bottom-16 w-40"
-            />
-            <div className="absolute bottom-[6.5rem] font-skranji text-white text-[3rem] font-bold">{percent > 100 ? 100 : percent}%</div>
+          <div className={`absolute w-full h-24 flex z-10 justify-center items-center`}>
+            {/* <Suspense fallback={<div>Loading Header...</div>}> */}
+            {loaded1 === true ? <Header currentMenu={currentMenu} setCurrentMenu={setCurrentMenu} /> : null}
+            {/* </Suspense> */}
           </div>
-          <div className={`absolute w-full h-24 ${percent >= 100 ? "flex" : "hidden"} z-10 flex justify-center items-center`}>
-            <Header currentMenu={currentMenu} setCurrentMenu={setCurrentMenu} />
-          </div>
-          <div id="Home" className={`w-full ${percent >= 100 ? "" : "h-0"}`}>
+          <div id="Home" className={`w-full`}>
             <div className="relative font-skranji text-white z-0">
-              <MainPage
-                loadedImages={loadedImages1}
-                setLoadedImages={setLoadedImages1}
-                loaded={!loading}
-                setLoaded={setLoaded1}
-              />
-              <HowPlay
-                loadedImages={loadedImages2}
-                setLoadedImages={setLoadedImages2}
-                loaded={!loading}
-                setLoaded={setLoaded2}
-              />
-              <WhitePaper
-                loadedImages={loadedImages3}
-                setLoadedImages={setLoadedImages3}
-                loaded={!loading}
-                setLoaded={setLoaded3}
-              />
-              <GemDescription
-                loadedImages={loadedImages4}
-                setLoadedImages={setLoadedImages4}
-                loaded={!loading}
-                setLoaded={setLoaded4}
-              />
-              <HowEarn
-                loadedImages={loadedImages5}
-                setLoadedImages={setLoadedImages5}
-                loaded={!loading}
-                setLoaded={setLoaded5}
-              />
-              <ContactUs
-                loadedImages={loadedImages6}
-                setLoadedImages={setLoadedImages6}
-                loaded={!loading}
-                setLoaded={setLoaded6}
-              />
+              {/* <Suspense fallback={<div>Loading...</div>}> */}
+                <MainPage loaded={loaded1} setLoaded={setLoaded1} />
+                {/* {loaded1 === true ? <HowPlay loaded={loaded2} setLoaded={setLoaded2} /> : null}
+                {loaded2 === true ? <WhitePaper loaded={loaded3} setLoaded={setLoaded3} /> : null}
+                {loaded3 === true ? <GemDescription loaded={loaded4} setLoaded={setLoaded4} /> : null}
+                {loaded4 === true ? <HowEarn loaded={loaded5} setLoaded={setLoaded5} /> : null}
+                {loaded5 === true ? <ContactUs loaded={loaded6} setLoaded={setLoaded6} /> : null} */}
+              {/* </Suspense> */}
             </div>
           </div>
         </div>

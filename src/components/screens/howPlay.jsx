@@ -6,20 +6,20 @@ import { useEffect, useState } from "react";
 const HowPlay = (props) => {
     let imagesCount = 6;
     const { t, i18n } = useTranslation();
-
+    const [loadedImages, setLoadedImages] = useState(0);
     useEffect(() => {
-        if (props.loadedImages >= imagesCount) {
-            console.log(props.loadedImages)
+        if (loadedImages >= imagesCount) {
             props.setLoaded(true)
         }
-    }, [props.loadedImages]);
+    }, [loadedImages]);
 
     const handleImageLoad = () => {
-        props.setLoadedImages(prevState => prevState + 1);
+        setLoadedImages(prevState => prevState + 1);
     };
 
     return (
         <div className={`relative flex flex-col items-center justify-start w-full ${props.loaded === true ? "h-[1519px]" : "h-0"} mt-[-18rem] sm:mt-[-15rem]`}>
+            {/* <div className={`relative flex flex-col items-center justify-start w-full h-[1519px] mt-[-18rem] sm:mt-[-15rem]`}></div> */}
             <LazyImage
                 src="https://1oc3hrz1dgaooenq.public.blob.vercel-storage.com/howPlay-Dht71eqpuRFBhRXoikRe6dp5wLd0Cu.png"
                 onLoad={handleImageLoad}

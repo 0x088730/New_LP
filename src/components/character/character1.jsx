@@ -9,13 +9,12 @@ const Character1 = () => {
         new SpinePlayer('player-container', {
             jsonUrl: jsonUrl,
             atlasUrl: atlasUrl,
-            animation: 'animation',
+            animation: 'idle',
             premultipliedAlpha: true,
-            backgroundColor: '#cccccc',
-            viewport: {
-                debugRender: true,
-            },
-            showControls: true,
+            backgroundColor: '#ff0000ff',
+            fullScreenBackgroundColor: "#00ff00ff",
+            showControls: false,
+            skin: "default"
         });
     })
 

@@ -14,20 +14,20 @@ const HowEarn = (props) => {
         { header: "Motoko", detail: t("Motoko is a lightning element character. A wanderer who seems to have been everywhere, or nowhere? Has anyone seen him? Rumor has it that all creatures who have ever seen him were defeated by him in an instant. But what we do know is that this character can take a lot of instant damage and deal a lot of crushing damage. He doesn't have a lot of critical damage, but every attack he makes can be his enemy's last. His weakness is fighting against creatures with the wood element, especially if that creature has intermittent damage.") },
         { header: "Hayate", detail: t("Hayate is a wood element character. The huge castle of Altdream, more like a city, was once home to thousands of people. One day, one of the guards discovered the ability to control wooden objects and then the earth. One day, while practicing with the elements, not far from the castle, the knight sent the entire castle underground, destroying everyone in it. He became maddened by his own power and now constantly seeks out creatures to destroy. His strength is periodic damage. His weakness is fighting creatures with the element of fire, especially if those") }
     ]
-
+    const [loadedImages, setLoadedImages] = useState(0);
     useEffect(() => {
-        if (props.loadedImages >= imagesCount) {
-            console.log(props.loadedImages)
+        if (loadedImages >= imagesCount) {
             props.setLoaded(true)
         }
-    }, [props.loadedImages]);
+    }, [loadedImages]);
 
     const handleImageLoad = () => {
-        props.setLoadedImages(prevState => prevState + 1);
+        setLoadedImages(prevState => prevState + 1);
     };
 
     return (
         <div className={`relative md:w-full ${props.loaded === true ? "xl:h-[1710px] mt-[64rem] sm:mt-[38rem] md:mt-[47rem] lg:mt-28 xl:mt-[-27rem]" : "h-0 mt-0"} flex justify-center`}>
+            {/* <div className={`relative md:w-full xl:h-[1710px] mt-[64rem] sm:mt-[38rem] md:mt-[47rem] lg:mt-28 xl:mt-[-27rem] flex justify-center`}> */}
             <LazyImage
                 src="https://1oc3hrz1dgaooenq.public.blob.vercel-storage.com/howEarn-sU6HwrUqVfGvh6rSUC7WUPjyxhgQOD.png"
                 onLoad={handleImageLoad}
@@ -36,7 +36,7 @@ const HowEarn = (props) => {
             <LazyImage
                 src="https://1oc3hrz1dgaooenq.public.blob.vercel-storage.com/character/character3-slhlUUKxZ1yT3rVA72qm8Z2DbVaSxX.png"
                 onLoad={handleImageLoad}
-                className="absolute left-0 mt-40 sm:mt-0 top-[-99rem] sm:top-[-65rem] md:top-[-58rem] lg:top-[-22rem] xl:top-[-18rem] w-[66%] sm:w-[45%] md:w-[35%] lg:w-[33%] xl:w-[27%]"
+                className="absolute left-0 mt-40 sm:mt-0 top-[-99rem] sm:top-[-65rem] md:top-[-58rem] lg:top-[-22rem] xl:top-[-21rem] 2xl:top-[-22rem] w-[66%] sm:w-[45%] md:w-[35%] lg:w-[33%] xl:w-[39%] 2xl:w-[33%]"
             />
             <div className="main-bg-test absolute w-[1200px] h-[1000px] sm:h-[800px] top-[-70rem] sm:top-[-45rem] md:top-[-38rem] lg:top-[-6rem] xl:-top-16 flex flex-col-reverse sm:flex-row justify-center items-center">
                 <div className={`relative object-cover ${currentCharacter === 2 ? "w-44 sm:w-48" : "w-56 sm:w-56"} ${currentCharacter === 3 ? "h-72" : "h-80"}  me-0 sm:me-16 z-10`}>

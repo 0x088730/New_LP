@@ -7,20 +7,20 @@ import { useEffect, useState } from "react";
 const ContactUs = (props) => {
     let imagesCount = 9;
     const { t, i18n } = useTranslation();
-
+    const [loadedImages, setLoadedImages] = useState(0);
     useEffect(() => {
-        if (props.loadedImages >= imagesCount) {
-            console.log(props.loadedImages)
+        if (loadedImages >= imagesCount) {
             props.setLoaded(true)
         }
-    }, [props.loadedImages]);
+    }, [loadedImages]);
 
     const handleImageLoad = () => {
-        props.setLoadedImages(prevState => prevState + 1);
+        setLoadedImages(prevState => prevState + 1);
     };
 
     return (
         <div className={`relative md:w-full ${props.loaded === true ? "h-[1100px] sm:h-[1100px] md:h-[1300px] xl:h-[1300px] mt-[-9rem] sm:mt-[-21rem] md:mt-[-28rem] lg:mt-[-32rem] xl:mt-[-50rem] 2xl:mt-[-48rem]" : "h-0 mt-0"} flex flex-col justify-start items-center`}>
+            {/* <div className={`relative md:w-full h-[1100px] sm:h-[1100px] md:h-[1300px] xl:h-[1300px] mt-[-9rem] sm:mt-[-21rem] md:mt-[-28rem] lg:mt-[-32rem] xl:mt-[-50rem] 2xl:mt-[-48rem] flex flex-col justify-start items-center`}> */}
             <LazyImage
                 src="https://1oc3hrz1dgaooenq.public.blob.vercel-storage.com/contact-cMWZ0LdqHEmrcDRJ4Kkk45YA7AviG4.png"
                 onLoad={(handleImageLoad)}

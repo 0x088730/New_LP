@@ -12,7 +12,8 @@ const nextConfig = {
   },
   images: {
     unoptimized: true
-  }
+  },
+  transpilePackages: ['@esotericsoftware/spine-threejs', '@esotericsoftware/spine-player']
 }
 
 module.exports = nextConfig
