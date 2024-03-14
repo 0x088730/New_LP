@@ -43,7 +43,7 @@ const MainPage = (props) => {
                 <div className="text-center px-16 mt-4 lg:mt-0 mb-12 lg:mb-16 text-[18px] sm:text-[20px] md:text-[22px] lg:text-[24px] xl:text-[26px] 2xl:text-[28px]">{t("The first RPG gacha game on the blockchain")}</div>
                 <ClickButton title={t("GET START")} className="w-60 sm:w-52 lg:w-[60%] h-20" onClick={() => goUrl("https://play.cryptoshowdown.io/")} />
             </div>
-            {/* <LazyImage
+            <LazyImage
                 src="https://1oc3hrz1dgaooenq.public.blob.vercel-storage.com/character/character-1-NNBBHbqHNMYgAmWCZTdHZdfaYH7FgK.png"
                 onLoad={handleImageLoad}
                 className={`absolute left-0 bottom-[50px] w-[55%] sm:w-[40%] ${gifStatus === false ? "h-[unset]" : "h-0"}`}
@@ -62,7 +62,7 @@ const MainPage = (props) => {
                 src="https://1oc3hrz1dgaooenq.public.blob.vercel-storage.com/character-2-4foCzwU07QLYHpA2lqwR3TzNoivnkS.gif"
                 onLoad={handleGifLoad}
                 className={`absolute -right-4 bottom-[50px] w-[45%] sm:w-[33%] ${gifStatus === false ? "h-0" : "h-[unset]"}`}
-            /> */}
+            />
             {/* <Character1 /> */}
         </div >
     );

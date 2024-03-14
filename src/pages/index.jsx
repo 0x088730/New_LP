@@ -48,11 +48,11 @@ export default function Home() {
             <div className="relative font-skranji text-white z-0">
               {/* <Suspense fallback={<div>Loading...</div>}> */}
                 <MainPage loaded={loaded1} setLoaded={setLoaded1} />
-                {/* {loaded1 === true ? <HowPlay loaded={loaded2} setLoaded={setLoaded2} /> : null}
+                {loaded1 === true ? <HowPlay loaded={loaded2} setLoaded={setLoaded2} /> : null}
                 {loaded2 === true ? <WhitePaper loaded={loaded3} setLoaded={setLoaded3} /> : null}
                 {loaded3 === true ? <GemDescription loaded={loaded4} setLoaded={setLoaded4} /> : null}
                 {loaded4 === true ? <HowEarn loaded={loaded5} setLoaded={setLoaded5} /> : null}
-                {loaded5 === true ? <ContactUs loaded={loaded6} setLoaded={setLoaded6} /> : null} */}
+                {loaded5 === true ? <ContactUs loaded={loaded6} setLoaded={setLoaded6} /> : null}
               {/* </Suspense> */}
             </div>
           </div>
