@@ -3,7 +3,6 @@ import Image from 'next/image';
 const LazyImage = (props) => {
     return (
         <Image
-            effect="black-and-white"
             draggable="false"
             alt=''
             src={props.src}
