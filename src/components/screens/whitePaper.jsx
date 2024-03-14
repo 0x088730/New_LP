@@ -8,20 +8,20 @@ import { useEffect, useState } from "react";
 const WhitePaper = (props) => {
     let imagesCount = 3;
     const { t, i18n } = useTranslation();
-    const [loadedImages, setLoadedImages] = useState(0);
+
     useEffect(() => {
-        if (loadedImages >= imagesCount) {
+        if (props.loadedImages >= imagesCount) {
+            console.log(props.loadedImages)
             props.setLoaded(true)
         }
-    }, [loadedImages]);
+    }, [props.loadedImages]);
 
     const handleImageLoad = () => {
-        setLoadedImages(prevState => prevState + 1);
+        props.setLoadedImages(prevState => prevState + 1);
     };
 
     return (
         <div id={t("WhitePaper")} className={`relative md:w-full ${props.loaded === true ? "xl:h-[1202px] mt-[22rem] sm:mt-[17rem] md:mt-[16rem] lg:mt-[16rem] xl:mt-0" : "h-0 mt-0"} flex justify-center overflow-visible`}>
-            {/* <div id={t("WhitePaper")} className={`relative md:w-full xl:h-[1202px] mt-[22rem] sm:mt-[17rem] md:mt-[16rem] lg:mt-[16rem] xl:mt-0 flex justify-center overflow-visible`}> */}
             <LazyImage
                 src="https://1oc3hrz1dgaooenq.public.blob.vercel-storage.com/whitepaper-uUpJEYxK1e2vrNmlaJDWAHfiSlQfOL.jpg"
                 onLoad={handleImageLoad}
@@ -32,7 +32,7 @@ const WhitePaper = (props) => {
                 onLoad={handleImageLoad}
                 className="absolute left-0 top-[-29rem] sm:top-[-26rem] md:top-[-23rem] xl:-top-20 w-full h-full sm:h-[40rem] xl:h-[unset]"
             />
-            <div className="relative w-[70rem] flex flex-col justify-start items-center translate-y-[-15rem] sm:translate-y-[-17rem] xl:translate-y-0 z-20">
+            <div className="relative w-[70rem] flex flex-col justify-start items-center translate-y-[-15rem] sm:translate-y-[-17rem] xl:translate-y-0 z-30">
                 <LazyImage
                     src="https://1oc3hrz1dgaooenq.public.blob.vercel-storage.com/others/book-test-8fcrMTaURCFjDFPyYiI9Olf0E6pKmf.png"
                     onLoad={handleImageLoad}

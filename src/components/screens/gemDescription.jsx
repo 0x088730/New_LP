@@ -5,25 +5,25 @@ import { LazyLoadImage } from "react-lazy-load-image-component";
 import LazyImage from "../lazyImage";
 
 const GemDescription = (props) => {
-    let imagesCount = 7;
+    let imagesCount = 8;
     const { t, i18n } = useTranslation();
     const count = [1, 2, 3];
     const [showClaimWindowFlag, setShowClaimWindowFlag] = useState(false)
-    const [loadedImages, setLoadedImages] = useState(0);
+
     useEffect(() => {
-        if (loadedImages >= imagesCount) {
+        if (props.loadedImages >= imagesCount) {
+            console.log(props.loadedImages)
             props.setLoaded(true)
         }
-    }, [loadedImages]);
+    }, [props.loadedImages]);
 
     const handleImageLoad = () => {
-        setLoadedImages(prevState => prevState + 1);
+        props.setLoadedImages(prevState => prevState + 1);
     };
 
     return (
         <>
             <div className={`relative md:hidden md:w-full ${props.loaded === true ? "xl:h-[1428px] mt-[47rem] sm:mt-[43rem] md:mt-[-22rem]" : "h-0 mt-0"} flex flex-col justify-center items-center`}>
-                {/* <div className={`relative md:hidden md:w-full xl:h-[1428px] mt-[47rem] sm:mt-[43rem] md:mt-[-22rem] flex flex-col justify-center items-center`}> */}
                 <LazyImage
                     src="https://1oc3hrz1dgaooenq.public.blob.vercel-storage.com/gemdes-U1JlEkvxiaDwj98aBkGqjGYYLhSBKR.png"
                     onLoad={handleImageLoad}
@@ -31,7 +31,6 @@ const GemDescription = (props) => {
                 />
             </div>
             <div className={`relative md:w-full ${props.loaded === true ? "xl:h-[1428px] mt-0 sm:mt-4 md:mt-[12rem] lg:mt-[10rem] xl:mt-[-22rem]" : "h-0 mt-0"} flex flex-col justify-center items-center`}>
-                {/* <div className={`relative md:w-full xl:h-[1428px] mt-0 sm:mt-4 md:mt-[12rem] lg:mt-[10rem] xl:mt-[-22rem] flex flex-col justify-center items-center`}> */}
                 <LazyImage
                     src="https://1oc3hrz1dgaooenq.public.blob.vercel-storage.com/gemdes-U1JlEkvxiaDwj98aBkGqjGYYLhSBKR.png"
                     onLoad={handleImageLoad}

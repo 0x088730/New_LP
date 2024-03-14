@@ -36,8 +36,8 @@ export default function PresaleAdmin() {
     totalAmount: 1183,
     transaction: 0.1
   });
-  // const [loadedImages, setLoadedImages] = useState(0);
-  // const [loading, setLoading] = useState(false);
+  const [loadedImages, setLoadedImages] = useState(0);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     setPage(global.pageStatus);
@@ -161,14 +161,42 @@ export default function PresaleAdmin() {
     }
   }
 
+  useEffect(() => {
+    setLoading(true);
+  }, [])
+
+  useEffect(() => {
+    if (loadedImages >= 7) {
+      const timeout = setTimeout(() => {
+        setLoading(false);
+      }, 1000);
+      return () => clearTimeout(timeout);
+    }
+  }, [loadedImages]);
+
+  const handleImageLoad = () => {
+    setLoadedImages(prevState => prevState + 1);
+  };
+
   return (
     <I18nextProvider i18n={i18next}>
       <div className="relative flex justify-center font-skranji">
+        <div className={`${loading === false ? "h-0 z-0" : "h-full z-30"} w-full flex justify-center`}>
+          <LazyImage
+            src="https://1oc3hrz1dgaooenq.public.blob.vercel-storage.com/loading-WGHzpbP6BMyWPUpYMIgZFdV43W9XoW.jpg"
+            className={`background-position-center w-full min-w-[1600px] h-full`}
+          />
+          <LazyImage
+            src="https://1oc3hrz1dgaooenq.public.blob.vercel-storage.com/others/spinner-KchMqW2myVLGxijjVL93hLIeJOCf68.svg"
+            className="fixed bottom-16 w-40"
+          />
+          <div className="fixed bottom-[6.5rem] font-skranji text-white text-[3rem] font-bold">{Math.floor(loadedImages >= 7 ? 100 : loadedImages * 100 / 7)}%</div>
+        </div>
         <Header currentMenu="Presale Admin" />
-        <div className={`fixed overflow-y-auto overflow-x-hidden flex-col h-full w-full space-y-2 flex items-center justify-center`}>
+        <div className={`fixed overflow-y-auto overflow-x-hidden flex-col ${loading === true ? "h-0" : "h-full"} w-full space-y-2 flex items-center justify-center`}>
           <LazyImage
             src="https://1oc3hrz1dgaooenq.public.blob.vercel-storage.com/presale-bg-u4EFgcXo7qKyfX4PdqgLyQp25bI55c.jpg"
-            // onLoad={handleImageLoad}
+            onLoad={handleImageLoad}
             className="background-position-center w-[1920px] h-full 2xl:w-full 2xl:h-full"
           />
           <div className="absolute top-0 w-[300px] sm:w-[500px] lg:w-[1000px] xl:w-[1200px] translate-y-28 flex flex-col lg:flex-row justify-center md:justify-between items-center z-10">
@@ -183,7 +211,7 @@ export default function PresaleAdmin() {
                   <>
                     <LazyImage
                       src="https://1oc3hrz1dgaooenq.public.blob.vercel-storage.com/others/metamask-GJy3L7UgrilOQ3MTosZsImpweQ9qW0.png"
-                      // onLoad={handleImageLoad}
+                      onLoad={handleImageLoad}
                       className="w-6 inline me-1"
                     />{t("CONNECT METAMASK")}
                   </>
@@ -191,7 +219,7 @@ export default function PresaleAdmin() {
                   <>
                     <LazyImage
                       src="https://1oc3hrz1dgaooenq.public.blob.vercel-storage.com/others/metamask-GJy3L7UgrilOQ3MTosZsImpweQ9qW0.png"
-                      // onLoad={handleImageLoad}
+                      onLoad={handleImageLoad}
                       className="w-6 inline me-1"
                     />{address}
                   </>
@@ -253,11 +281,11 @@ export default function PresaleAdmin() {
                   pendingStatus={pendingStatus}
                   globalValue={globalValue}
                   setGlobalValue={setGlobalValue}
-                  // handleImageLoad={handleImageLoad}
+                  handleImageLoad={handleImageLoad}
                 />
                 :
                 page === "chart" ?
-                  <Chart />
+                  <Chart handleImageLoad={handleImageLoad} />
                   :
                   <Account
                     tokenAmount={tokenAmount}
@@ -265,7 +293,7 @@ export default function PresaleAdmin() {
                     btnType={btnType}
                     bonusRate={bonusRate}
                     setBonusRate={setBonusRate}
-                    // handleImageLoad={handleImageLoad}
+                    handleImageLoad={handleImageLoad}
                   />
               }
             </div>
@@ -274,25 +302,25 @@ export default function PresaleAdmin() {
               <div className="flex items-center my-8 sm:my-0">
                 <LazyImage
                   src="https://1oc3hrz1dgaooenq.public.blob.vercel-storage.com/others/sms-LJXM15DJNsH4YVQcKG4j9K7mHLa2na.png"
-                  // onLoad={handleImageLoad}
+                  onLoad={handleImageLoad}
                   className="me-2 w-6" />ADM@SOURCE-CODE.WORK
               </div>
               <div className="flex gap-x-4 items-center">
                 <LazyImage
                   src="https://1oc3hrz1dgaooenq.public.blob.vercel-storage.com/others/tw-mqQsv2bjdytKljsS9ozhLRHgFM1tQB.png"
-                  // onLoad={handleImageLoad}
+                  onLoad={handleImageLoad}
                   className="cursor-pointer w-10"
                   onClick={() => goUrl("https://twitter.com/Crypto_Showdown")}
                 />
                 <LazyImage
                   src="https://1oc3hrz1dgaooenq.public.blob.vercel-storage.com/others/tg-7826BkbDTIHjIqbypPhborZ38rvT90.png"
-                  // onLoad={handleImageLoad}
+                  onLoad={handleImageLoad}
                   className="cursor-pointer w-10"
                   onClick={() => goUrl("https://t.me/cryptoshowdown")}
                 />
                 <LazyImage
                   src="https://1oc3hrz1dgaooenq.public.blob.vercel-storage.com/others/discord-WVqr4Tnb05DTTWVIxEDCbHy5E7HLoT.png"
-                  // onLoad={handleImageLoad}
+                  onLoad={handleImageLoad}
                   className="cursor-pointer w-10"
                   onClick={() => goUrl("https://discord.gg/9FRAyNg9Qh")}
                 />

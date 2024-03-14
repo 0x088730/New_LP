@@ -8,7 +8,7 @@ import { ClaimButton } from "../clickButton";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import LazyImage from "../lazyImage";
 
-export default function Account({ tokenAmount, setTokenAmount, btnType, bonusRate, setBonusRate }) {
+export default function Account({ tokenAmount, setTokenAmount, btnType, bonusRate, setBonusRate, handleImageLoad }) {
     const { t, i18n } = useTranslation();
     const [ref, setRef] = useState("");
     const [withdrawDaily, setWithdrawDaily] = useState(true);
@@ -126,7 +126,7 @@ export default function Account({ tokenAmount, setTokenAmount, btnType, bonusRat
                         <div className="text-[#FFFFFF] mx-4">{t("Your Current Referral Bonus")} - {bonusRate}%</div>
                         <LazyImage
                             src={`assets/images/bonusRate_${bonusRate}.png`}
-                            // onLoad={handleImageLoad}
+                            onLoad={handleImageLoad}
                             className="w-full"
                         />
                         <div className="flex justify-evenly w-full text-[#FFFFFF]">

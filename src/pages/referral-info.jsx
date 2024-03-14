@@ -17,30 +17,30 @@ export default function ReferralInfo() {
     global.pageStatus = "account"
   }
 
-  // const [loadedImages, setLoadedImages] = useState(0);
-  // const [loading, setLoading] = useState(false);
+  const [loadedImages, setLoadedImages] = useState(0);
+  const [loading, setLoading] = useState(false);
 
-  // useEffect(() => {
-  //   setLoading(true);
-  // }, [])
+  useEffect(() => {
+    setLoading(true);
+  }, [])
 
-  // useEffect(() => {
-  //   if (loadedImages >= 8) {
-  //     const timeout = setTimeout(() => {
-  //       setLoading(false);
-  //     }, 1000);
-  //     return () => clearTimeout(timeout);
-  //   }
-  // }, [loadedImages]);
+  useEffect(() => {
+    if (loadedImages >= 8) {
+      const timeout = setTimeout(() => {
+        setLoading(false);
+      }, 1000);
+      return () => clearTimeout(timeout);
+    }
+  }, [loadedImages]);
 
-  // const handleImageLoad = () => {
-  //   setLoadedImages(prevState => prevState + 1);
-  // };
+  const handleImageLoad = () => {
+    setLoadedImages(prevState => prevState + 1);
+  };
 
   return (
     <I18nextProvider i18n={i18next}>
       <div className="flex justify-center">
-        {/* <div className={`${loading === false ? "h-0 z-0" : "h-full z-30"} w-full flex justify-center`}>
+        <div className={`${loading === false ? "h-0 z-0" : "h-full z-30"} w-full flex justify-center`}>
           <LazyImage
             src="https://1oc3hrz1dgaooenq.public.blob.vercel-storage.com/loading-WGHzpbP6BMyWPUpYMIgZFdV43W9XoW.jpg"
             className={`background-position-center w-full min-w-[1600px] h-full`}
@@ -50,13 +50,12 @@ export default function ReferralInfo() {
             className="absolute bottom-16 w-40"
           />
           <div className="absolute bottom-[6.5rem] font-skranji text-white text-[3rem] font-bold">{Math.floor(loadedImages * 100 / 8)}%</div>
-        </div> */}
+        </div>
         <Header currentMenu="Referral Info" />
-        <div className={`fixed overflow-y-auto overflow-x-hidden h-full w-full flex justify-center items-center text-white font-skranji text-[16px]`}>
-        {/* <div className={`fixed overflow-y-auto overflow-x-hidden ${loading === true ? "h-0" : "h-full"} w-full flex justify-center items-center text-white font-skranji text-[16px]`}> */}
+        <div className={`fixed overflow-y-auto overflow-x-hidden ${loading === true ? "h-0" : "h-full"} w-full flex justify-center items-center text-white font-skranji text-[16px]`}>
           <LazyImage
             src="https://1oc3hrz1dgaooenq.public.blob.vercel-storage.com/htp_bg-v50uIH6CxPVeEo0sqo14CY3wYDLClN.jpg"
-            // onLoad={handleImageLoad}
+            onLoad={handleImageLoad}
             className="background-position-center w-[1920px] h-[1200px] 2xl:w-full 2xl:h-full"
           />
           <div className="w-[95%] translate-y-[30rem] md:translate-y-12 sm:w-[90%] md:w-[85%] max-w-[1300px] flex flex-col justify-start items-center gap-20 relative">
@@ -67,7 +66,7 @@ export default function ReferralInfo() {
                   <div className="absolute -top-[5.5rem] md:-top-[7.5rem] w-[300px] md:w-[383px]">
                     <LazyImage
                       src="https://1oc3hrz1dgaooenq.public.blob.vercel-storage.com/others/infoImg1-uhtqNfxPtKQXhAH2jdAAfCDJs8SqSj.png"
-                      // onLoad={handleImageLoad}
+                      onLoad={handleImageLoad}
                       className="w-full h-full"
                     />
                   </div>
@@ -77,7 +76,7 @@ export default function ReferralInfo() {
                   <div className="absolute -top-[7.5rem] md:right-12 w-[220px] sm:w-[250px]">
                     <LazyImage
                       src="https://1oc3hrz1dgaooenq.public.blob.vercel-storage.com/others/infoImg2-OzLjjaqyTiExb7LILXH9oJGbIAvQGt.png"
-                      // onLoad={handleImageLoad}
+                      onLoad={handleImageLoad}
                       className="w-full h-full" />
                   </div>
                   <div className="w-full flex flex-col md:flex-row justify-between mt-24 md:mt-0">
@@ -101,7 +100,7 @@ export default function ReferralInfo() {
                     <div className="absolute sm:left-6 md:-left-6 lg:left-6 -top-16 sm:-top-5 w-[180px] sm:w-[91px] h-[150px] sm:h-[87px]">
                       <LazyImage
                         src="https://1oc3hrz1dgaooenq.public.blob.vercel-storage.com/others/skewIcon-ymxXvS9fa0wz8LdvOrnpGEFt42L8sf.png"
-                        // onLoad={handleImageLoad}
+                        onLoad={handleImageLoad}
                         className="w-full h-full"
                       />
                     </div>
@@ -122,25 +121,25 @@ export default function ReferralInfo() {
               <div className="flex items-center my-8 sm:my-0">
                 <LazyImage
                   src="https://1oc3hrz1dgaooenq.public.blob.vercel-storage.com/others/sms-LJXM15DJNsH4YVQcKG4j9K7mHLa2na.png"
-                  // onLoad={handleImageLoad}
+                  onLoad={handleImageLoad}
                   className="me-2 w-6" />ADM@SOURCE-CODE.WORK
               </div>
               <div className="flex gap-x-4 items-center">
                 <LazyImage
                   src="https://1oc3hrz1dgaooenq.public.blob.vercel-storage.com/others/tw-mqQsv2bjdytKljsS9ozhLRHgFM1tQB.png"
-                  // onLoad={handleImageLoad}
+                  onLoad={handleImageLoad}
                   className="cursor-pointer w-10"
                   onClick={() => goUrl("https://twitter.com/Crypto_Showdown")}
                 />
                 <LazyImage
                   src="https://1oc3hrz1dgaooenq.public.blob.vercel-storage.com/others/tg-7826BkbDTIHjIqbypPhborZ38rvT90.png"
-                  // onLoad={handleImageLoad}
+                  onLoad={handleImageLoad}
                   className="cursor-pointer w-10"
                   onClick={() => goUrl("https://t.me/cryptoshowdown")}
                 />
                 <LazyImage
                   src="https://1oc3hrz1dgaooenq.public.blob.vercel-storage.com/others/discord-WVqr4Tnb05DTTWVIxEDCbHy5E7HLoT.png"
-                  // onLoad={handleImageLoad}
+                  onLoad={handleImageLoad}
                   className="cursor-pointer w-10"
                   onClick={() => goUrl("https://discord.gg/9FRAyNg9Qh")}
                 />
