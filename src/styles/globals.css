@@ -351,17 +351,15 @@ body {
 
 .background-position-center-absolute {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  translate: -50% -50%;
+  top: 0;
+  left: 0;
   max-width: none;
 }
 
 .background-position-center-test {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  translate: -50% 0;
+  top: 0;
+  left: 0;
   max-width: none;
 }
 
